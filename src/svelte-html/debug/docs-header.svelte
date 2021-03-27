@@ -8,6 +8,7 @@
 		font-size: 2em;
 		color: transparent;
 		background-clip: text !important;
+		-webkit-background-clip: text !important; /* i fucking hate this */
 		filter: drop-shadow(0px 2px 5px rgba(0,0,0,.5));
 		display: inline;
 	}
