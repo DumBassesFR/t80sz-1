@@ -2,7 +2,7 @@
   "modules": false,
   "plugins": {
     "postcss-import": {},
-    "tailwindcss": {},
+    "@tailwindcss/jit": {},
     "postcss-mixins": {},
     "postcss-nested": {},
     "autoprefixer": {
