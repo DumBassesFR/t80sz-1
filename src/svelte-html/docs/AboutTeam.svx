@@ -5,7 +5,7 @@
 <style>
 </style>
 
-<Header text="past staff" gradient="purple"/> <!-- gradient options: yellow, orange, purple, blue, green -->
+<Header text="past staff" gradient="yellow"/>
 
 ### Staff team
 
