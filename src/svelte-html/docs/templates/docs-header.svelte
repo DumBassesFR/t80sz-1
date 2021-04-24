@@ -11,6 +11,7 @@
 		-webkit-background-clip: text !important; /* i fucking hate this */
 		filter: drop-shadow(0px 2px 5px rgba(0,0,0,.5));
 		display: inline;
+		margin-bottom: 0.5rem !important;
 	}
 </style>
 {#if gradient == 'green'}
