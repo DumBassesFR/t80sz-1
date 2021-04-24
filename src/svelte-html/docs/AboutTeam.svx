@@ -1,5 +1,6 @@
 <script>
-	import Header from '../debug/docs-header.svelte';
+	import Header from './templates/docs-header.svelte';
+	import Member from './templates/docs-team.svelte';
 </script>
 
 <style>
@@ -7,8 +8,22 @@
 
 <Header text="past staff" gradient="yellow"/>
 
-### Staff team
-
+<div style="display: grid; grid-gap: 0.25em; grid-template-columns: auto auto auto; margin-top: 1rem;">
+	<Member	
+		name="7Z"
+		role="moderator"
+		hired="11/17/2017"
+		left="7/6/2018"
+		desc="7Z was the last mod handpicked by Jem in The Bear Zone. 7Z moderated text chats primarily and often tweeted about random things that would show up in #mail-room (insert hyperlink)."
+	/>
+	<Member	
+		name="AquaAnt"
+		role="moderator"
+		hired="11/19/2017"
+		left="1/7/2018"
+		desc="AquaAnt joined the mod team to focus on moderation and stability for the server. Unfortunately, this was met with severe pushback and Aqua resigned in January."
+	/>
+</div>
 
 ### ADMIN:
 
