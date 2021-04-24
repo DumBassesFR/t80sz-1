@@ -1,6 +1,16 @@
 body {
-    @apply bg-screen bg-photocopy bg-purple-dark overflow-hidden;
-	background-blend-mode: color-dodge;
+    @apply bg-photocopy bg-purple-dark overflow-hidden;
+    animation: slide linear 60s infinite;
+    transition: background-color 500ms ease-in-out;
+    @keyframes slide {
+        from {
+            background-position: 0%;
+        }
+
+        to {
+            background-position: 100%;
+        }
+    }
 }
 
 #rainbow-cards {
