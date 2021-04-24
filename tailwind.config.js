@@ -32,7 +32,7 @@ module.exports = {
             'purple': theme('colors.purple.light')
         }),
 		backgroundImage: theme => ({
-			'photocopy': 'url("../assets/photocopy.webp")'
+			'photocopy': 'url("../assets/pattern.png")'
 		})
     },
 	plugins: [
