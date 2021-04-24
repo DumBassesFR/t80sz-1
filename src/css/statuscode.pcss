@@ -1,0 +1,81 @@
+#unavailable {
+    @apply flex justify-end items-center;
+    background: linear-gradient(90deg, rgba(40,20,40,0) 0%, rgba(40,20,40,0.7) 100%);
+    height: 100vh;
+    #unavailable-text {
+        @apply justify-center items-end flex flex-col text-white text-right relative font-sans;
+        font-family: 'Recoleta Alt';
+        left: 10em;
+        width: 30em;
+        .na-header, .na-desc {
+            @apply mt-1 mb-1;
+		    filter: drop-shadow(0px 2px 5px rgba(0,0,0,.5));
+        }
+        .na-header {
+            background: linear-gradient(90deg, rgba(255,229,0,1) 0%, rgba(249,190,17,1) 100%);
+            color: transparent;
+            font-size: 2.5em;
+            background-clip: text !important;
+            -webkit-background-clip: text !important;
+            display: inline;
+            line-height: 1.25em;
+        }
+    }
+}
+#unavailable-bobby {
+    @apply flex items-center justify-end;
+    animation: transition-fade 500ms ease-in-out;
+    transform: scale(0.6);
+    .bobby-circle-na, .bobby-ring-na {
+        animation: woosh-na 1.5s cubic-bezier(0.33, 1, 0.68, 1);
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        stroke-dasharray: 1050px;
+        stroke-dashoffset: 1050px;
+    }
+    .stroke-circle-na {
+        animation: woosh-na-circ 1.5s cubic-bezier(0.33, 1, 0.68, 1);
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        stroke-dasharray: 2000px;
+        stroke-dashoffset: 2000px;
+    }
+    .shocked-bobby, .exclamations-na {
+        opacity: 0;
+        animation: transition-fade 500ms ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    .shocked-bobby {
+        animation-delay: 1s;
+    }
+    .exclamations-na {
+        animation-delay: 1.25s;
+    }
+}
+@keyframes woosh-na {
+    from {
+        stroke-dasharray: 1050px;
+        stroke-dashoffset: 1050px;
+    }
+    to {
+        stroke-dasharray: 22px;
+        stroke-dashoffset: 22px;
+    }
+}
+@keyframes woosh-na-circ {
+    from {
+        stroke-dashoffset: 2000px;
+    }
+    to {
+        stroke-dashoffset: 390px;
+    }
+}
+@keyframes transition-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
