@@ -68,17 +68,20 @@ import Bobby from "../../bobby.svelte";
         font-weight: 400;
         max-width: 20em;
     }
+    .ambassador-member {
+      background: linear-gradient(90deg, rgba(108,104,217,1) 0%, rgba(136,132,241,1) 100%);
+    }
     .staff-member {
-       background: linear-gradient(90deg, rgba(10,200,50,1) 0%, rgba(30,150,120,1) 100%);
+      background: linear-gradient(90deg, rgba(10,200,50,1) 0%, rgba(30,150,120,1) 100%);
     }
     .moderator-member {
-        background: linear-gradient(90deg, rgba(68,69,255,1) 0%, rgba(51,121,193,1) 100%);
-    }
-    .owner-member {
-        background: linear-gradient(90deg, rgba(176,11,105,1) 0%, rgba(204,0,204,1) 100%);
+      background: linear-gradient(90deg, rgba(68,69,255,1) 0%, rgba(51,121,193,1) 100%);
     }
     .admin-member {
-        background: linear-gradient(90deg, rgba(196,41,169,1) 0%, rgba(141,53,206,1) 100%);
+      background: linear-gradient(90deg, rgba(196,41,169,1) 0%, rgba(141,53,206,1) 100%);
+    }
+    .owner-member {
+      background: linear-gradient(90deg, rgba(176,11,105,1) 0%, rgba(204,0,204,1) 100%);
     }
     .team-role {
         padding: 0.2rem;
