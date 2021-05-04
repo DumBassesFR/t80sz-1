@@ -5,7 +5,7 @@
 </script>
 <style lang="postcss">
 	#grad-header {
-		@apply bg-clip-text inline mb-2 px-1;
+		@apply bg-clip-text inline mb-2 mt-0 px-1;
 		font-size: 2.25em;
 		line-height: 1.1em;
 		color: transparent;

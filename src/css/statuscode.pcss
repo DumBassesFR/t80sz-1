@@ -5,22 +5,15 @@
     animation-fill-mode: forwards;
     height: 100vh;
     #unavailable-text {
-        @apply justify-center items-end flex flex-col text-white text-right relative font-sans;
+        @apply justify-center max-w-md 2xl:max-w-xl items-end flex flex-col text-white text-right relative font-sans;
         font-family: 'Recoleta Alt';
         left: 10em;
-        width: 25em;
         .na-header, .na-desc {
-            @apply mt-1 mb-1;
+            @apply mt-1 mb-1 text-base 2xl:text-2xl;
 		    filter: drop-shadow(0px 2px 5px rgba(0,0,0,.5));
         }
-        .na-header {
-            background: linear-gradient(90deg, rgba(255,229,0,1) 0%, rgba(249,190,17,1) 100%);
-            color: transparent;
-            font-size: 2.5em;
-            background-clip: text !important;
-            -webkit-background-clip: text !important;
-            display: inline;
-            line-height: 1.25em;
+        #grad-header {
+            @apply text-3xl 2xl:text-5xl bg-clip-text inline leading-8 !important;
         }
     }
 }
