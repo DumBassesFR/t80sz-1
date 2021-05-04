@@ -1,6 +1,6 @@
 <script>
-	import Header from './templates/docs-header.svelte';
-	import Member from './templates/docs-team.svelte';
+	import Header from '../templates/header.svelte';
+	import Member from '../templates/docs-team.svelte';
 </script>
 
 <style>
