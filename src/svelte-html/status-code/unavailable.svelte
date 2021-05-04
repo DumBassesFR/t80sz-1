@@ -1,11 +1,12 @@
 <script lang="typescript">
   import '../../css/statuscode.pcss'
   import { fade } from 'svelte/transition';
+  import Header from '../templates/header.svelte';
   export let name;
 </script>
 <div id="unavailable">
 <div id="unavailable-text">
-  <h1 class="na-header">It looks like {name} is not ready for launch!</h1>
+  <Header text="It looks like {name} is not ready for launch!" gradient='yellow'/>
   <p class="na-desc">Please wait as we finish wrapping this missing page.<br>In the meantime, you can still access the rest of<br>the site's content.</p>
 </div>
 <div out:fade="{{ duration: 500 }}" id="unavailable-bobby">
