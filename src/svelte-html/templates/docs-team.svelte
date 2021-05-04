@@ -21,51 +21,34 @@ import Bobby from "../bobby.svelte";
         }
     }
 </script>
-<style>
+<style lang="postcss">
     .team-member {
-        display: flex;
-        flex-direction: column;
-        padding: 0.5em;
-        background: #150411;
-        gap: 0.5rem;
+        @apply gap-2 p-2 bg-purple-dark flex flex-col w-auto;
         /* please end my pain below for fucks sake */
-        width: fit-content;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        height: fit-content;
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-    }
-    .team-member img {
-        width: 5em;
-        height: 5em;
-        margin-right: 0.5rem;
-        background-color: #281428;
+        img {
+            @apply w-24 h-24 mr-2 bg-purple-light;
+        }
     }
     .member-name, .joined-at, .left-at, .team-role {
-        font-weight: 700;
+        @apply font-bold;
     }
     .member-name, .joined-at, .left-at, .team-role, .team-desc {
-        margin: 0;
-        margin-top: 0.05rem !important;
-        margin-bottom: 0.05rem !important;
+        @apply m-0 mx-1 !important;
     }
     .joined-at, .left-at, .team-desc {
-        font-size: 0.6em !important;
-        line-height: 1.5em;
+        @apply text-sm !important;
     }
     .member-name {
-        margin-top: 0 !important;
+        @apply mt-0;
     }
     .member-name, .team-role {
-        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        @apply bdf-drop-shadow-sm;
     }
     .team-member img, .team-role, .team-member {
-        border-radius: 5px;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        @apply rounded shadow;
     }
     .team-desc {
-        font-weight: 400;
+        @apply font-normal;
         max-width: 20em;
     }
     .ambassador-member {
@@ -84,12 +67,7 @@ import Bobby from "../bobby.svelte";
       background: linear-gradient(90deg, rgba(176,11,105,1) 0%, rgba(204,0,204,1) 100%);
     }
     .team-role {
-        padding: 0.2rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        display: inline;
-        font-size: 0.75rem !important;
-        text-transform: capitalize;
+        @apply inline p-1 px-2 text-xs capitalize leading-8 !important;
     }
 </style>
 <div class="team-member">

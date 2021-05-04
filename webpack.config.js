@@ -1,5 +1,6 @@
 const path = require('path');
 const { mdsvex } = require('mdsvex');
+const sveltePreprocess = require('svelte-preprocess');
 module.exports = {
 	output: {
 		filename: "src/t80sz.core.js",
@@ -20,7 +21,10 @@ module.exports = {
 				use: {
 					loader: 'svelte-loader',
 					options: {
-						preprocess: mdsvex()
+						preprocess: [ sveltePreprocess({
+							postcss: true,
+							
+						}), mdsvex() ]
 					}
 				}
 			},

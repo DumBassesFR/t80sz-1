@@ -3,15 +3,14 @@
 	export let text;
 	const gradientSets = ['90deg, rgba(11,241,49,1) 0%, rgba(32,179,123,1) 100%', '90deg,  rgba(68,69,255,1) 0%, rgba(51,121,193,1) 100%', '90deg, rgba(255,229,0,1) 0%, rgba(249,190,17,1) 100%', '90deg, rgba(242,139,39,1) 0%, rgba(249,190,17,1) 100%', '90deg, rgba(196,41,169,1) 0%, rgba(141,53,206,1) 100%'] // green, blue, yellow, orange, purple	
 </script>
-<style>
+<style lang="postcss">
 	#grad-header {
-		font-size: 2em;
+		@apply bg-clip-text inline mb-2 px-1;
+		font-size: 2.25em;
+		line-height: 1.1em;
 		color: transparent;
-		background-clip: text !important;
 		-webkit-background-clip: text !important; /* i fucking hate this */
 		filter: drop-shadow(0px 2px 5px rgba(0,0,0,.5));
-		display: inline;
-		margin-bottom: 0.5rem !important;
 	}
 </style>
 {#if gradient == 'green'}
