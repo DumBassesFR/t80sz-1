@@ -5,6 +5,7 @@
 	import Bobby from './bobby.svelte';
 	import Menu from './menu.svelte';
 	import Docs from './docs/docs.svelte';
+	import BackHome from './templates/back-home.svelte';
 	// add your file debug info here V
 	let modules = [
 		{
@@ -16,6 +17,11 @@
 			name: Menu,
 			public: 'Main Menu Options',
 			id: 'menu-opts'
+		},
+		{
+			name: BackHome,
+			public: 'Back to Homepage',
+			id: 'back-home'
 		},
 		{
 			name: Docs,

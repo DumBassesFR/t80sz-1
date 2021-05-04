@@ -3,13 +3,15 @@
   import { fade } from 'svelte/transition';
   import Header from '../templates/header.svelte';
   export let name;
+  import  BackHome from '../templates/back-home.svelte';
 </script>
 <div id="unavailable">
-<div id="unavailable-text">
+<div out:fade="{{ duration: 200 }}" in:fade="{{ duration: 200 }}" id="unavailable-text">
   <Header text="It looks like {name} is not ready for launch!" gradient='yellow'/>
   <p class="na-desc">Please wait as we finish wrapping this missing page.<br>In the meantime, you can still access the rest of<br>the site's content.</p>
+  <BackHome gradient='yellow'/>
 </div>
-<div out:fade="{{ duration: 500 }}" id="unavailable-bobby">
+<div out:fade="{{ duration: 200 }}" in:fade="{{ duration: 200 }}" id="unavailable-bobby">
 <svg xmlns="http://www.w4.org/2000/svg" width="700" height="700" fill="none">
   <defs/>
   <g class="core-circle" filter="url(#filter0_d)">
