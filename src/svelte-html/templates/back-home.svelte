@@ -23,7 +23,7 @@
 </script>
 <style lang="postcss">
     .back-button {
-        @apply flex flex-row items-center px-2 text-base text-purple-dark shadow rounded w-auto;
+        @apply flex flex-row items-center px-2 text-base mt-2 text-purple-dark shadow rounded w-auto;
         line-height: 0;
         .back-icon {
             @apply font-icon mr-1;
