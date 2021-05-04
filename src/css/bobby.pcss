@@ -25,8 +25,8 @@ body {
 
         #cardbase {
             @apply fill-purple;
-            stroke-dasharray: 125;
-            animation: dash 50s infinite linear;
+            stroke-dasharray: 118;
+            animation: dashcard 50s infinite linear;
         }
     }
 }
@@ -62,6 +62,14 @@ body {
         }
         100% {
             stroke-dashoffset: 6000;
+        }
+    }
+    @keyframes dashcard {
+        0% {
+            stroke-dashoffset: 0;
+        }
+        100% {
+            stroke-dashoffset: 7080;
         }
     }
 }
