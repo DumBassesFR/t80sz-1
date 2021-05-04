@@ -1,7 +1,8 @@
 <script>
     import '../css/bobby.pcss';
+    import { fade } from 'svelte/transition';
 </script>
-<div id="rainbow-cards">
+<div in:fade="{{ duration: 500 }}" out:fade="{{ duration: 500 }}" id="rainbow-cards">
     <div id="card">
         <svg id="rectcard" preserveAspectRatio="xMin meet" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
             <defs>
