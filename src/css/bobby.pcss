@@ -1,75 +1,79 @@
 body {
-    @apply bg-photocopy bg-purple-dark overflow-hidden;
-    animation: slide linear 60s infinite;
-    transition: background-color 500ms ease-in-out;
-    @keyframes slide {
-        from {
-            background-position: 0%;
-        }
-
-        to {
-            background-position: 100%;
-        }
+  @apply bg-photocopy bg-purple-dark overflow-hidden;
+  animation: slide linear 60s infinite;
+  transition: background-color 500ms ease-in-out;
+  background-size: 15em;
+  @keyframes slide {
+    from {
+      background-position: 0%;
     }
+
+    to {
+      background-position: 100%;
+    }
+  }
 }
 
 #rainbow-cards {
-    @apply w-screen h-screen transform scale-125 sm:scale-50 flex;
+  @apply w-screen h-screen transform scale-125 sm:scale-50 flex;
 }
 
 #card {
-    @apply flex justify-center items-center w-full h-full;
+  @apply flex justify-center items-center w-full h-full;
 
-    #rectcard {
-        @apply w-1/2 relative;
+  #rectcard {
+    @apply w-1/2 relative;
 
-        #cardbase {
-            @apply fill-purple;
-            stroke-dasharray: 118;
-            animation: dashcard 50s infinite linear;
-        }
+    #cardbase {
+      @apply fill-purple;
+      stroke-dasharray: 118;
+      animation: dashcard 50s infinite linear;
     }
+  }
 }
 
-#bobby #arc, #bobby circle, #bobby rect[rx='22.5'], #cardbase {
-    @apply filter filter-drop-shadow-lg;
+#bobby #arc,
+#bobby circle,
+#bobby rect[rx="22.5"],
+#cardbase {
+  @apply filter filter-drop-shadow-lg;
 }
 
 #bobby {
-    @apply w-full h-full justify-center items-center flex absolute;
+  @apply w-full h-full justify-center items-center flex absolute;
 
-    #arc {
-        stroke-dasharray: 1000;
-        animation: dash 10s infinite linear;
-
-        circle {
-            animation: dash 5s infinite linear;
-        }
-    }
+  #arc {
+    stroke-dasharray: 1000;
+    animation: dash 10s infinite linear;
 
     circle {
-        stroke-dasharray: 3000;
-        stroke-linecap: round;
+      animation: dash 5s infinite linear;
     }
+  }
 
-    #base {
-        @apply w-2/5 mr-1 sm:mr-3 absolute;
-    }
+  circle {
+    stroke-dasharray: 3000;
+    stroke-linecap: round;
+  }
 
-    @keyframes dash {
-        0% {
-            stroke-dashoffset: 0;
-        }
-        100% {
-            stroke-dashoffset: 6000;
-        }
+  #base {
+    @apply w-2/5 mr-1 sm:mr-3 absolute;
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 0;
     }
-    @keyframes dashcard {
-        0% {
-            stroke-dashoffset: 0;
-        }
-        100% {
-            stroke-dashoffset: 7080;
-        }
+    100% {
+      stroke-dashoffset: 6000;
     }
+  }
+  @keyframes dashcard {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 7080;
+    }
+  }
 }

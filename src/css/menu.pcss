@@ -1,50 +1,50 @@
 @define-mixin icon $clr: white, $sym {
-	& {
-    	color: $clr;	
-	}
-    &:before {
-        content: $sym;
-    }
-    &:hover {
-		background-color: $clr;
-		color: #150411;
-		-tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-		box-shadow: var(--tw-shadow); 
-	}
+  & {
+    color: $clr;
+  }
+  &:before {
+    content: $sym;
+  }
+  &:hover {
+    background-color: $clr;
+    color: #150411;
+    -tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-shadow);
+  }
 }
 #menu-base {
-    @apply flex h-9 w-auto 2xl:w-12 sm:w-9 sm:h-auto absolute top-4 left-4 rounded items-center justify-center bg-purple-light shadow-md;
-    z-index: 1;
+  @apply flex h-9 w-auto 2xl:w-12 sm:w-9 sm:h-auto absolute top-4 left-4 rounded items-center justify-center bg-purple-light shadow-md;
+  z-index: 1;
 }
 
 #options {
-    @apply flex flex-row sm:flex-col;
+  @apply flex flex-row sm:flex-col;
 }
 
 a {
-    @apply no-underline;
+  @apply no-underline;
 }
 
 .icon {
-    @apply font-icon text-xl 2xl:text-2xl leading-5 transition-all ease-in-out m-0 ml-2 mr-2 sm:ml-0 sm:mr-0 sm:mt-2 sm:mb-2 p-0.5 rounded;
+  @apply font-icon text-xl 2xl:text-2xl leading-5 transition-all ease-in-out m-0 ml-2 mr-2 sm:ml-0 sm:mr-0 sm:mt-2 sm:mb-2 p-0.5 rounded;
 }
 
 .icon-info {
-    @mixin icon #ffe500, "info";
+  @mixin icon #ffe500, "info";
 }
 
 .icon-server {
-    @mixin icon #f28b27, "chat";
+  @mixin icon #f28b27, "chat";
 }
 
 .icon-archive {
-    @mixin icon #c429a9, "archive";
+  @mixin icon #c429a9, "archive";
 }
 
 .icon-varchive {
-    @mixin icon #4445ff, "videocam";
+  @mixin icon #4445ff, "videocam";
 }
 
 .icon-source {
-    @mixin icon #0bf131, "code";
+  @mixin icon #0bf131, "code";
 }
