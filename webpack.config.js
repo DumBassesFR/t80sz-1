@@ -1,6 +1,6 @@
-const path = require("path");
-const { mdsvex } = require("mdsvex");
-const sveltePreprocess = require("svelte-preprocess");
+const path = require("path")
+const { mdsvex } = require("mdsvex")
+const sveltePreprocess = require("svelte-preprocess")
 module.exports = {
   output: {
     filename: "src/t80sz.core.js",
@@ -48,4 +48,4 @@ module.exports = {
       },
     ],
   },
-};
+}

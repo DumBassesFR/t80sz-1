@@ -1,4 +1,16 @@
 {
+  "trailingComma": "es5",
   "tabWidth": 2,
-  "useTabs": false
+  "semi": false,
+  "svelteSortOrder": "styles-scripts-markup",
+  "svelteAllowShorthand": true,
+  "svelteBracketNewLine": false,
+  "overrides": [
+    {
+      "files": "*.pcss",
+      "options": {
+        "useTabs": false
+      }
+    }
+  ]
 }

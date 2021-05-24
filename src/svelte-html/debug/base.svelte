@@ -1,11 +1,10 @@
 <script>
   function changeModule(module) {
-    activeModule = module;
+    activeModule = module
   }
-  export let fetchModules;
-  export let type;
-  let activeModule = "default";
-
+  export let fetchModules
+  export let type
+  let activeModule = "default"
 </script>
 
 {#if type == "module"}

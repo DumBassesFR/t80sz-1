@@ -1,10 +1,10 @@
-const cssExtract = require("mini-css-extract-plugin");
-const cssMinimize = require("css-minimizer-webpack-plugin");
-const htmlWebpack = require("html-webpack-plugin");
-const compress = require("compression-webpack-plugin");
-const path = require("path");
-const defcfg = require("./webpack.config");
-const { merge } = require("webpack-merge");
+const cssExtract = require("mini-css-extract-plugin")
+const cssMinimize = require("css-minimizer-webpack-plugin")
+const htmlWebpack = require("html-webpack-plugin")
+const compress = require("compression-webpack-plugin")
+const path = require("path")
+const defcfg = require("./webpack.config")
+const { merge } = require("webpack-merge")
 module.exports = merge(defcfg, {
   mode: "production",
   entry: {
@@ -20,9 +20,9 @@ module.exports = merge(defcfg, {
       title: "THE 80's ZONE",
       filename: "home/index.html",
       meta: {
-        'viewport': "width=device-width, initial-scale=1",
-        'description': "EST. 2017-10-31",
-        'theme-color': "#150411",
+        viewport: "width=device-width, initial-scale=1",
+        description: "EST. 2017-10-31",
+        "theme-color": "#150411",
       },
       excludeChunks: ["bobby"],
       hash: true,
@@ -31,8 +31,8 @@ module.exports = merge(defcfg, {
       title: "standalone bobby weeeeeeeeee",
       filename: "bobby/index.html",
       meta: {
-        'viewport': "width=device-width, initial-scale=1",
-        'description': "EST. 2017-10-31",
+        viewport: "width=device-width, initial-scale=1",
+        description: "EST. 2017-10-31",
         "theme-color": "#150411",
       },
       excludeChunks: ["main"],
@@ -82,4 +82,4 @@ module.exports = merge(defcfg, {
     minimize: true,
     minimizer: [new cssMinimize()],
   },
-});
+})

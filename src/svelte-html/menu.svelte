@@ -1,6 +1,6 @@
 <script>
-  import "../css/fonts.pcss";
-  import "../css/menu.pcss";
+  import "../css/fonts.pcss"
+  import "../css/menu.pcss"
   const items = [
     {
       name: "Information",
@@ -22,11 +22,10 @@
       name: "Source Code",
       id: "source",
     },
-  ];
+  ]
   function homepage(name) {
-    return `#${name}`;
+    return `#${name}`
   }
-
 </script>
 
 <div id="menu-base">
