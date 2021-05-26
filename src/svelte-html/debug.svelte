@@ -4,7 +4,7 @@
   // add your file imports here V
   import Bobby from "./bobby.svelte"
   import Menu from "./menu.svelte"
-  import Docs from "./docs/docs.svelte"
+  import Docs from "./pages/info/docs/docs.svelte"
   import BackHome from "./templates/back-home.svelte"
   // add your file debug info here V
   let modules = [
