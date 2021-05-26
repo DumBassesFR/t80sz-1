@@ -29,16 +29,16 @@
   <h1 id="grad-header" style="background: linear-gradient({gradientSets[1]}">
     {text}
   </h1>
-{:else if gradient == "purple"}
-  <h1 id="grad-header" style="background: linear-gradient({gradientSets[4]}">
+{:else if gradient == "yellow"}
+  <h1 id="grad-header" style="background: linear-gradient({gradientSets[2]}">
     {text}
   </h1>
 {:else if gradient == "orange"}
   <h1 id="grad-header" style="background: linear-gradient({gradientSets[3]}">
     {text}
   </h1>
-{:else if gradient == "yellow"}
-  <h1 id="grad-header" style="background: linear-gradient({gradientSets[2]}">
+{:else if gradient == "purple"}
+  <h1 id="grad-header" style="background: linear-gradient({gradientSets[4]}">
     {text}
   </h1>
 {/if}
