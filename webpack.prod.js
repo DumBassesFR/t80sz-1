@@ -76,6 +76,18 @@ module.exports = merge(defcfg, {
           },
         ],
       },
+      {
+        test: /\.(html)$/i,
+        use: [
+          "html-loader",
+          {
+            loader: "posthtml-loader",
+            options: {
+              plugins: [require("htmlnano")()],
+            },
+          },
+        ],
+      },
     ],
   },
   optimization: {
