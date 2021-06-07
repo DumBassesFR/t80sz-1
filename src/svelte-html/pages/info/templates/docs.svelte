@@ -1,10 +1,10 @@
 <script lang="typescript">
-  import "../../debug/debug.pcss"
-  import Base from "../debug/base.svelte"
+  import "../../../../debug/debug.pcss"
+  import Base from "../../../templates/debug/base.svelte"
   // add your doc imports here V
-  import AboutUs from "./AboutUs.svx"
+  import AboutUs from "../docs/AboutUs.svx"
   // add your file doc info here V
-  import AboutTeam from "./AboutTeam.svx"
+  import AboutTeam from "../docs/AboutTeam.svx"
   let modules = [
     {
       name: AboutUs,
