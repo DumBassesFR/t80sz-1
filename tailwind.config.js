@@ -36,8 +36,11 @@ module.exports = {
       purple: theme("colors.purple.light"),
     }),
     backgroundImage: (theme) => ({
-      photocopy: 'url("../assets/pattern.png")',
+      photocopy: "url('../assets/pattern.png')",
     }),
+  },
+  corePlugins: {
+    gradientColorStops: false,
   },
   plugins: [require("tailwindcss-css-filters")],
 }
