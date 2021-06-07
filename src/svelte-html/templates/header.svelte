@@ -8,37 +8,29 @@
     filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
   }
 </style>
-
 <script>
+  import { colors } from '../../libs/colors.ts'; 
   export let gradient
   export let text
-  const gradientSets = [
-    "90deg, rgba(11,241,49,1) 0%, rgba(32,179,123,1) 100%",
-    "90deg,  rgba(68,69,255,1) 0%, rgba(51,121,193,1) 100%",
-    "90deg, rgba(255,229,0,1) 0%, rgba(249,190,17,1) 100%",
-    "90deg, rgba(242,139,39,1) 0%, rgba(249,190,17,1) 100%",
-    "90deg, rgba(196,41,169,1) 0%, rgba(141,53,206,1) 100%",
-  ] // green, blue, yellow, orange, purple
+  console.log(gradient);
+  async function gradSelection(g) {
+    const clr = await new colors();
+    return new Promise(async (resolve) => {
+      await clr.setGradient(g)
+      .then(value => {
+        resolve(value);
+      })
+    })
+  }
+  const gradProm = gradSelection(gradient);
 </script>
 
-{#if gradient == "green"}
-  <h1 id="grad-header" style="background: linear-gradient({gradientSets[0]}">
+{#await gradProm}
+  <h1 id="grad-header" style="background: #eee;">
+    loading
+  </h1>
+{:then grad} 
+  <h1 id="grad-header" style="background: {grad};">
     {text}
   </h1>
-{:else if gradient == "blue"}
-  <h1 id="grad-header" style="background: linear-gradient({gradientSets[1]}">
-    {text}
-  </h1>
-{:else if gradient == "yellow"}
-  <h1 id="grad-header" style="background: linear-gradient({gradientSets[2]}">
-    {text}
-  </h1>
-{:else if gradient == "orange"}
-  <h1 id="grad-header" style="background: linear-gradient({gradientSets[3]}">
-    {text}
-  </h1>
-{:else if gradient == "purple"}
-  <h1 id="grad-header" style="background: linear-gradient({gradientSets[4]}">
-    {text}
-  </h1>
-{/if}
+{/await}

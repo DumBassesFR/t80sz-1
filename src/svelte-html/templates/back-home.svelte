@@ -1,3 +1,18 @@
+<script>
+  import { colors } from '../../libs/colors.ts'; 
+  export let gradient
+  console.log(gradient);
+  async function gradSelection(g) {
+    const clr = await new colors();
+    return new Promise(async (resolve) => {
+      await clr.setGradient(g)
+      .then(value => {
+        resolve(value);
+      })
+    })
+  }
+  const gradProm = gradSelection(gradient);
+</script>
 <style lang="postcss">
   .back-button {
     @apply flex flex-row items-center px-2 text-base 2xl:text-xl mt-2 text-purple-dark shadow rounded w-auto;
@@ -12,41 +27,16 @@
   }
 </style>
 
-<script>
-  export let gradient
-  const gradientSets = [
-    "90deg, rgba(11,241,49,1) 0%, rgba(32,179,123,1) 100%",
-    "90deg,  rgba(68,69,255,1) 0%, rgba(51,121,193,1) 100%",
-    "90deg, rgba(255,229,0,1) 0%, rgba(249,190,17,1) 100%",
-    "90deg, rgba(242,139,39,1) 0%, rgba(249,190,17,1) 100%",
-    "90deg, rgba(196,41,169,1) 0%, rgba(141,53,206,1) 100%",
-  ] // green, blue, yellow, orange, purple
-  function gradientVal() {
-    switch (gradient) {
-      case "green":
-        return gradientSets[0]
-        break
-      case "blue":
-        return gradientSets[1]
-        break
-      case "purple":
-        return gradientSets[4]
-        break
-      case "orange":
-        return gradientSets[3]
-        break
-      case "yellow":
-        return gradientSets[2]
-        break
-    }
-  }
-</script>
-
 <a href="#home">
-  <div
-    class="back-button"
-    style="background: linear-gradient({gradientVal()});">
+{#await gradProm}
+   <div class="back-button" style="background: #eee;">
     <p class="back-icon">home</p>
     <p class="back-text">back to homepage</p>
-  </div>
+   </div>
+{:then grad} 
+   <div class="back-button" style="background-image: {grad};">
+    <p class="back-icon">home</p>
+    <p class="back-text">back to homepage</p>
+  </div> 
+{/await}
 </a>
