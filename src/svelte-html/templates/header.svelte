@@ -8,28 +8,26 @@
     filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
   }
 </style>
+
 <script>
-  import { colors } from '../../libs/colors.ts'; 
+  import { colors } from "../../libs/colors.ts"
   export let gradient
   export let text
-  console.log(gradient);
+  console.log(gradient)
   async function gradSelection(g) {
-    const clr = await new colors();
+    const clr = await new colors()
     return new Promise(async (resolve) => {
-      await clr.setGradient(g)
-      .then(value => {
-        resolve(value);
+      await clr.setGradient(g).then((value) => {
+        resolve(value)
       })
     })
   }
-  const gradProm = gradSelection(gradient);
+  const gradProm = gradSelection(gradient)
 </script>
 
 {#await gradProm}
-  <h1 id="grad-header" style="background: #eee;">
-    loading
-  </h1>
-{:then grad} 
+  <h1 id="grad-header" style="background: #eee;">loading</h1>
+{:then grad}
   <h1 id="grad-header" style="background: {grad};">
     {text}
   </h1>
