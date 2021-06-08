@@ -1,8 +1,6 @@
 <style lang="postcss">
   #grad-header {
-    @apply bg-clip-text inline mb-2 mt-0 px-1;
-    font-size: 2.25em;
-    line-height: 1.1em;
+    @apply bg-clip-text inline mb-2 mt-0 px-1 text-4xl leading-5 filter bdf-drop-shadow-md;
     color: transparent;
     -webkit-background-clip: text !important; /* i fucking hate this */
     filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
