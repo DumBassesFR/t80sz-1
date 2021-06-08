@@ -1,6 +1,6 @@
-import 'svelte';
-import DebugMenu from '../svelte-html/debug.svelte';
+import "svelte"
+import DebugMenu from "../svelte/debug.svelte"
 
 new DebugMenu({
-	target: document.body
-});
+  target: document.body,
+})

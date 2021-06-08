@@ -1,5 +1,5 @@
 import "svelte"
-import Base from "./svelte-html/base.svelte"
+import Base from "./svelte/base.svelte"
 async function loadElements() {
   new Base({
     target: document.body,
