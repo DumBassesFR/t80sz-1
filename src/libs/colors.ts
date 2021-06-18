@@ -6,7 +6,7 @@ const gradients = [
   "linear-gradient(90deg, rgba(11,241,49,1) 0%, rgba(32,179,123,1) 100%);",
 ]
 export class colors {
-  async setGradient(grad) {
+  async setGradient(grad: string) {
     return new Promise((resolve) => {
       switch (grad) {
         case "yellow":

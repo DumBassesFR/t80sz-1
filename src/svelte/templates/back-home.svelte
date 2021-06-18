@@ -12,11 +12,11 @@
   }
 </style>
 
-<script>
-  import { colors } from "../../libs/colors.ts"
+<script type="typescript">
+  import { colors } from "../../libs/colors"
   export let gradient
   console.log(gradient)
-  async function gradSelection(g) {
+  async function gradSelection(g: string) {
     const clr = await new colors()
     return new Promise(async (resolve) => {
       await clr.setGradient(g).then((value) => {

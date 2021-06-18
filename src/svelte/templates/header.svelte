@@ -1,18 +1,18 @@
 <style lang="postcss">
   #grad-header {
-    @apply bg-clip-text inline mb-2 mt-0 px-1 text-4xl leading-5 filter bdf-drop-shadow-md;
+    @apply bg-clip-text inline mb-2 mt-0 px-1 text-5xl leading-5 filter bdf-drop-shadow-md;
     color: transparent;
     -webkit-background-clip: text !important; /* i fucking hate this */
     filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
   }
 </style>
 
-<script>
-  import { colors } from "../../libs/colors.ts"
+<script type="typescript">
+  import { colors } from "../../libs/colors"
   export let gradient
   export let text
   console.log(gradient)
-  async function gradSelection(g) {
+  async function gradSelection(g: string) {
     const clr = await new colors()
     return new Promise(async (resolve) => {
       await clr.setGradient(g).then((value) => {
