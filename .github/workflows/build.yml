@@ -34,6 +34,7 @@ jobs:
       
       - name: Make Recoleta placeholders (haha, you thought i would be giving that)
         run: |
+          mkdir src/fonts/recoleta/
           touch src/fonts/recoleta/recalt-reg.woff
           touch src/fonts/recoleta/recalt-bold.woff
 
