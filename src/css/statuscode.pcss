@@ -1,5 +1,5 @@
 #unavailable {
-  @apply flex justify-end items-center;
+  @apply flex flex-col lg:flex-row justify-center lg:justify-end items-center;
   background: linear-gradient(
     90deg,
     rgba(40, 20, 40, 0) 0%,
@@ -9,21 +9,20 @@
   animation-fill-mode: forwards;
   height: 100vh;
   #unavailable-text {
-    @apply justify-center max-w-md 2xl:max-w-xl items-end flex flex-col text-white text-right relative font-sans;
+    @apply justify-center left-0 bottom-24 lg:bottom-0 top-48 lg:top-0 lg:left-40 lg:max-w-md 2xl:max-w-xl items-center lg:items-end flex flex-col text-white text-center lg:text-right relative font-sans;
     font-family: "Recoleta Alt";
-    left: 10em;
     .na-header,
     .na-desc {
-      @apply mt-1 mb-1 text-base 2xl:text-2xl;
+      @apply mt-1 mb-1 text-sm md:text-base lg:text-lg 2xl:text-2xl;
       filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
     }
     #grad-header {
-      @apply text-3xl 2xl:text-5xl bg-clip-text inline leading-8 !important;
+      @apply text-3xl lg:text-4xl 2xl:text-5xl bg-clip-text max-w-sm lg:max-w-xl inline leading-8 !important;
     }
   }
 }
 #unavailable-bobby {
-  @apply flex items-center justify-end;
+  @apply flex items-center relative top-10 lg:top-0 lg:relative justify-end;
   animation: transition-fade 500ms ease-in-out;
   transform: scale(0.6);
   .bobby-circle-na,
