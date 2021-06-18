@@ -32,7 +32,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm i --legacy-peer-deps
-          npm audit fix
+          npm audit fix --force
 
       - name: Make Recoleta placeholders (haha, you thought i would be giving that)
         run: |
