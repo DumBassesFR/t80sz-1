@@ -38,6 +38,11 @@ module.exports = {
     backgroundImage: (theme) => ({
       photocopy: "url('../assets/pattern.png')",
     }),
+    extend: {
+      transitionTimingFunction: {
+        back: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
+      },
+    },
   },
   corePlugins: {
     gradientColorStops: false,
