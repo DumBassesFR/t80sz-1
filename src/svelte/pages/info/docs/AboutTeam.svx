@@ -1,6 +1,6 @@
 <script>
-	import Header from '../../../templates/header.svelte';
-	import Member from '../../../templates/info/docs-team.svelte';
+	import Header from '../templates/header.svelte';
+	import Member from '../templates/docs-team.svelte';
 </script>
 
 <style>
@@ -33,11 +33,11 @@
 		desc="AquaAnt joined the mod team to focus on moderation and stability for the server. Unfortunately, this was met with severe pushback and Aqua resigned in January."
 	/>
 	<Member	
-		name="7Z"
+		name="Sushi"
 		role="moderator"
-		hired="11/17/2017"
-		left="7/6/2018"
-		desc="7Z was the last mod handpicked by Jem in The Bear Zone. 7Z moderated text chats primarily and often tweeted about random things that would show up in #mail-room (insert hyperlink)."
+		hired="6/4/2018"
+		left="3/13/2019"
+		desc="Sushi was invited to the mod team in an effort to have enough mods for the launch of The 80's Zone. Sushi's career was dedicated to general moderation and managing art channels."
 	/>
 </div>
 
