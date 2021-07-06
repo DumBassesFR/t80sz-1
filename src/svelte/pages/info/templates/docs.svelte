@@ -1,6 +1,6 @@
 <script lang="typescript">
   import "../../../../debug/debug.pcss"
-  import Base from "../../../templates/debug/base.svelte"
+  import Base from "../../debug/templates/base.svelte"
   // add your doc imports here V
   import AboutUs from "../docs/AboutUs.svx"
   // add your file doc info here V

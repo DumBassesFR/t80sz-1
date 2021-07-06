@@ -1,9 +1,9 @@
 <script lang="typescript">
   import "../../css/statuscode.pcss"
   import { fade } from "svelte/transition"
-  import Header from "../templates/header.svelte"
+  import Header from "../pages/info/templates/header.svelte"
   export let name: string
-  import BackHome from "../templates/back-home.svelte"
+  import BackHome from "../pages/debug/templates/back-home.svelte"
 </script>
 
 <div id="unavailable">
