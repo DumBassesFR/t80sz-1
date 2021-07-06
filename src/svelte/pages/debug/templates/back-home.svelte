@@ -13,9 +13,9 @@
 </style>
 
 <script type="typescript">
-  import { colors } from "../../libs/colors"
-  export let gradient
-  console.log(gradient)
+  import { colors } from "../../../../libs/colors"
+  export let gradient: string
+  export let href = "default"
   async function gradSelection(g: string) {
     const clr = await new colors()
     return new Promise(async (resolve) => {
@@ -24,10 +24,17 @@
       })
     })
   }
+  function redirectTo() {
+    if (href == "default") {
+      return "#home"
+    } else {
+      return "/"
+    }
+  }
   const gradProm = gradSelection(gradient)
 </script>
 
-<a href="#home">
+<a href="{redirectTo()}">
   {#await gradProm}
     <div class="back-button" style="background: #eee;">
       <p class="back-icon">home</p>

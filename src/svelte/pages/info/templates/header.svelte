@@ -8,7 +8,7 @@
 </style>
 
 <script type="typescript">
-  import { colors } from "../../libs/colors"
+  import { colors } from "../../../../libs/colors"
   export let gradient
   export let text
   console.log(gradient)

@@ -81,8 +81,8 @@
 </style>
 
 <script>
-  import Base from "../../base.svelte"
-  import Bobby from "../../bobby.svelte"
+  import Base from "../../../base.svelte"
+  import Bobby from "../../../bobby.svelte"
 
   export let name
   export let role

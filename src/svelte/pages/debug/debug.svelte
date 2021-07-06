@@ -1,12 +1,12 @@
-<script lang="typescript">
-  import "../debug/debug.pcss"
-  import Base from "./templates/debug/base.svelte"
+<script type="typescript">
+  import "../../../debug/debug.pcss"
+  import Base from "./templates/base"
   // add your file imports here V
-  import Bobby from "./bobby.svelte"
-  import Menu from "./menu.svelte"
-  import Docs from "./pages/info/templates/docs.svelte"
-  import BackHome from "./templates/back-home.svelte"
-  import Slider from "./templates/info/rainbow-slider.svelte"
+  import Bobby from "../../bobby"
+  import Menu from "../../menu"
+  import Docs from "../info/templates/docs"
+  import BackHome from "./templates/back-home"
+  import Info from "../info/info"
   // add your file debug info here V
   let modules = [
     {
@@ -30,9 +30,9 @@
       id: "docs-base",
     },
     {
-      name: Slider,
-      public: "Docs/Rainbow Slider",
-      id: "rainbow-slider",
+      name: Info,
+      public: "Docs/Information Page",
+      id: "info",
     },
   ]
 </script>
