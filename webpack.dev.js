@@ -6,8 +6,8 @@ const { merge } = require("webpack-merge")
 module.exports = merge(defcfg, {
   mode: "development",
   entry: {
-    main: "./src/index.ts",
-    debug: "./src/debug/debug.ts",
+    main: "./src/pages/index.ts",
+    debug: "./src/pages/debug/debug.ts",
   },
   output: {
     filename: "t80sz.[name].js",

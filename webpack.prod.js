@@ -8,8 +8,8 @@ const { merge } = require("webpack-merge")
 module.exports = merge(defcfg, {
   mode: "production",
   entry: {
-    main: "./src/index.ts",
-    bobby: "./src/standalone-bobby.ts",
+    main: "./src/pages/index.ts",
+    bobby: "./src/pages/standalone-bobby.ts",
   },
   output: {
     filename: "src/t80sz.[name].js",
@@ -36,6 +36,17 @@ module.exports = merge(defcfg, {
         "theme-color": "#150411",
       },
       excludeChunks: ["main"],
+      hash: true,
+    }),
+    new htmlWebpack({
+      title: "404 - THE 80's ZONE",
+      filename: "status/404/index.html",
+      meta: {
+        viewport: "width=device-width, initial-scale=1",
+        description: "EST. 2017-10-31",
+        "theme-color": "#150411",
+      },
+      excludeChunks: ["main", "bobby"],
       hash: true,
     }),
     new cssExtract({
@@ -93,5 +104,8 @@ module.exports = merge(defcfg, {
   optimization: {
     minimize: true,
     minimizer: [new cssMinimize()],
+    splitChunks: {
+      chunks: "all",
+    },
   },
 })
