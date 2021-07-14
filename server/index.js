@@ -22,6 +22,15 @@ ws.use("/", express.static("public/home"))
 ws.use("/404", express.static("public/status/404"))
 ws.use("/src", express.static("public/src"))
 ws.use("/bobby", express.static("public/bobby"))
+const placeholders = [
+  {name: "/server", placeholder: "https://discord.gg/t80z"}, 
+  {name: "/archive", placeholder: "https://duckduckgo.com" }, 
+  {name: "/source", placeholder: "https://github.com/ryeenii/t80sz" } ]
+for (const i in placeholders) {
+  ws.use(placeholders[i].name, (req, res) => {
+    res.redirect(307, placeholders[i].placeholder)
+  })
+}
 ws.get("*", function (req, res) {
   res.redirect("/404")
 })
