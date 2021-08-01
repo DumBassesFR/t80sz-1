@@ -1,6 +1,8 @@
 <script>
   import Menu from "./menu.svelte"
+  import Info from "./pages/info/info.svelte";
   import Bobby from "./bobby.svelte"
+  import VArchive from './pages/varchive/varchive.svelte'
   import NA from "./status-code/unavailable.svelte"
   let activePage = Bobby
   let defBg = "#150411"
@@ -8,7 +10,7 @@
   function activeChange() {
     switch (location.hash) {
       case "#info":
-        activePage = "Info"
+        activePage = Info
         defBg = "#151004"
         break
       case "#server":
@@ -20,7 +22,7 @@
         defBg = "#16030D"
         break
       case "#varchive":
-        activePage = "videoArchive"
+        activePage = VArchive
         defBg = "#0E0316"
         break
       case "#source":
@@ -46,6 +48,10 @@
   <Menu />
   {#if activePage == Bobby}
     <Bobby />
+  {:else if activePage == Info}
+    <Info />
+  {:else if activePage == VArchive}
+    <VArchive />
   {:else}
     <NA name={activePage} />
   {/if}

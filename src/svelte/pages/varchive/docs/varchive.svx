@@ -1,0 +1,11 @@
+Welcome to the Video Archive, an attempt to <span style="color:#696AFF"><b>preserve all known videos created in the name of the Zone.</b></span>
+
+Over the years, we've created a large catalog of video content through podcasts, 
+tournaments, streamed events *(both successful and unsuccessful)*, and other uncategorized 
+media you may never have seen before. 
+
+To ensure everything is properly archived and easily accessible to the public, 
+we include both a YouTube link and an Internet Archive mirror for all uploads. 
+<br/>If you have a piece of media that you believe hasn't been archived, 
+please email us at <code style="color:#696AFF"><a style="color: inherit;" href="mailto:staff@the80s.zone">staff@the80s.zone.</a></code> 
+Depending on the content provided, we may compensate you financially.
