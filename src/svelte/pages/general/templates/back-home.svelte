@@ -1,7 +1,11 @@
 <style lang="postcss">
   .back-button {
-    @apply flex flex-row items-center px-2 text-base 2xl:text-xl mt-2 text-purple-dark shadow rounded w-auto;
+    @apply my-6 flex flex-row items-center px-2 2xl:px-5 text-base font-bold 2xl:text-2xl mt-2 text-purple-dark shadow rounded w-auto;
     line-height: 0;
+    width: --moz-fit-content;
+    width: fit-content;
+    width: --webkit-fit-content;
+    text-shadow: 0px 2px 5px rgba(0,0,0,.3);
     .back-icon {
       @apply font-icon mr-1;
     }
