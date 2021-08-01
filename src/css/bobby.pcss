@@ -1,5 +1,6 @@
 body {
-  @apply bg-photocopy bg-purple-dark overflow-hidden;
+  @apply bg-photocopy bg-purple-dark;
+  margin: 0;
   animation: slide linear 60s infinite;
   transition: background-color 500ms ease-in-out;
   background-size: 15em;
@@ -13,9 +14,8 @@ body {
     }
   }
 }
-
 #rainbow-cards {
-  @apply w-screen h-screen transform scale-125 sm:scale-50 flex;
+  @apply w-screen h-screen transform scale-125 sm:scale-100 md:scale-75 lg:scale-50 flex;
 }
 
 #card {
@@ -31,7 +31,12 @@ body {
     }
   }
 }
-
+#main-menu{ 
+  @apply h-screen;
+}
+body[style='background-color: rgb(21, 4, 17);'] > #main-menu {
+  @apply overflow-hidden;
+}
 #bobby #arc,
 #bobby circle,
 #bobby rect[rx="22.5"],
