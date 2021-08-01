@@ -23,7 +23,7 @@ module.exports = merge(defcfg, {
       hash: true,
     }),
     new htmlWebpack({
-      template: "src/debug/debug.html",
+      template: "src/pages/debug/debug.html",
       filename: "debug/index.html",
       excludeChunks: ["main"],
     }),
