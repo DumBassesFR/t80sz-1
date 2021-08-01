@@ -1,11 +1,11 @@
 <script>
   import "../css/bobby.pcss"
-  import { fade } from "svelte/transition"
+  import { fade, fly } from "svelte/transition"
 </script>
 
 <div
-  in:fade={{ duration: 500 }}
-  out:fade={{ duration: 500 }}
+  in:fly={{ y: 1500, duration: 1000 }}
+  out:fade={{ duration: 300 }}
   id="rainbow-cards">
   <div id="card">
     <svg

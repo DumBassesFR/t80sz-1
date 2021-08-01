@@ -1,15 +1,15 @@
 <script lang="typescript">
   import "../../css/statuscode.pcss"
-  import { fade } from "svelte/transition"
-  import Header from "../pages/info/templates/header.svelte"
+  import { fade, fly } from "svelte/transition"
+  import Header from "../pages/general/templates/header.svelte"
   export let name: string
-  import BackHome from "../pages/debug/templates/back-home.svelte"
+  import BackHome from "../pages/general/templates/back-home.svelte"
 </script>
 
 <div id="unavailable">
   <div
     out:fade={{ duration: 200 }}
-    in:fade={{ duration: 1000 }}
+    in:fly={{ y: 1500, duration: 1000 }}
     id="unavailable-text">
     <Header
       text="It looks like {name} is not ready for launch!"
@@ -22,7 +22,7 @@
   </div>
   <div
     out:fade={{ duration: 200 }}
-    in:fade={{ duration: 1000 }}
+    in:fly={{ y: 1500, duration: 1000 }}
     id="unavailable-bobby">
     <svg
       xmlns="http://www.w4.org/2000/svg"
