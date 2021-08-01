@@ -1,6 +1,7 @@
 <script>
-	import Header from '../templates/header.svelte';
+	import Header from '../../general/templates/header.svelte';
 	import Member from '../templates/docs-team.svelte';
+  import { fly, fade } from 'svelte/transition';
 </script>
 
 <style>
@@ -13,17 +14,43 @@
 		width: fit-content;
 		width: -moz-fit-content;	
 	}
+  @media (max-width: 850px) {
+    .team-divider {
+      grid-template-columns: auto;
+    }
+  }
 </style>
 
 <Header text="past staff" gradient="yellow"/>
-
-<div class="team-divider">
+<div class="team-divider" in:fly={{y: 1200, duration: 1000}} out:fade={{duration: 500}}>
+  <Member
+    name="Skelly"
+    role="owner"
+    hired="09/21/2018"
+    desc="Skelly joined the mod team in 2018, working initially as a caterer before being promoted out of the program due to the failure of the program and favoritism by the mod team. In early 2019, D Vana gave up ownership and let the new owner be decided by a vote. Skelly won by one vote, and became the new owner of The 80's Zone. A look back on the vote however, shows that there was confusion in the voting system leading one vote going to Skelly instead of the second place winner meaning the true winner was-" />
+  <Member
+    name="IamJemboy"
+    role="owner"
+    hired="09/20/2017"
+    left="07/04/2017"
+    desc="Jem founded The Bear Zone as a way to harbor his community together and create a space where artists and mashup artists alike could share their creative work and have a 'chill' environment. Unfortunately, this ended up being so unlike his vision, he wanted the server deleted after only a month citing it's chaotic and unstable nature and not having enough time to take care of it. Fellow mashup artists quickly grew sour of The Bear Zone and distanced themselves from the community despite the fact their communities died before we did." />
+  <Member
+    name="doelirious"
+    role="admin"
+    hired="12/01/2017"
+    left="08/02/2019"
+    desc="A core figure in the lore of both The Bear Zone and The 80s Zone, Doe quickly rose to power thanks to the Discord bot they host, GLaDOS (later renamed to Officer Poyon.) Doe always managed to find themself in some part of the server's drama, and often playing a part in the creation of new drama. Doe would leave the server due to a disagreement in July of 2019."/>
+  <Member
+    name="D Vana"
+    role="admin"
+    hired="09/27/2017"
+    desc="D Vana joined the mod team as part of the first wave of mods. D Vana orchestrated most of the drama and events throughout the server, having been handed the server after Shira had to step back in early 2018. D Vana went on to found The 80's Zone and The Solar System before resigning as owner in 2019. Today, D Vana works on The 80's Zone projects alongside working in the r/Futurefunk community." />
 	<Member	
 		name="7Z"
 		role="moderator"
 		hired="11/17/2017"
 		left="7/6/2018"
-		desc="7Z was the last mod handpicked by Jem in The Bear Zone. 7Z moderated text chats primarily and often tweeted about random things that would show up in #mail-room (insert hyperlink)."
+		desc="7Z was the last mod handpicked by Jem in The Bear Zone. 7Z moderated text chats primarily and often tweeted about random things that would show up in #mail-room."
 	/>
 	<Member	
 		name="AquaAnt"
@@ -39,385 +66,167 @@
 		left="3/13/2019"
 		desc="Sushi was invited to the mod team in an effort to have enough mods for the launch of The 80's Zone. Sushi's career was dedicated to general moderation and managing art channels."
 	/>
+  <Member
+    name="CircledLine"
+    role="moderator"
+    hired="10/25/2017"
+    left="02/25/2018"
+    desc="As one of the early active members of the community, CircledLine was invited to the mod team. CircledLine spent his time focused on general and mediating mod team drama before leaving in February to focus on his personal life." />
+  <Member
+    name="Courier"
+    role="moderator"
+    hired="07/21/2018"
+    desc="Courier joined the mod team after a receiving an invitation from Doe. Courier is the current night time moderator and maintains the image and text channels."/>
+  <Member
+    name="apiarymary"
+    role="moderator"
+    hired="08/25/2018"
+    left="06/12/2019"
+    desc="Dairy Queen Mary joined the mod team in late August after being recommended by D Vana. Mary worked in the art channels primarily and resigned after growing distasteful of the community."/>
+  <Member
+    name="Doodee"
+    role="moderator"
+    hired="04/27/2018"
+    left="07/04/2018"
+    desc="After becoming popular in the community for utilizing Tilly, Doodee was invited to the mod team. Doodee ended up leaving several months later at the launch of The 80's Zone, wanting to focus on her own server, The Tilly Zone." />
+  <Member
+    name="Fluffacorn"
+    role="moderator"
+    hired="06/21/2018"    
+    desc="Fluffacorn joined at the end of The Bear Zone's lifespan but stuck with the mod team into The 80s Zone. Currently, Fluffacorn handles most of the technical side of the server such as bots, having more or less replaced Doe, and works on most of the larger projects in the server, such as anniversary events." />
+  <Member
+    name="FlyingSlowpoke"
+    role="moderator"
+    hired="04/27/2018"
+    left="08/31/2018"
+    desc="FlyingSlowpoke became a mod after proving their worth moderating the community. FlyingSlowpoke is most notable for the giveaway of their entire Humble Bundle Account." />
+  <Member
+    name="Pluto"
+    role="moderator"
+    hired="02/25/2018"
+    left="01/11/2019"
+    desc="Pluto joined the mod team as part of an announcement at the end of Double Bear. Pluto spent their time working on small events and in the voice chat community before resigning in 2019."/>
+  <Member
+    name="Giggles"
+    role="moderator"
+    hired="07/12/2019"
+    desc="Giggles qualified for mod by proving to Skelly and Fluffacorn that he had the knowledge and ability to moderate at a competent level. Despite previously being banned for the doxxing of administrator D Vana, he continues to mod today."/>
+  <Member
+    name="Grandpa Ced"
+    role="moderator"
+    hired="01/12/2018"
+    left="07/29/2018" 
+    desc="Ced joined the mod team after being promoted out of Loli Patroli, a group designed to moderate the undergoing lolicon problems in the porn channels. Ced faced backlash from members of the community and mod team throughout his career for his ways of moderation such as leaving people in the timeout channels for several hours with no notice, attempting to migrate the community to a satellite server, and bullying members and moderators in the community."/>
+  <Member
+    name="Hat Kid"
+    role="moderator"
+    hired="10/20/2017"
+    left="12/16/2017"
+    desc="Hat Kid was invited to the mod team after being recommended by D Vana and other members of the community. Hat Kid left the mod team 26 days later, citing personal issues." />
+  <Member
+    name="KurtTheKing"
+    role="moderator"
+    hired="02/25/2018"
+    left="06/24/2018"
+    desc="Kurt was selected to join the mod team after being viewed favorably by the mod team. Kurt spent his time being berated by other members of the staff team, receiving consistently petty insults until he left in June." />
+  <Member
+    name="Lewd"
+    role="moderator"
+    hired="01/11/2018"
+    left="03/07/2019"
+    desc="Lewd joined the team to help with the moderation of the porn channels. After multiple disputes with members of the community and other mods, Lewd resigned and focused more on his personal community." />
+  <Member
+    name="LivingTarget"
+    role="moderator"
+    hired="09/27/2017"
+    left="04/23/2019"
+    desc="LivingTarget was selected to join the mod team after submitting an application and getting an interview with Jem. LivingTarget spent his time working on side projects with Doe like Mr. Ping and acted as general support for the team before resigning in 2019." />
+  <Member
+    name="Mahado"
+    role="moderator"
+    hired="09/24/2017"
+    left="01/11/2017"
+    desc="Mahado joined the mod team wanting to help Jem get The Bear Zone off the ground under the belief the community would be small and manageable. (spoiler alert: it really wasn't.)" />
+  <Member
+    name="Marble"
+    role="moderator"
+    hired="11/24/2017"
+    left="02/13/2018"
+    desc="Marble spent most of his time moderating text chats and being alone in voice chat, citing that the white noise was calming to listen to. Marble received harsh criticisms from the community throughout his employment for actually moderating text chat." />
+  <Member
+    name="Meep"
+    role="moderator"
+    hired="04/27/2018"
+    left="01/11/2019"
+    desc="Hired as a late Bear Zone era mod, Meep was more in line with ensuring rules were followed and kept with that standard throughout the entirety of his career. In 2019, Meep left citing differences with the mod team." />
+  <Member
+    name="Minus"
+    role="moderator"
+    hired="08/31/2018"
+    left="01/11/2019"
+    desc="Minus was brought on the mod team as recommended by Doe at the time despite certain issues that ended up being ignored. In early 2019, Minus stepped down to focus more on his personal life." />
+  <Member
+    name="Rab"
+    role="moderator"
+    hired="10/25/2017"
+    left="10/27/2017"
+    desc="Rab was hired alongside two other mods. Unfortunately, Rab ended up going inactive two days later to focus on family issues at the time." />
+  <Member
+    name="Rini"
+    role="moderator"
+    hired="01/21/2018"
+    desc="After being recognized for his work in the first turf war, Rini worked with the mod team as a lead designer for event use. Rini's largest work wouldn't come until the debut of THE 80's ZONE where he was asked to design the main assets for the community. And thus, Bobby the Disco Ball was born. From there, Rini continued to work with D Vana and the mod team on multiple projects (some unsuccesful) including but not limited to Double Bear, Solar89, and the80s.zone. (oh hey, you're here!)" />
+  <Member
+    name="Rigeos"
+    role="moderator"
+    hired="01/12/2019"
+    left="01/25/2021"
+    desc="Rigeios was employed in 2019 as a result of moderator applications and spent most of his time working through internal issues and generally moderating the server. Before his leave in 2021, Rigeios also managed art channel showcases for the community." />
+  <Member
+    name="Shieldzee"
+    role="moderator"
+    hired="09/27/2017"
+    desc="Shieldzee joined the mod team in 2017 as one of the first mods employed by Jem. Shield often spent time away from the server and it's drama due to schoolwork leading to his termination in early 2018. However, in late 2018, Shield was reemployed on the promise that he would spend time with the community moderating it once again." />
+  <Member
+    name="Simsnet"
+    role="moderator"
+    hired="09/24/2017"
+    left="11/24/2017"
+    desc="Simsnet was one of the first mods employed by Jem, joining the staff team 6 days before launch. Simsnet was active during the first few weeks of the server's launch before stepping back and coming in less often due to the then strenuous nature of moderating a community that revolved around chaos." />
+  <Member
+    name="Siri"
+    role="moderator"
+    hired="10/24/2017"
+    left="01/21/2018"
+    desc="Siri was the first additional mod employed by The Bear Zone, as a personal recommendation by D Vana. Siri enforced rules more notably than other mods leading to backlash from the community, citing him as 'too strict'. One consistent rumor during the early days of The Bear Zone involved Siri and supposed pictures of him dressed up as a femboy. Users in the voice chat community often commented on this topic and worked to find these pictures before user 'Will! I AM GOD' claimed to have found them and uploaded them to tumblr page iwonderwhatsfordinner.tumblr.com before Tumblr's policy change on NSFW content." />
+  <Member
+    name="StarMaynn"
+    role="moderator"
+    hired="10/25/2017"
+    left="10/20/2018"
+    desc="StarMaynn was employed prior to the second turf war, and worked with the team often as a mediator to resolve internal drama. Star also worked on several media projects and demos for The Bear Zone and early 80's Zone before leaving the server in October 2018." />
+  <Member
+    name="TheIceFox"
+    role="moderator"
+    hired="02/25/2018"
+    left="09/30/2020"
+    desc="Ice joined the mod team during a special announcement at the end of Double Bear, being brought in primarily for night time moderation." />
+  <Member
+    name="RaccoonVillain"
+    role="moderator"
+    hired="09/27/17"
+    left="12/16/2017"
+    desc="RaccoonVillain, known as The Notorious W.A.A. at the time, was one of the first mods employed by Jem. W.A.A. spent his time interacting with the community in voice chat primarily, often disregarding rules and pinging everyone with images throughout his career before being terminated in December 2017." />
+  <Member
+    name="Willbot"
+    role="moderator"
+    hired="04/21/2018"
+    left="07/30/2021"
+    desc="Will dealt with the issues that carried over from the late era of The Bear Zone. They worked with D Vana and Doe on toxicity issues in the community alongside attempting to calm the growing divide. In late 2018, Will stepped down as administrator to become moderator again until July 2021 when he fully left the team in order to focus onto his personal life." />
+  <Member
+    name="Shira"
+    role="moderator"
+    hired="09/20/2017"
+    left="03/28/2019"
+    desc="Owner of Rice Hub and trusted ally of Jem, Shira spent the early days of The Bear Zone working through the onslaught of issues that persisted through the community. Shira briefly led the mod team in late 2017 during 'The Shira Era' before having to step down as leader only a few months later due to personal issues at the time." />
 </div>
-
-### ADMIN:
-
-D Vana - Founder of The 80s Zone
-
-Siri - Previous mod
-
-Willbot - Moderator (previously Admin)
-
-Shira - Former admin
-
-Jemboy - Founder of The Bear Zone
-
-Doe - Puppeteer of Jem (Former Admin)
-
-
-### MOD:
-
-
-### 7Z ~
-
-Date of Hire: 11/17/17
-
-Date of Leave: 7/6/18
-
-About: 7Z was the last mod handpicked by Jem in The Bear Zone. 7Z moderated text chats primarily and often tweeted about random things that would show up in #mail-room (insert hyperlink).
-
-
-### AquaAnt ~
-
-Date of Hire: 11/19/17
-
-Date of Leave: 1/07/18
-
-About: AquaAnt joined the mod team to focus on moderation and stability for the server. Unfortunately, this was met with severe pushback and Aqua resigned in January.
-
-
-### Sushi ~
-
-Date of Join: 6/04/18
-
-Date of Leave: 3/13/19
-
-About: Sushi was invited to the mod team in an effort to have enough mods for the launch of The 80's Zone. Sushi's career was dedicated to general moderation and managing art channels.
-
-
-### CircledLine
-
-Date of Hire: 10/25/17
-
-Date of Leave: 2/25/18
-
-About: As one of the early active members of the community, CircledLine was invited to the mod team. CircledLine spent his time focused on general and mediating mod team drama before leaving in February to focus on his personal life.
-
-
-### Courier ~
-
-Date of Hire: 7/21/18
-
-Date of Leave: N/A
-
-About: Courier joined the mod team after a receiving an invitation from Doe. Courier is the current night time moderator and maintains the image and text channels.
-
-
-### Dairy Queen Mary ~
-
-Date of Hire: 8/25/18
-
-Date of Leave: 6/12/19
-
-About: Dairy Queen Mary joined the mod team in late August after being recommended by D Vana. Mary worked in the art channels primarily and resigned after growing distasteful of the community.
-
-
-### Doe ~
-
-Date of Hire: 12/1/17
-
-Date of Leave: 08/02/19
-
-About: A core figure in the lore of both The Bear Zone and The 80s Zone, Doe quickly rose to power thanks to the Discord bot they host, GLaDOS (later renamed to Officer Poyon.) Doe always managed to find themself in some part of the server's drama, and often playing a part in the creation of new drama. Doe would leave the server due to a disagreement in July of 2019.
-
-### Doodee
-
-Date of Hire: 4/27/18
-
-Date of Leave: 7/4/18
-
-About: After becoming popular in the community for utilizing Tilly (insert hyperlink), Doodee was invited to the mod team. Doodee ended up leaving several months later at the launch of The 80's Zone, wanting to focus on her own server, The Tilly Zone (insert hyperlink).
-
-
-### D Vana ~
-
-Date of Hire: 9/27/17
-
-Date of Leave: N/A
-
-About: D Vana joined the mod team as part of the first wave of mods. D Vana orchestrated most of the drama and events throughout the server, having been handed the server after Shira had to step back in early 2018. D Vana went on to found The 80's Zone and The Solar System (insert hyperlink) before resigning as owner in 2019. Today, D Vana works on The 80's Zone projects alongside working in the r/Futurefunk community.
-
-
-### Fluffacorn ~
-
-Date of Hire: 6/21/18
-
-Date of Leave: N/A
-
-About: Fluffacorn joined at the end of The Bear Zone's lifespan but stuck with the mod team into The 80s Zone. Currently, Fluffacorn handles most of the technical side of the server such as bots, having more or less replaced Doe, and works on most of the larger projects in the server, such as anniversary events.
-
-
-### FlyingSlowpoke ~
-
-Date of Hire: 4/27/18
-
-Date of Leave: 8/31/18
-
-About: FlyingSlowpoke became a mod after proving their worth moderating the community. FlyingSlowpoke is most notable for the giveaway of their entire Humble Bundle Account.
-
-
-### Pluto ~
-
-Date of Hire: 2/25/18
-
-Date of Leave: 1/11/19
-
-About: Pluto joined the mod team as part of an announcement at the end of Double Bear (insert hyperlink here). Pluto spent his time working on small events and in the voice chat community before resigning in 2019.
-
-
-### Giggles ~
-
-Date of Hire: 7/12/19
-
-Date of Leave: N/A
-
-About: Giggles qualified for mod by proving to Skelly and Fluffacorn that he had the knowledge and ability to moderate at a competent level. Despite previously being banned for the doxxing of administrator D Vana, he continues to mod today.
-
-
-### Ced ~
-
-Date of Hire: 1/21/18
-
-Date of Leave: 7/29/18
-
-About: Ced joined the mod team after being promoted out of Loli Patroli, a group designed to moderate the undergoing lolicon problems in the porn channels. Ced faced backlash from members of the community and mod team throughout his career for his ways of moderation such as leaving people in the timeout channels for several hours with no notice, attempting to migrate the community to a satellite server, and bullying members and moderators in the community.
-
-
-### Hat Kid ~
-
-Date of Hire: 11/20/17
-
-Date of Leave: 12/16/17
-
-About: Hat Kid was invited to the mod team after being recommended by D Vana and other members of the community. Hat Kid left the mod team 26 days later, citing personal issues.
-
-
-### IamJemboy ~
-
-Date of Hire: 9/20/17
-
-Date of Leave: 7/4/18
-
-About: Jem founded The Bear Zone as a way to harbor his community together and create a space where artists and mashup artists alike could share their creative work and have a "chill" environment. Unfortunately, this ended up being so unlike his vision, he wanted the server deleted after only a month citing it's chaotic and unstable nature and not having enough time to take care of it. Fellow mashup artists quickly grew sour of The Bear Zone and distanced themselves from the community despite the fact their communities died before we did.
-
-### KurttheKing ~
-
-Date of Hire: 2/25/18
-
-Date of Leave: 6/24/18
-
-About: Kurt was selected to join the mod team after being viewed favorably by the mod team. Kurt spent his time being berated by other members of the staff team, receiving consistently petty insults until he left in June.
-
-
-### Lewd ~
-
-Date of Hire: 1/11/18
-
-Date of Leave: 3/7/19
-
-About: Lewd joined the team to help with the moderation of the porn channels. After multiple disputes with members of the community and other mods, Lewd resigned and focused more on his personal community.
-
-
-### LivingTarget ~
-
-Date of Hire: 9/27/17
-
-Date of Leave: 4/23/19
-
-About: LivingTarget was selected to join the mod team after submitting an application and getting an interview with Jem. LivingTarget spent his time working on side projects with Doe like Mr. Ping and acted as general support for the team.
-his time working on small events and in the voice chat community before resigning in 2019.
-
-
-### Mahado ~
-
-Date of Hire: 9/24/17
-
-Date of Leave: 10/25/17
-
-About: Mahado joined the mod team wanting to help Jem get The Bear Zone off the ground under the belief the community would be small and manageable. It was not.
-
-
-### Marble ~
-
-Date of Hire: 11/24/17
-
-Date of Leave: 2/13/18
-
-About: Marble spent most of his time moderating text chats and being alone in voice chat, citing that the white noise was calming to listen to. Marble received harsh criticisms from the community throughout his employment for actually moderating text chat.
-
-
-### Meep ~
-
-Date of Hire: 4/27/18
-
-Date of Leave: 1/11/19
-
-About: Hired as a late Bear Zone era mod, Meep was more in line with ensuring rules were followed and kept with that standard throughout the entirety of his career. In 2019, Meep left citing differences with the mod team.
-
-
-
-### Minus ~
-
-Date of Hire: 8/31/18
-
-Date of Leave: 1/11/19
-
-About: Minus was brought on the mod team as recommended by Doe at the time despite certain issues that ended up being ignored. In early 2019, Minus stepped down to focus more on his personal life.
-
-
-### Rab
-
-Date of Hire: 10/25/17
-
-Date of Leave: 10/27/17
-
-About: Rab was hired alongside two other mods. Unfortunately, Rab ended up going inactive two days later to focus on family issues at the time.
-
-
-### Rini ~
-
-Date of Hire: 1/21/18
-
-Date of Leave: N/A
-
-About: After being recognized for his work in the first turf war (insert hyperlink), Rini worked with the mod team to develop media projects and assets for moderator use. Rini's most important work however, wouldn't come until the launch of The 80's Zone where he was asked to design a logo and materials for the community. And thus, Bobby the Disco Ball was born. From there, Rini continued to work with D Vana and the mod team on multiple projects including but not limited to Modcast Podcast: After Hours, Solar89, and the80s.zone. (You're here right now!)
-
-
-### Rigeios ~
-
-Date of Hire: 1/12/19
-
-Date of Leave: 1/25/21
-
-About: Rigeios was employed in 2019 as a result of moderator applications and spent most of his time working through internal issues and generally moderating the server. Before his leave in 2021, Rigeios also managed art channel showcases for the community.
-
-
-### Shieldzee ~
-
-Date of Hire: 9/27/17
-
-Date of Leave: N/A
-
-About: Shieldzee joined the mod team in 2017 as one of the first mods employed by Jem. Shield often spent time away from the server and it's drama due to schoolwork leading to his termination in early 2018. However, in late 2018, Shield was reemployed on the promise that he would spend time with the community moderating it once again.
-
-
-### Skelly
-
-Date of Join: 9/21/18
-
-Date of Leave: N/A
-
-About: Skelly joined the mod team in 2018, working initially as a caterer (insert hyperlink) before being promoted out of the program due to the failure of the program and favoritism by the mod team. In early 2019, D Vana gave up ownership and let the new owner be decided by a vote. Skelly won by one vote, and became the new owner of The 80's Zone. A look back on the vote however, shows that there was confusion in the voting system leading one vote going to Skelly instead of the second place winner meaning the true winner was-
-
-
-### Simsnet ~
-
-Date of Hire: 9/24/17
-
-Date of Leave: 11/24/17
-
-About: Simsnet was one of the first mods employed by Jem, joining the staff team 6 days before launch. Simsnet was active during the first few weeks of the server's launch before stepping back and coming in less often due to the then strenuous nature of moderating a community that revolved around chaos.
-
-
-### Siri ~
-
-Date of Hire: 10/24/17
-
-Date of Leave: 1/21/18
-
-About: Siri was the first additional mod employed by The Bear Zone, as a personal recommendation by D Vana. Siri enforced rules more notably than other mods leading to backlash from the community, citing him as "too strict". One consistent rumor during the early days of The Bear Zone involved Siri and supposed pictures of him dressed up like a "trap". Users in the voice chat community often commented on this topic and worked to find these pictures before user "Will! I AM GOD" claimed to have found them and uploaded them to tumblr page iwonderwhatsfordinner.tumblr.com before Tumblr's policy change on NSFW content.
-
-
-### StarMaynn ~
-
-Date of Hire: 10/25/17
-
-Date of Leave: 10/20/18
-
-About: StarMaynn was employed prior to the second turf war (insert hyperlink here), and worked with the team often as a mediator to resolve internal drama. Star also worked on several media projects and demos for The Bear Zone and early 80's Zone before leaving the server in October 2018.
-
-
-### TheIceFox ~
-
-Date of Hire: 2/25/18
-
-Date of Leave: 9/30/20
-
-About: Ice joined the mod team during a special announcement at the end of Double Bear (insert hyperlink here), being brought in primarily for night time moderation.
-
-
-### RaccoonVillain ~
-
-Date of Hire: 9/27/17
-
-Date of Leave: 12/16/17
-
-About: RaccoonVillain, known as The Notorious W.A.A. at the time, was one of the first mods employed by Jem. W.A.A. spent his time interacting with the community in voice chat primarily, often disregarding rules and pinging everyone with images throughout his career before being terminated in December 2017.
-
-
-### Willbot ~
-
-Date of Hire: 4/21/18
-
-Date of Leave: N/A
-
-About: Will is currently employed with The 80's Zone, having dealt with the issues that carried over from the late era of The Bear Zone. Will worked with D Vana and Doe on toxicity issues in the community alongside attempting to calm the growing divide. In late 2018, Will stepped down as administrator to become moderator again and continues to work on events and community feedback today.
-
-
-### Shira ~
-
-Date of Hire: 9/20/17
-
-Date of Leave: 3/28/19
-
-About: Owner of Rice Hub and trusted ally of Jem, Shira spent the early days of The Bear Zone working through the onslaught of issues that persisted through the community. Shira briefly led the mod team in late 2017 during "The Shira Era" before having to step down as leader only a few months later due to personal issues at the time.
-
-
-STAFF:
-### Doodee ~
-
-### Dairy Queen Mary ~
-
-### Darkindapark
-
-Date of Hire: 1/03/18
-
-Date of Leave: 4/20/18
-
-
-### KurttheKing ~
-
-### Lewd ~
-
-### Nuggies ~
-
-
-
-
-### Rini ~
-
-### Skelly ~
-
-### Sushi ~
-
-### Vexdevil
-
-Date of Hire: 9/27/17
-
-Date of Leave: 7/4/18
-
-
-Willbot ~
-
-### AMBASSADOR:
-
-### Chords
-
-### Flade
-
-### Hideika
-
-### Juturna
-
-### Tori
