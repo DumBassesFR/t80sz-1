@@ -1,9 +1,9 @@
 <style lang="postcss">
   .team-member {
-    @apply gap-2 p-2 bg-purple-dark flex flex-col w-auto;
-    /* please end my pain below for fucks sake */
+    @apply gap-2 p-2 bg-yellow-light flex flex-col w-auto;
     img {
-      @apply w-24 h-24 mr-2 bg-purple-light;
+      @apply w-24 h-24 2xl:w-32 2xl:h-32 mr-2;
+      background-color: rgb(87, 62, 21);
     }
   }
   .member-name,
@@ -22,14 +22,14 @@
   .joined-at,
   .left-at,
   .team-desc {
-    @apply text-sm !important;
+    @apply text-sm 2xl:text-xl !important;
   }
   .member-name {
     @apply mt-0;
   }
   .member-name,
   .team-role {
-    @apply bdf-drop-shadow-sm;
+    @apply bdf-drop-shadow-sm shadow;
   }
   .team-member img,
   .team-role,
@@ -38,7 +38,9 @@
   }
   .team-desc {
     @apply font-normal;
-    max-width: 20em;
+    min-width: 5em;
+    min-height: 5em;
+    max-width: 28em;
   }
   .ambassador-member {
     background: linear-gradient(
@@ -76,7 +78,8 @@
     );
   }
   .team-role {
-    @apply inline p-1 px-2 text-xs capitalize leading-8 !important;
+    @apply inline p-1 2xl:py-0 px-2 text-xs 2xl:text-2xl capitalize !important;
+    line-height: 3rem !important;
   }
 </style>
 
@@ -104,17 +107,17 @@
     "Dec",
   ]
   const hireSplit = hired.split("/")
-  const hireFunc = new Date(hireSplit[2], hireSplit[0], hireSplit[1])
+  const hireFunc = new Date(hireSplit[2], hireSplit[0] - 1, hireSplit[1])
   const hireDate = `${
-    months[hireFunc.getMonth() - 1]
+      months[hireFunc.getMonth()]
   }. ${hireFunc.getDate()} ${hireFunc.getFullYear()}`
   const leaveDate = leftAt()
   function leftAt() {
     if (left) {
       const leaveSplit = left.split("/")
-      const leaveFunc = new Date(leaveSplit[2], leaveSplit[0], leaveSplit[1])
+      const leaveFunc = new Date(leaveSplit[2], leaveSplit[0] - 1, leaveSplit[1])
       const leaveDt = `${
-        months[leaveFunc.getMonth() - 1]
+        months[leaveFunc.getMonth()]
       }. ${leaveFunc.getDate()} ${leaveFunc.getFullYear()}`
       return leaveDt
     }
@@ -129,12 +132,12 @@
       <p class="team-role {role}-member">{role}</p>
       <div class="join-leave">
         <h4 class="joined-at">
-          <span style="color:#ffe500;">Day of Hire:</span>
+          <span style="color:#FFEA33;">Day of Hire:</span>
           {hireDate}
         </h4>
         {#if leaveDate}
           <h4 class="left-at">
-            <span style="color:#ffe500;">Day of Leave:</span>
+            <span style="color:#FFEA33;">Day of Leave:</span>
             {leaveDate}
           </h4>
         {/if}
