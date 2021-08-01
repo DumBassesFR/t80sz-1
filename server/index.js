@@ -7,7 +7,7 @@ const compress = require("compression")
 const ws = express()
 const domain = {
   ip: "127.0.0.1",
-  port: 8003,
+  port: 80,
 }
 ws.use(helmet())
 ws.use(
@@ -23,7 +23,7 @@ ws.use("/404", express.static("public/status/404"))
 ws.use("/src", express.static("public/src"))
 ws.use("/bobby", express.static("public/bobby"))
 const placeholders = [
-  {name: "/server", placeholder: "https://discord.gg/t80z"}, 
+  {name: "/server", placeholder: "https://discord.gg/the80z"}, 
   {name: "/archive", placeholder: "https://duckduckgo.com" }, 
   {name: "/source", placeholder: "https://github.com/ryeenii/t80sz" } ]
 for (const i in placeholders) {
@@ -31,9 +31,6 @@ for (const i in placeholders) {
     res.redirect(307, placeholders[i].placeholder)
   })
 }
-ws.get("*", function (req, res) {
-  res.redirect("/404")
-})
 ws.listen(domain.port, domain.ip, () => {
   console.log(`sup, server is up at ${domain.ip}:${domain.port}`)
 })
