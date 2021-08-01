@@ -1,5 +1,5 @@
 #unavailable {
-  @apply flex flex-col lg:flex-row justify-center lg:justify-end items-center;
+  @apply flex flex-col lg:flex-row overflow-hidden justify-center lg:justify-end items-center;
   background: linear-gradient(
     90deg,
     rgba(40, 20, 40, 0) 0%,
@@ -9,11 +9,11 @@
   animation-fill-mode: forwards;
   height: 100vh;
   #unavailable-text {
-    @apply justify-center left-0 bottom-24 lg:bottom-0 top-48 lg:top-0 lg:left-40 lg:max-w-md 2xl:max-w-xl items-center lg:items-end flex flex-col text-white text-center lg:text-right relative font-sans;
+    @apply justify-center left-0 bottom-24 lg:bottom-0 top-60 sm:top-52 lg:top-0 lg:left-40 lg:max-w-md 2xl:max-w-xl items-center lg:items-end flex flex-col text-white text-center lg:text-right relative font-sans;
     font-family: "Recoleta Alt";
     .na-header,
     .na-desc {
-      @apply mt-1 mb-1 text-sm md:text-base lg:text-lg 2xl:text-2xl;
+      @apply mt-1 mb-1 text-sm sm:text-base lg:text-lg 2xl:text-2xl;
       filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
     }
     #grad-header {
@@ -22,9 +22,8 @@
   }
 }
 #unavailable-bobby {
-  @apply flex items-center relative top-10 lg:top-0 lg:relative justify-end;
+  @apply flex items-center transform scale-50 lg:scale-60 relative top-10 sm:top-5 lg:top-0 lg:relative justify-end;
   animation: transition-fade 500ms ease-in-out;
-  transform: scale(0.6);
   .bobby-circle-na,
   .bobby-ring-na {
     animation: woosh-na 1.5s cubic-bezier(0.33, 1, 0.68, 1);
