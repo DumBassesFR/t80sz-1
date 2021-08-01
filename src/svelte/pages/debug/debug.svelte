@@ -1,11 +1,11 @@
 <script type="typescript">
-  import "../../../debug/debug.pcss"
+  import "../../../pages/debug/debug.pcss"
   import Base from "./templates/base"
   // add your file imports here V
   import Bobby from "../../bobby"
   import Menu from "../../menu"
   import Docs from "../info/templates/docs"
-  import BackHome from "./templates/back-home"
+  import BackHome from "../general/templates/back-home"
   import Info from "../info/info"
   // add your file debug info here V
   let modules = [
