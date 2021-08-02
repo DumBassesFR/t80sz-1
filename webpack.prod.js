@@ -10,6 +10,7 @@ module.exports = merge(defcfg, {
   entry: {
     main: "./src/pages/index.ts",
     bobby: "./src/pages/standalone-bobby.ts",
+    404: "./src/pages/status-codes/404.ts"
   },
   output: {
     filename: "src/t80sz.[name].js",
@@ -24,7 +25,7 @@ module.exports = merge(defcfg, {
         description: "EST. 2017-10-31",
         "theme-color": "#150411",
       },
-      excludeChunks: ["bobby"],
+      excludeChunks: ["bobby", "404"],
       hash: true,
     }),
     new htmlWebpack({
@@ -35,7 +36,7 @@ module.exports = merge(defcfg, {
         description: "EST. 2017-10-31",
         "theme-color": "#150411",
       },
-      excludeChunks: ["main"],
+      excludeChunks: ["main", "404"],
       hash: true,
     }),
     new htmlWebpack({

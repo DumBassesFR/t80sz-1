@@ -1,9 +1,11 @@
 <script lang="typescript">
   import "../../css/statuscode.pcss"
+  import "../../css/fonts.pcss"
+  import "../../css/bobby.pcss"
   import { fade } from "svelte/transition"
-  import Header from "../pages/info/templates/header.svelte"
+  import Header from "../pages/general/templates/header.svelte"
   export let name: string
-  import BackHome from "../pages/debug/templates/back-home.svelte"
+  import BackHome from "../pages/general/templates/back-home.svelte"
 import A3 from "./403.svelte"
 </script>
 
@@ -31,7 +33,7 @@ import A3 from "./403.svelte"
       height="700"
       fill="none">
       <defs />
-      <g class="core-circle" filter="url(#filter0_d)">
+      <g class="core-circle">
         <circle cx="356" cy="342" r="260" fill="#281428" />
         <circle
           cx="356"
@@ -42,7 +44,7 @@ import A3 from "./403.svelte"
           stroke="url(#paint0_angular)"
           stroke-width="10" />
       </g>
-      <g filter="url(#filter1_d)">
+      <g>
         <g class="shocked-bobby" clip-path="url(#clip0)">
           <path
             fill="#FDFAFF"
@@ -125,42 +127,6 @@ import A3 from "./403.svelte"
           <stop offset=".87" stop-color="#F28B27" />
           <stop offset="1" stop-color="#FFE500" />
         </linearGradient>
-        <filter
-          id="filter0_d"
-          width="540"
-          height="540"
-          x="86"
-          y="75"
-          color-interpolation-filters="sRGB"
-          filterUnits="userSpaceOnUse">
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-          <feOffset dy="3" />
-          <feGaussianBlur stdDeviation="5" />
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow" />
-          <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-        </filter>
-        <filter
-          id="filter1_d"
-          width="601.13"
-          height="596"
-          x="70"
-          y="84"
-          color-interpolation-filters="sRGB"
-          filterUnits="userSpaceOnUse">
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-          <feOffset dy="3" />
-          <feGaussianBlur stdDeviation="5" />
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow" />
-          <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-        </filter>
         <radialGradient
           id="paint0_angular"
           cx="0"

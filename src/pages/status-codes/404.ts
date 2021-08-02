@@ -1,5 +1,5 @@
 import "svelte"
-import notFound from "../svelte/status-code/404.svelte"
+import notFound from "../../svelte/status-code/404.svelte"
 async function loadElements() {
   new notFound({
     target: document.body,

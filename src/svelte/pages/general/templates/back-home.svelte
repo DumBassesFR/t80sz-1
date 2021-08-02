@@ -38,7 +38,7 @@
   const gradProm = gradSelection(gradient)
 </script>
 
-<a href="{redirectTo()}">
+<a style="text-decoration: none;" href="{redirectTo()}">
   {#await gradProm}
     <div class="back-button" style="background: #eee;">
       <p class="back-icon">home</p>
