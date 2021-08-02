@@ -6,7 +6,6 @@
   import Header from "../pages/general/templates/header.svelte"
   export let name: string
   import BackHome from "../pages/general/templates/back-home.svelte"
-import A3 from "./403.svelte"
 </script>
 
 <div id="unavailable">
