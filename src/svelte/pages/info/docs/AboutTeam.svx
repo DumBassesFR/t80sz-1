@@ -32,7 +32,7 @@
     name="IamJemboy"
     role="owner"
     hired="09/20/2017"
-    left="07/04/2017"
+    left="07/04/2018"
     desc="Jem founded The Bear Zone as a way to harbor his community together and create a space where artists and mashup artists alike could share their creative work and have a 'chill' environment. Unfortunately, this ended up being so unlike his vision, he wanted the server deleted after only a month citing it's chaotic and unstable nature and not having enough time to take care of it. Fellow mashup artists quickly grew sour of The Bear Zone and distanced themselves from the community despite the fact their communities died before we did." />
   <Member
     name="doelirious"
@@ -78,11 +78,11 @@
     hired="07/21/2018"
     desc="Courier joined the mod team after a receiving an invitation from Doe. Courier is the current night time moderator and maintains the image and text channels."/>
   <Member
-    name="apiarymary"
+    name="Mary"
     role="moderator"
     hired="08/25/2018"
     left="06/12/2019"
-    desc="Dairy Queen Mary joined the mod team in late August after being recommended by D Vana. Mary worked in the art channels primarily and resigned after growing distasteful of the community."/>
+    desc="Mary joined the mod team in late August after being recommended by D Vana. Mary worked in the art channels primarily and resigned after growing distasteful of the community."/>
   <Member
     name="Doodee"
     role="moderator"

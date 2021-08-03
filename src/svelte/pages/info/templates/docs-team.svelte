@@ -118,7 +118,7 @@
       const leaveFunc = new Date(leaveSplit[2], leaveSplit[0] - 1, leaveSplit[1])
       const leaveDt = `${
         months[leaveFunc.getMonth()]
-      }. ${leaveFunc.getDate()} ${leaveFunc.getFullYear()}`
+      }. ${leaveFunc.getDate()}, ${leaveFunc.getFullYear()}`
       return leaveDt
     }
   }
