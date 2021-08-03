@@ -177,7 +177,7 @@
     hired="01/21/2018"
     desc="After being recognized for his work in the first turf war, Rini worked with the mod team as a lead designer for event use. Rini's largest work wouldn't come until the debut of THE 80's ZONE where he was asked to design the main assets for the community. And thus, Bobby the Disco Ball was born. From there, Rini continued to work with D Vana and the mod team on multiple projects (some unsuccesful) including but not limited to Double Bear, Solar89, and the80s.zone. (oh hey, you're here!)" />
   <Member
-    name="Rigeos"
+    name="Rigeios"
     role="moderator"
     hired="01/12/2019"
     left="01/25/2021"
@@ -222,7 +222,7 @@
     role="moderator"
     hired="04/21/2018"
     left="07/30/2021"
-    desc="Will dealt with the issues that carried over from the late era of The Bear Zone. They worked with D Vana and Doe on toxicity issues in the community alongside attempting to calm the growing divide. In late 2018, Will stepped down as administrator to become moderator again until July 2021 when he fully left the team in order to focus onto his personal life." />
+    desc="Will dealt with the issues that carried over from the late era of The Bear Zone. They worked with D Vana and Doe on toxicity issues in the community alongside attempting to calm the growing divide. In late 2018, Will stepped down as administrator to become moderator again until July 2021 when he fully left the team in order to focus on his personal life." />
   <Member
     name="Shira"
     role="moderator"
