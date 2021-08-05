@@ -92,7 +92,6 @@
   export let hired
   export let left
   export let desc
-  const pfp = import(`../../../../../src/assets/team/${name}.png`);
   let months = [
     "Jan",
     "Feb",
@@ -127,7 +126,7 @@
 
 <div class="team-member">
   <div style="display: flex; flex-direction: row;">
-    <img src="{pfp}" alt={name} />
+    <img src="../../../../../src/assets/team/{name}.png" alt={name} />
     <div id="info">
       <h3 class="member-name">{name}</h3>
       <p class="team-role {role}-member">{role}</p>
