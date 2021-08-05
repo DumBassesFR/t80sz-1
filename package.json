@@ -19,6 +19,7 @@
   },
   "homepage": "https://the80s.zone",
   "dependencies": {
+    "basic-auth": "^2.0.1",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
@@ -38,6 +39,9 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
+    "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin": "^8.0.0",
+    "imagemin-optipng": "^8.0.0",
     "mdsvex": "^0.9.7",
     "mini-css-extract-plugin": "^1.6.0",
     "npm-run-all": "^4.1.5",
