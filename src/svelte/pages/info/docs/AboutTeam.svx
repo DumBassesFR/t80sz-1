@@ -27,7 +27,7 @@
     name="Skelly"
     role="owner"
     hired="09/21/2018"
-    desc="Skelly joined the mod team in 2018, working initially as a caterer before being promoted out of the program due to the failure of the program and favoritism by the mod team. In early 2019, D Vana gave up ownership and let the new owner be decided by a vote. Skelly won by one vote, and became the new owner of The 80's Zone. A look back on the vote however, shows that there was confusion in the voting system leading one vote going to Skelly instead of the second place winner meaning the true winner was-" />
+    desc="Skelly joined the mod team in 2018, working initially as a caterer before being promoted out of the program due to the failure of the program and favoritism by the mod team. In early 2019, D Vana gave up ownership and let the new owner be decided by a vote. Skelly won by one vote, and became the new owner of The 80s Zone. A look back on the vote however, shows that there was confusion in the voting system leading one vote going to Skelly instead of the second place winner meaning the true winner was-" />
   <Member
     name="IamJemboy"
     role="owner"
@@ -44,7 +44,7 @@
     name="D Vana"
     role="admin"
     hired="09/27/2017"
-    desc="D Vana joined the mod team as part of the first wave of mods. D Vana orchestrated most of the drama and events throughout the server, having been handed the server after Shira had to step back in early 2018. D Vana went on to found The 80's Zone and The Solar System before resigning as owner in 2019. Today, D Vana works on The 80's Zone projects alongside working in the r/Futurefunk community." />
+    desc="D Vana joined the mod team as part of the first wave of mods. D Vana orchestrated most of the drama and events throughout the server, having been handed the server after Shira had to step back in early 2018. D Vana went on to found The 80s Zone and The Solar System before resigning as owner in 2019. Today, D Vana works on The 80s Zone projects alongside working in the r/Futurefunk community." />
 	<Member	
 		name="7Z"
 		role="moderator"
@@ -64,7 +64,7 @@
 		role="moderator"
 		hired="6/4/2018"
 		left="3/13/2019"
-		desc="Sushi was invited to the mod team in an effort to have enough mods for the launch of The 80's Zone. Sushi's career was dedicated to general moderation and managing art channels."
+		desc="Sushi was invited to the mod team in an effort to have enough mods for the launch of The 80s Zone. Sushi's career was dedicated to general moderation and managing art channels."
 	/>
   <Member
     name="CircledLine"
@@ -88,7 +88,7 @@
     role="moderator"
     hired="04/27/2018"
     left="07/04/2018"
-    desc="After becoming popular in the community for utilizing Tilly, Doodee was invited to the mod team. Doodee ended up leaving several months later at the launch of The 80's Zone, wanting to focus on her own server, The Tilly Zone." />
+    desc="After becoming popular in the community for utilizing Tilly, Doodee was invited to the mod team. Doodee ended up leaving several months later at the launch of The 80s Zone, wanting to focus on her own server, The Tilly Zone." />
   <Member
     name="Fluffacorn"
     role="moderator"
@@ -175,7 +175,7 @@
     name="Rini"
     role="moderator"
     hired="01/21/2018"
-    desc="After being recognized for his work in the first turf war, Rini worked with the mod team as a lead designer for event use. Rini's largest work wouldn't come until the debut of THE 80's ZONE where he was asked to design the main assets for the community. And thus, Bobby the Disco Ball was born. From there, Rini continued to work with D Vana and the mod team on multiple projects (some unsuccesful) including but not limited to Double Bear, Solar89, and the80s.zone. (oh hey, you're here!)" />
+    desc="After being recognized for his work in the first turf war, Rini worked with the mod team as a lead designer for event use. Rini's largest work wouldn't come until the debut of The 80s Zone where he was asked to design the main assets for the community. And thus, Bobby the Disco Ball was born. From there, Rini continued to work with D Vana and the mod team on multiple projects (some unsuccesful) including but not limited to Double Bear, Solar89, and the80s.zone. (oh hey, you're here!)" />
   <Member
     name="Rigeios"
     role="moderator"
