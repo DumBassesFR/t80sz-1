@@ -1,7 +1,6 @@
 const cssExtract = require("mini-css-extract-plugin")
 const cssMinimize = require("css-minimizer-webpack-plugin")
 const htmlWebpack = require("html-webpack-plugin")
-const imageMin = require("image-minimizer-webpack-plugin")
 const compress = require("compression-webpack-plugin")
 const path = require("path")
 const defcfg = require("./webpack.config")
@@ -55,13 +54,6 @@ module.exports = merge(defcfg, {
       filename: "src/[name].css",
     }),
     new compress({ exclude: /node_modules/, compressionOptions: { level: 7 } }),
-    new imageMin({
-      minimizerOptions: {
-        plugins: [
-          ["optipng", { optimizationLevel: 7 }]
-        ]
-      }
-    }),
   ],
   module: {
     rules: [
