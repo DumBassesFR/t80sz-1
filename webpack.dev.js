@@ -16,7 +16,7 @@ module.exports = merge(defcfg, {
   },
   plugins: [
     new htmlWebpack({
-      title: "THE 80's ZONE",
+      title: "The 80s Zone",
       filename: "index.html",
       meta: { viewport: "width=device-width, initial-scale=1" },
       excludeChunks: ["debug"],
