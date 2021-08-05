@@ -19,7 +19,7 @@ module.exports = merge(defcfg, {
   },
   plugins: [
     new htmlWebpack({
-      title: "THE 80's ZONE",
+      title: "The 80s Zone",
       filename: "home/index.html",
       meta: {
         viewport: "width=device-width, initial-scale=1",
@@ -41,7 +41,7 @@ module.exports = merge(defcfg, {
       hash: true,
     }),
     new htmlWebpack({
-      title: "404 - THE 80's ZONE",
+      title: "404 - The 80s Zone",
       filename: "status/404/index.html",
       meta: {
         viewport: "width=device-width, initial-scale=1",

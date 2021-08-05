@@ -1,7 +1,7 @@
 {
   "name": "t80sz",
   "version": "1.0.0-RC1",
-  "description": "The 80's Zone's Website Source Code.",
+  "description": "The 80s Zone's Website Source Code.",
   "main": "index.js",
   "scripts": {
     "compile": "npx webpack --progress --color --config webpack.prod.js",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/ryeenii/t80sz.git"
   },
-  "author": "reenii and THE 80'S ZONE",
+  "author": "reenii and The 80s Zone",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ryeenii/t80sz/issues"

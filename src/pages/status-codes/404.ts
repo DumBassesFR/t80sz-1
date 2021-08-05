@@ -7,7 +7,7 @@ async function loadElements() {
 }
 loadElements().then(() => {
   console.log(
-    "%cTHE 80's ZONE",
+    "%cThe 80s Zone",
     "color: fuchsia; font-size: 3em; font-family: Comic Sans MS;"
   )
   console.log(
