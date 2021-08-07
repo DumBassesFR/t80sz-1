@@ -14,7 +14,7 @@
 		grid-template-columns: auto auto;
 		width: -webkit-fit-content;
 		width: fit-content;
-		width: -moz-fit-content;	
+		width: -moz-fit-content;
 	}
 </style>
 <div class="page-gap" in:fly={{y: 500, duration: 1000}} out:fade={{duration: 200}}>
@@ -24,14 +24,14 @@
     <Docs/>
   </div>
   <div class="redirect-divider" in:fly={{y: 500, duration: 1000}} out:fade={{duration: 200}}>
-    <LargeRedirect 
-      icon="account_balance" 
-     text="The Internet Archive mirror" 
+    <LargeRedirect
+      icon="account_balance"
+     text="The Internet Archive Mirror" 
      color="yellow"
      red="https://archive.org/details/@the_80s_zone"/>
-    <LargeRedirect 
-     icon="play_circle_filled" 
-     text="YouTube Mirror" 
+    <LargeRedirect
+     icon="play_circle_filled"
+     text="YouTube Mirror"
      color="purple"
      red="https://www.youtube.com/channel/UC_aA045hM9gjf4PamMJtAkA"/>
   </div>
