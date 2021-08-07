@@ -1,3 +1,4 @@
+<link rel='icon' type='image/png' href='src/assets/favicons/info.png'>
 <style>
   .rainbow-slider::-moz-range-thumb {
     background: var(--slr-clr);
@@ -29,7 +30,6 @@
     @apply filter-drop-shadow-sm filter;
   }
 </style>
-
 <script type="typescript">
   import "../../../css/info.pcss"
   import "../../../css/pages.pcss"
@@ -104,7 +104,7 @@
         const vTS = (obj: object) => Object.keys(obj)[0]
         promSplit[0].forEach((element: object) => {
           iad[it] = {}
-          iad[it].text = element.name 
+          iad[it].text = element.name
           iad[it].el = element
           iad[it].no = promSplit[0].length
           iad[it].crno = it
@@ -135,7 +135,7 @@
       selItem = val;
     }
     async hitBox(val: number) {
-     return new Promise(resolve => { 
+     return new Promise(resolve => {
       if (val >= 0 && val <= 15) {
         resolve(0);
       } else if (val >= 15 && val <= 35) {
@@ -174,7 +174,7 @@
           resolve(value.length - 1);
         })
       }
-     }) 
+     })
     }
   }
   const slr = new Slider()
@@ -202,11 +202,11 @@
         type="range"
         bind:value={slrVal}
         on:mouseup={() => {
-          const hb = slr.hitBox(slrVal);  
+          const hb = slr.hitBox(slrVal);
           hb.then(hbx => {
             slr.changeVal(arr[hbx].el)
           })
-        }} 
+        }}
         on:input={() => slr.colorSwap(slrVal)}
         class="rainbow-slider"
         style="--slr-clr: {slrClr || clrs[0]};" />

@@ -1,3 +1,4 @@
+<link rel='icon' type='image/png' href='src/assets/favicons/home.png'>
 <script>
   import "../css/bobby.pcss"
   import { fade, fly } from "svelte/transition"
@@ -63,11 +64,11 @@
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="5" />
-        <rect 
-          fill="url(#sa)" 
-          height="45" 
-          rx="22.5" 
-          width="181" 
+        <rect
+          fill="url(#sa)"
+          height="45"
+          rx="22.5"
+          width="181"
           y="63" />
         <rect
           fill="url(#sa)"
