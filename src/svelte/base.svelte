@@ -48,11 +48,9 @@
   <Menu />
   {#if activePage == Bobby}
     <Bobby />
-  {:else if activePage == Info}
-    <Info />
-  {:else if activePage == VArchive}
-    <VArchive />
-  {:else}
+  {:else if typeof activePage === "string"}
     <NA name={activePage} />
+  {:else}
+    <svelte:component this={activePage} />
   {/if}
 </div>
