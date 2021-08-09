@@ -3,34 +3,40 @@
   import { fly, fade } from 'svelte/transition'
 </script>
 
-<Header text="about us." gradient="yellow"/> 
+<Header text="about us" gradient="yellow"/>
 
-<div class="gap" in:fly={{duration: 700, y: 1200}} out:fade={{duration: 500}}>
-<h2>Welcome to The 80s Zone!</h2>
-<span class="linebreak" style="display: block; margin-bottom: -20px;"/>Born from the ashes of the official <span style="color:#FFEA33"><b>I am Jemboy</b></span> Discord server, The 80s Zone has been a social hangout for hundreds of people since its public launch on <span style="color:#FFEA33"><b>July 4th, 2018.</b></span>
-</div>
-<br>
-<div class="gap" in:fly={{duration: 750, y: 1200}} out:fade={{duration: 500}}>
-So where did the community originate from? It all started on <span style="color:#FFEA33"><b>September 20th, 2017</b></span> when mashup youtuber <span style="color:#FFEA33"><b>I am Jemboy</b></span> had the idea of creating a public hangout for fans and creators alike.
-</div>
-<br>
-<div class="gap" in:fly={{duration: 800, y: 1200}} out:fade={{duration: 500}}>
-  In his mind, it would be a relaxed environment where everyone could be friendly and creative whilst running the server with a hands off approach. Unfortunately, on <span style="color:#FFEA33"><b>September 29th, 2017</b></span>, reality hit. 
-</div>
-<br>
-<div class="gap" in:fly={{duration: 850, y: 1200}} out:fade={{duration: 500}}>
-The Bear Zone as it was called was a place centered around the idea of chaos and teenage humor, making it a place rife for drama. Though there were issues that persisted throughout its 9 months, a tightknit community was born out of the hellish environment. 
-</div>
+## Welcome to The 80s Zone!
 
-With a high staff turnover rate and neglect from an owner that had seemingly abandoned the place, it was up to the community to fend for itself and become self sustainable. 
+Born from the ashes of the official <span style="color:#FFEA33"><b>I am Jemboy</b></span> Discord server, <span style="color:#FFEA33"><b>The 80s Zone</b></span>
+has been a social hangout for hundreds of people since its public launch on <span style="color:#FFEA33"><b>July 4th, 2018.</b></span>
 
-So on <span style="color:#FFEA33">**July 4th, 2018**</span>, The Bear Zone was shut down via a battle royale and retooled to become an archive while The 80s Zone became a fresh start for the community, owned by <span style="color:#FFEA33">**D Vana**</span> until <span style="color:#FFEA33">**February 21st, 2019**</span>. <span style="color:#FFEA33">**Skelly**</span> from that point on became owner and essentially demoted himself to the level of a mod, freeing the server from any real ownership.
+So where did the community originate from? It all started on <span style="color:#FFEA33"><b>September 20th, 2017</b></span> when mashup
+youtuber <span style="color:#FFEA33"><b>I am Jemboy</b></span> had the idea of creating a public hangout for fans and creators alike.
 
-It has since been several years and the community goes on, acting in a way that's starkly different from the days of Fall 2017.
+In his mind, it would be a relaxed environment where everyone could be friendly and creative whilst running the server with a hands off approach. Unfortunately,
+on <span style="color:#FFEA33"><b>September 29th, 2017</b></span>, reality hit.
 
-### Despite its name, The 80s Zone has very little to actually do with the 1980's!  
-<span class="linebreak" style="display: block; margin-bottom: -20px;"/>The 80s Zone <i>does</i> however, represent a group of people dedicated to creativity, spending time with one another, and spreading the word of the community.  
+<span style="color:#FFEA33"><b>The Bear Zone</b></span> as it was called was a place centered around the idea of chaos and teenage humor, making it a place rife
+for drama. Though there were issues that persisted throughout its <span style="color:#FFEA33"><b>9 months</b></span>, a tightknit community was born out of the
+hellish environment.
 
-For reference, in 2020, The 80s Zone pulled a total of <span style="color:#FFEA33">**1.57 million**</span> messages in conversation, images, and other pieces of media shared! There's a lot to enjoy with the server whether it's the anime community in <code style="color:#FFEA33">#toonami</code>, the technology community in <code style="color:#FFEA33">#informix</code>, or the large art community found throughout the <span style="color:#FFEA33">**Westnet**</span> category.
+With a high staff turnover rate and neglect from an owner that had seemingly abandoned the place, it was up to the community to fend for itself and become
+self sustainable.
 
-If you're interested in our very deep wealth of history, we have pages upon pages of content that tell the tale of how we got here alongside other bonus pages we felt needed to be preserved. So start reading and please enjoy!
+So on <span style="color:#FFEA33"><b>July 4th, 2018<b></span>, <span style="color:#FFEA33"><b>The Bear Zone<b></span> was shut down via a battle royale and retooled to become an archive while <span style="color:#FFEA33"><b>The 80s Zone</b></span> became a fresh start for the community, owned by <span style="color:#FFEA33"><b>D Vana<b></span> until <span style="color:#FFEA33"><b>February 21st, 2019<b></span>.
+
+<span style="color:#FFEA33"><b>Skelly<b></span> from that point on became owner and essentially demoted himself to the level of a mod, freeing the server from any real ownership.
+
+It has since been several years and the community goes on, acting in a way that's starkly different from the days of <span style="color:#FFEA33"><b>Fall 2017</b></span>.
+
+Despite its name, <span style="color:#FFEA33"><b>The 80s Zone</b></span> has very little to actually do
+with <span style="color:#FFEA33"><b>the 1980's</b></span>! <span style="color:#FFEA33"><b>The 80s Zone</b></span> <i>does</i> however, represent a
+group of people dedicated to creativity, spending time with one another, and spreading the word of the community.
+
+For reference, in <span style="color:#FFEA33"><b>2020</b></span>, <span style="color:#FFEA33"><b>The 80s Zone</b></span> pulled a total
+of <span style="color: #FFEA33"><b>1.57 million<b></span> messages in conversation, images, and other pieces of media shared! There's a lot to enjoy with the server
+whether it's the anime community in <code style="color:#FFEA33"><b>#toonami<b></code>, the technology community
+in <code style="color:#FFEA33"><b>#informix<b></code>, or the large art community found throughout the <code style="color:#FFEA33"><b>Westnet<b></code> category.
+
+If you're interested in our very deep wealth of history, we have pages upon pages of content that tell the tale of how we got here alongside other bonus
+pages we felt needed to be preserved. So start reading and please enjoy!

@@ -1,11 +1,13 @@
-Welcome to the Video Archive, an attempt to <span style="color:#696AFF"><b>preserve all known videos created in the name of the Zone.</b></span>
+Welcome to the <span style="color:#696AFF"><b>Video Archive</b></span>, a place
+where <span style="color:#696AFF"><b>all documented pieces of the Zone's media</b></span> are gathered in one place for your enjoyment.
 
-Over the years, we've created a large catalog of video content through podcasts, 
-tournaments, streamed events *(both successful and unsuccessful)*, and other uncategorized 
-media you may never have seen before. 
+Over the years, we've accrued a large catalog of videos including podcasts,
+tournaments, miscellaneous events (both successful and unsuccessful), and other funny tidbits you
+may have never seen before.
 
-To ensure everything is properly archived and easily accessible to the public, 
-we include both a YouTube link and an Internet Archive mirror for all uploads. 
-<br/>If you have a piece of media that you believe hasn't been archived, 
-please email us at <code style="color:#696AFF"><a style="color: inherit;" href="mailto:staff@the80s.zone">staff@the80s.zone.</a></code> 
+In order to ensure that everything is archived and accessible,we've included
+a <span style="color:#696AFF"><a style="color: inherit;" href="https://www.youtube.com/channel/UC_aA045hM9gjf4PamMJtAkA">Youtube</a></span> link
+where possible, as well as an <span style="color:#696AFF"><a style="color: inherit;" href="https://archive.org/details/@the_80s_zone">archive.org</a></span> mirror to all uploads.
+
+If you have a piece of media that you believe hasn't been archived, please email us at <code style="color:#696AFF"><a style="color: inherit;" href="mailto:staff@the80s.zone">staff@the80s.zone</a></code>.
 Depending on the content provided, we may compensate you financially.
