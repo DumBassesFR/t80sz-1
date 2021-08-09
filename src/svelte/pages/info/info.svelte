@@ -1,35 +1,3 @@
-<style>
-  .rainbow-slider::-moz-range-thumb {
-    background: var(--slr-clr);
-  }
-  .rainbow-slider::-webkit-slider-thumb {
-    background: var(--slr-clr);
-  }
-  @media (max-width: 390px) {
-    .docs-gap {
-      width: 85vw;
-    }
-  }
-  .variant-button {
-    display: flex;
-  }
-  .chap-button {
-    @apply my-6 flex-row ml-7 flex lg:hidden items-center px-2 2xl:px-5 text-base font-bold 2xl:text-2xl mt-2 text-purple-dark shadow rounded w-auto;
-    line-height: 0;
-    width: --moz-fit-content;
-    width: fit-content;
-    width: --webkit-fit-content;
-    text-shadow: 0px 2px 5px rgba(0,0,0,.3);
-    .chap-icon {
-      @apply font-icon mr-1;
-    }
-  }
-  .chap-icon,
-  .chap-text {
-    @apply filter-drop-shadow-sm filter;
-  }
-</style>
-
 <script type="typescript">
   import "../../../css/info.pcss"
   import "../../../css/pages.pcss"
