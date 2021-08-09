@@ -6,8 +6,8 @@
 <Header text="about us." gradient="yellow"/> 
 
 <div class="gap" in:fly={{duration: 700, y: 1200}} out:fade={{duration: 500}}>
-<h2>Welcome to THE 80s ZONE!</h2>
-<span class="linebreak" style="display: block; margin-bottom: -20px;"/>Born from the ashes of the official <span style="color:#FFEA33"><b>I am Jemboy</b></span> Discord server, THE 80s ZONE has been a social hangout for hundreds of people since its public launch on <span style="color:#FFEA33"><b>July 4th, 2018.</b></span>
+<h2>Welcome to The 80s Zone!</h2>
+<span class="linebreak" style="display: block; margin-bottom: -20px;"/>Born from the ashes of the official <span style="color:#FFEA33"><b>I am Jemboy</b></span> Discord server, The 80s Zone has been a social hangout for hundreds of people since its public launch on <span style="color:#FFEA33"><b>July 4th, 2018.</b></span>
 </div>
 <br>
 <div class="gap" in:fly={{duration: 750, y: 1200}} out:fade={{duration: 500}}>
@@ -15,7 +15,7 @@ So where did the community originate from? It all started on <span style="color:
 </div>
 <br>
 <div class="gap" in:fly={{duration: 800, y: 1200}} out:fade={{duration: 500}}>
-  In his mind, it would be a relaxed environment where everyone could be friendly and creative whilst running the server with a hands off approach. Unfortunately, on <span style="color:#FFEA33"><b>September 30th, 2017</b></span>, reality hit. 
+  In his mind, it would be a relaxed environment where everyone could be friendly and creative whilst running the server with a hands off approach. Unfortunately, on <span style="color:#FFEA33"><b>September 29th, 2017</b></span>, reality hit. 
 </div>
 <br>
 <div class="gap" in:fly={{duration: 850, y: 1200}} out:fade={{duration: 500}}>
