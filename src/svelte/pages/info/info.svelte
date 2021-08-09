@@ -42,7 +42,8 @@
   let selItem: object = AboutUs;
   const clrs = ["#ffe500", "#f29b27", "#c429a9", "#4445ff", "#0bf131"]
   let slrClr = ""
-  let slrVal = 1
+  let slrVal = 5
+  let slidr;
   class Slider {
     async splitArr() {
       return new Promise((resolve) => {
@@ -124,15 +125,49 @@
         slrClr = clrs[1]
       } else if (val >= 35 && val <= 75) {
         slrClr = clrs[2]
-      } else if (val >= 75 && val <= 95) {
+      } else if (val >= 75 && val <= 90) {
         slrClr = clrs[3]
-      } else if (val >= 95) {
+      } else if (val >= 90) {
         slrClr = clrs[4]
       }
       return slrClr
     }
     changeVal(val: object) {
       selItem = val;
+    }
+    changePos(val : object[], no : number) {
+      switch(no) {
+        case 4:
+          slidr.value = 91;
+          break;
+        case 3:
+          if (val.length === 5) {
+            slidr.value = 76;
+          }
+          else {
+            slidr.value = 91;
+          }
+          break;
+        case 2:
+          if (val.length >= 4) {
+            slidr.value = 36;
+          }
+          else {
+            slidr.value = 91;
+          }
+          break;
+        case 1:
+          if (val.length > 2) {
+            slidr.value = 16;
+          }
+          else {
+            slidr.value = 91;
+          }
+          break;
+        case 0:
+          slidr.value = 5;
+      }
+      this.colorSwap(slidr.value);
     }
     async hitBox(val: number) {
      return new Promise(resolve => { 
@@ -201,6 +236,7 @@
       <input
         type="range"
         bind:value={slrVal}
+        bind:this={slidr}
         on:mouseup={() => {
           const hb = slr.hitBox(slrVal);  
           hb.then(hbx => {
@@ -215,7 +251,7 @@
       {#each arr as el}
         <p
           style="--selected-color: {el.color}"
-          on:click={() => slr.changeVal(el.el)}>
+          on:click={() => { slr.changeVal(el.el); slr.changePos(arr, el.crno);}}>
           {el.crno + 1}. {el.text
             .match(/[A-Z][a-z]+|[0-9]+/g)
             .join(" ")
