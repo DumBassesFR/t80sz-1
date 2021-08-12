@@ -9,9 +9,7 @@
 </script>
 <style>
 	.redirect-divider {
-		display: grid;
-		grid-gap: 0.25em;
-		grid-template-columns: auto auto;
+    @apply flex flex-col sm:flex-row; 
 		width: -webkit-fit-content;
 		width: fit-content;
 		width: -moz-fit-content;

@@ -6,7 +6,7 @@
 </script>
 <style lang="postcss">
   .large-redirect {
-    @apply text-sm my-5 2xl:my-10 px-2 2xl:text-3xl 2xl:p-5 2xl:px-6 bg-blue-light h-10 flex flex-row rounded shadow;
+    @apply text-sm my-2 sm:mr-2 sm:my-5 2xl:my-10 px-2 2xl:text-3xl 2xl:p-5 2xl:px-6 bg-blue-light h-10 flex flex-row rounded shadow;
     .redirect {
       @apply font-sans leading-3;
     }

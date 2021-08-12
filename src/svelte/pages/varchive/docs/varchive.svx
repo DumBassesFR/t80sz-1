@@ -6,8 +6,8 @@ tournaments, miscellaneous events (both successful and unsuccessful), and other 
 may have never seen before.
 
 In order to ensure that everything is archived and accessible,we've included
-a <span style="color:#696AFF"><a style="color: inherit;" href="https://www.youtube.com/channel/UC_aA045hM9gjf4PamMJtAkA">Youtube</a></span> link
-where possible, as well as an <span style="color:#696AFF"><a style="color: inherit;" href="https://archive.org/details/@the_80s_zone">archive.org</a></span> mirror to all uploads.
+a <span style="color:#696AFF"><a style="color: inherit;" href="https://www.youtube.com/channel/UC_aA045hM9gjf4PamMJtAkA"><b>Youtube</b></a></span> link
+where possible, as well as an <span style="color:#696AFF"><a style="color: inherit;" href="https://archive.org/details/@the_80s_zone"><b>archive.org</b></a></span> mirror to all uploads.
 
 If you have a piece of media that you believe hasn't been archived, please email us at <code style="color:#696AFF"><a style="color: inherit;" href="mailto:staff@the80s.zone">staff@the80s.zone</a></code>.
 Depending on the content provided, we may compensate you financially.
