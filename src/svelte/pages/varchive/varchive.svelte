@@ -10,7 +10,7 @@
 <script>
   import Header from "../general/templates/header.svelte"
   import BackHome from "../general/templates/back-home.svelte"
-  import LargeRedirect from "../templates/lg-redirect.svelte"
+  import LargeRedirect from "../general/templates/lg-redirect.svelte"
   import Docs from "./docs/varchive.svx"
   import Aura from "../general/templates/aura.svelte"
   import { fade, fly } from "svelte/transition"
