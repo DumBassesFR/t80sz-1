@@ -1,0 +1,7 @@
+### Making our projects accessible to the public is a key goal at The 80s Zone.
+That's why the entirety of the80s.zone is powered by open source code!
+
+If you're interested in checking out what makes the site tick, or would like to make your own contributions to the project, 
+check out our github page below for more information.
+
+Feel free to give us a star if you enjoyed your stay here!
