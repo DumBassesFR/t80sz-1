@@ -1,6 +1,6 @@
 <style lang="postcss">
   .back-button {
-    @apply my-6 flex flex-row items-center px-2 2xl:px-5 text-base font-bold 2xl:text-2xl mt-2 text-purple-dark shadow rounded w-auto;
+    @apply my-6 flex flex-row items-center px-2 2xl:px-4 text-base font-bold 2xl:text-xl mt-2 text-purple-dark shadow rounded w-auto;
     line-height: 0;
     width: --moz-fit-content;
     width: fit-content;
