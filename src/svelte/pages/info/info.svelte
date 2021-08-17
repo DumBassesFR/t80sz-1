@@ -11,6 +11,7 @@
   const clrs = ["#ffe500", "#f29b27", "#c429a9", "#4445ff", "#0bf131"]
   let slrClr = ""
   let slrVal = 5
+  let chapMode: boolean = false
   let slidr
   class Slider {
     async splitArr() {
@@ -102,6 +103,12 @@
     }
     changeVal(val: object) {
       selItem = val
+      const chck = this.checkChap()
+      chck.then((resp) => {
+        if (resp) {
+          this.shSlider()
+        }
+      })
     }
     changePos(val: object[], no: number) {
       switch (no) {
@@ -173,6 +180,30 @@
         }
       })
     }
+    async checkChap() {
+      return new Promise((resolve) => {
+        const wdt: number = window.screen.width
+        if (wdt < 1024) {
+          resolve(true)
+        } else {
+          resolve(false)
+        }
+      })
+    }
+    shSlider() {
+      const chck = this.checkChap()
+      chck.then((resp) => {
+        if (resp) {
+          if (chapMode) {
+            chapMode = false
+          } else {
+            chapMode = true
+          }
+        } else {
+          chapMode = false
+        }
+      })
+    }
   }
   const slr = new Slider()
   const fetchAll = slr.combineAll()
@@ -186,7 +217,8 @@
     <BackHome gradient="yellow" />
     <div
       class="chap-button"
-      style="background-image: linear-gradient(90deg, rgba(255,229,0,1) 0%, rgba(249,190,17,1) 100%);">
+      style="background-image: linear-gradient(90deg, rgba(255,229,0,1) 0%, rgba(249,190,17,1) 100%);"
+      on:click={() => slr.shSlider()}>
       <p class="chap-icon">book</p>
       <p class="chap-text">chapters</p>
     </div>
@@ -198,7 +230,7 @@
   {#await fetchAll}
     <p>loading elements</p>
   {:then arr}
-    <div class="chapters">
+    <div class="chapters active-{chapMode}">
       <div class="slider">
         <input
           type="range"
