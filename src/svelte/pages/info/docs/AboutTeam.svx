@@ -19,6 +19,11 @@
       grid-template-columns: auto;
     }
   }
+  @media (min-width: 1900px) {
+    .team-divider {
+      grid-template-columns: auto auto auto;
+    }
+  }
 </style>
 
 <Header text="past staff" gradient="yellow"/>
