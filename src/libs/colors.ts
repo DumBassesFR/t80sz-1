@@ -44,7 +44,7 @@ export class colors {
         case "blue":
           resolve(lightColors[3])
           break;
-        case "yellow":
+        case "green":
           resolve(lightColors[4])
           break;
       }
