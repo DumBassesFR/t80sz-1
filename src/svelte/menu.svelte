@@ -4,11 +4,24 @@
       display: none;
     }
   }
+  .back-purple {
+    @apply bg-purple-light !important;
+  }
+  .back-yellow {
+    @apply bg-yellow-light !important;
+  }
+  .back-blue {
+    @apply bg-blue-light !important;
+  }
+  .back-green {
+    @apply bg-green-light !important;
+  }
 </style>
 
 <script>
   import "../css/fonts.pcss"
   import "../css/menu.pcss"
+  export let bg;
   const items = [
     {
       name: "Information",
@@ -28,12 +41,12 @@
     },
     {
       name: "Source Code",
-      id: "source",
+      id: "#source",
     },
   ]
 </script>
 
-<div id="menu-base">
+<div id="menu-base" class="back-{bg}">
   <nav id="options">
     {#each items as i}
       <a href={i.id} alt={i.name}>

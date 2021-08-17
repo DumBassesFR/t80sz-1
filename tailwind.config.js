@@ -20,7 +20,11 @@ module.exports = {
         light: "#181428",
         lightclr: "#696AFF"
       },
-      green: "#0bf131",
+      green: { 
+        DEFAULT: "#0bf131",
+        light: "#072714",
+        lightclr: "#3CF45A"
+      },
       purple: {
         dark: "#150411",
         DEFAULT: "#c429a9",
