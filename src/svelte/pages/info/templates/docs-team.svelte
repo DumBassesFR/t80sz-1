@@ -126,7 +126,7 @@
 
 <div class="team-member">
   <div style="display: flex; flex-direction: row;">
-    <img src="../../../../../src/assets/team/{name}.png" alt={name} />
+    <img loading=lazy src="../../../../../src/assets/team/{name}.png" alt={name} />
     <div id="info">
       <h3 class="member-name">{name}</h3>
       <p class="team-role {role}-member">{role}</p>
