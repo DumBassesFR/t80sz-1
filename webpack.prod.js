@@ -57,7 +57,8 @@ module.exports = merge(defcfg, {
     new compress({ exclude: /node_modules/, compressionOptions: { level: 7 } }),
     new copyPlug({
       patterns: [
-        { from: 'src/assets/team/', to: 'src/assets/team' }
+        { from: 'src/assets/team/', to: 'src/assets/team' },
+        { from: 'src/nojs', to: 'nojs/' }
       ]
     })
   ],
