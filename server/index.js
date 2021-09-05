@@ -7,7 +7,7 @@ const compress = require("compression")
 const path = require('path');
 const ws = express()
 const domain = {
-  ip: "0.0.0.0",
+  ip: "127.0.0.1",
   port: 3000,
 }
 ws.use(helmet())
