@@ -242,6 +242,12 @@
               slr.changeVal(arr[hbx].el)
             })
           }}
+          on:touchend={() => {
+            const hb = slr.hitBox(slrVal)
+            hb.then((hbx) => {
+              slr.changeVal(arr[hbx].el)
+            })
+          }}
           on:input={() => slr.colorSwap(slrVal)}
           class="rainbow-slider"
           style="--slr-clr: {slrClr || clrs[0]};" />

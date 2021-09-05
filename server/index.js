@@ -4,10 +4,11 @@ const fs = require("fs")
 const zlib = require("zlib")
 const helmet = require("helmet")
 const compress = require("compression")
+const path = require('path');
 const ws = express()
 const domain = {
-  ip: "127.0.0.1",
-  port: 80,
+  ip: "0.0.0.0",
+  port: 3000,
 }
 ws.use(helmet())
 ws.use(
@@ -18,10 +19,13 @@ ws.use(
     },
   })
 )
-ws.use("/", express.static("public/home"))
+ws.use("/", express.static("public/home"));
 ws.use("/404", express.static("public/status/404"))
 ws.use("/src", express.static("public/src"))
 ws.use("/bobby", express.static("public/bobby"))
+ws.use((req, res, next) => {
+  res.status(404).sendFile(path.resolve(__dirname, '..') + '/public/status/404/index.html');
+})
 const placeholders = [
   {name: "/server", placeholder: "https://discord.gg/the80z"}, 
   {name: "/archive", placeholder: "https://duckduckgo.com" }, 
