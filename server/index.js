@@ -26,15 +26,6 @@ ws.use("/bobby", express.static("public/bobby"))
 ws.use((req, res, next) => {
   res.status(404).sendFile(path.resolve(__dirname, '..') + '/public/status/404/index.html');
 })
-const placeholders = [
-  {name: "/server", placeholder: "https://discord.gg/the80z"}, 
-  {name: "/archive", placeholder: "https://duckduckgo.com" }, 
-  {name: "/source", placeholder: "https://github.com/ryeenii/t80sz" } ]
-for (const i in placeholders) {
-  ws.use(placeholders[i].name, (req, res) => {
-    res.redirect(307, placeholders[i].placeholder)
-  })
-}
 ws.listen(domain.port, domain.ip, () => {
   console.log(`sup, server is up at ${domain.ip}:${domain.port}`)
 })
