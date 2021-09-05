@@ -12,6 +12,12 @@
     height: 75vh;
   }
 }
+@media (max-width: 1024px) {
+  .chapter-contents {
+    top: 14vh;
+    right: 5em;
+  }
+}
 @media (min-width: 880px) and (max-width: 2160px) {
   .docs-gap[name="info"] {
     width: 65vw;
@@ -20,7 +26,7 @@
   }
 }
 .chapter-contents {
-  @apply flex justify-center flex-col fixed lg:relative top-28 right-16 items-end lg:items-start lg:top-0 lg:right-0 lg:flex-row;
+  @apply flex justify-center flex-col fixed lg:relative items-end lg:items-start lg:top-0 lg:right-0 lg:flex-row;
   transition: opacity 500ms ease-in-out;
   p {
     @apply flex text-white text-opacity-75 text-base 2xl:text-2xl cursor-pointer transition-all duration-300 ease-in-out;
@@ -73,7 +79,7 @@
       rgba(39, 28, 7, 0) 0%,
       rgba(39, 28, 7, 1) 100%
     );
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     width: 500px;
