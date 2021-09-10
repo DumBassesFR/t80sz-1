@@ -5,9 +5,16 @@ const gradients = [
   "linear-gradient(90deg,  rgba(68,69,255,1) 0%, rgba(51,121,193,1) 100%)",
   "linear-gradient(90deg, rgba(11,241,49,1) 0%, rgba(32,179,123,1) 100%)",
 ]
-const lightColors = [ "#FFEA33", "#F39132", "#D054BA", "#696AFF", "#3CF45A" ]
-const stdColors = [ "#FFE500", "#F28B27", "#C429A9", "#4445FF", "#0BF131" ]
 export class colors {
+  lightColors = [ "#FFEA33", "#F39132", "#D054BA", "#696AFF", "#3CF45A" ]
+  stdColors = [ "#FFE500", "#F28B27", "#C429A9", "#4445FF", "#0BF131" ]
+  patterns = [
+    { sequence: 1, scheme: [2] },
+    { sequence: 2, scheme: [0, 4] },
+    { sequence: 3, scheme: [0, 2, 4] },
+    { sequence: 4, scheme: [0, 1, 2, 4] },
+    { sequence: 3, scheme: [0, 1, 2, 3, 4] },
+  ]
   async setGradient(grad: string) {
     return new Promise((resolve) => {
       switch (grad) {
@@ -33,19 +40,19 @@ export class colors {
     return new Promise((resolve) => {
       switch(clr) {
         case "yellow":
-          resolve(lightColors[0])
+          resolve(this.lightColors[0])
           break;
         case "orange":
-          resolve(lightColors[1])
+          resolve(this.lightColors[1])
           break;
         case "purple":
-          resolve(lightColors[2])
+          resolve(this.lightColors[2])
           break;
         case "blue":
-          resolve(lightColors[3])
+          resolve(this.lightColors[3])
           break;
         case "green":
-          resolve(lightColors[4])
+          resolve(this.lightColors[4])
           break;
       }
     });
@@ -54,19 +61,19 @@ export class colors {
     return new Promise((resolve) => {
       switch(clr) {
         case "yellow":
-          resolve([stdColors[0], stdColors[1]])
+          resolve([this.stdColors[0], this.stdColors[1]])
           break;
         case "orange":
-          resolve([stdColors[1], stdColors[0]])
+          resolve([this.stdColors[1], this.stdColors[0]])
           break;
         case "purple":
-          resolve([stdColors[2], stdColors[3]])
+          resolve([this.stdColors[2], this.stdColors[3]])
           break;
         case "blue":
-          resolve(["#3379C1", stdColors[3]])
+          resolve(["#3379C1", this.stdColors[3]])
           break;
         case "green":
-          resolve([stdColors[4], stdColors[0]])
+          resolve([this.stdColors[4], this.stdColors[0]])
           break;
       }
     })

@@ -5,19 +5,19 @@
   import AboutTheTeam from "./docs/AboutTeam.svx"
   import BackHome from "../general/templates/back-home.svelte"
   import Aura from "../general/templates/aura.svelte"
+  import { colors } from "../../../libs/colors"
   import { fly, fade } from "svelte/transition"
   const array = [AboutUs, AboutTheTeam]
   let selItem: object = AboutUs
-  const clrs = ["#ffe500", "#f29b27", "#c429a9", "#4445ff", "#0bf131"]
-  let slrClr = ""
-  let slrVal = 5
+  let slrClr: string
+  let slrVal: number = 5
   let chapMode: boolean = false
-  let slidr
+  let slidr: object
   class Slider {
     async splitArr() {
       return new Promise((resolve) => {
-        let numlist = 0
-        for (let el in array) {
+        let numlist: number = 0
+        for (let el: object in array) {
           if (array[el]) {
             numlist++
           } else {
@@ -30,26 +30,20 @@
     async colorSplit() {
       const arry: string[] = await this.splitArr()
       return new Promise((resolve, reject) => {
-        const patterns = [
-          { sequence: 1, scheme: [2] },
-          { sequence: 2, scheme: [0, 4] },
-          { sequence: 3, scheme: [0, 2, 4] },
-          { sequence: 4, scheme: [0, 1, 2, 4] },
-          { sequence: 3, scheme: [0, 1, 2, 3, 4] },
-        ]
         try {
           if (!arry.length || arry.length <= 1) {
             reject("no elements")
           } else {
-            let i: number = 0
-            let p: number = 0
+            let i = 0,
+              p = 0
             let iar: string[] = []
+            const clr = new colors()
             arry.forEach((el) => {
-              patterns.forEach((pat) => {
+              clr.patterns.forEach((pat) => {
                 if (i != arry.length) {
                   if (pat.sequence == arry.length) {
                     pat.scheme.forEach((sch) => {
-                      iar[p] = clrs[sch]
+                      iar[p] = clr.stdColors[sch]
                       p++
                     })
                   }
@@ -88,26 +82,29 @@
       })
     }
     colorSwap(val: number) {
-      if (val >= 0 && val <= 15) {
-        slrClr = clrs[0]
-      } else if (val >= 15 && val <= 35) {
-        slrClr = clrs[1]
-      } else if (val >= 35 && val <= 75) {
-        slrClr = clrs[2]
-      } else if (val >= 75 && val <= 90) {
-        slrClr = clrs[3]
-      } else if (val >= 90) {
-        slrClr = clrs[4]
+      const clr = new colors()
+      const selClr = () => {
+        const clrRange = [
+          { min: 0, max: 15, col: clr.stdColors[0] },
+          { min: 15, max: 45, col: clr.stdColors[1] },
+          { min: 45, max: 75, col: clr.stdColors[2] },
+          { min: 75, max: 90, col: clr.stdColors[3] },
+          { min: 90, max: 100, col: clr.stdColors[4] },
+        ]
+        const found = clrRange.find((x) => val >= x.min && val <= x.max)
+        if (!found) {
+          return clr.stdColors[0]
+        }
+        return found.col
       }
+      slrClr = selClr()
       return slrClr
     }
     changeVal(val: object) {
       selItem = val
       const chck = this.checkChap()
       chck.then((resp) => {
-        if (resp) {
-          this.shSlider()
-        }
+        resp ? this.shSlider() : undefined
       })
     }
     changePos(val: object[], no: number) {
@@ -116,25 +113,13 @@
           slidr.value = 91
           break
         case 3:
-          if (val.length === 5) {
-            slidr.value = 76
-          } else {
-            slidr.value = 91
-          }
+          val.length === 5 ? (slidr.value = 76) : (slidr.value = 91)
           break
         case 2:
-          if (val.length >= 4) {
-            slidr.value = 36
-          } else {
-            slidr.value = 91
-          }
+          val.length >= 4 ? (slidr.value = 36) : (slidr.value = 91)
           break
         case 1:
-          if (val.length > 2) {
-            slidr.value = 16
-          } else {
-            slidr.value = 91
-          }
+          val.length > 2 ? (slidr.value = 51) : (slidr.value = 91)
           break
         case 0:
           slidr.value = 5
@@ -143,37 +128,22 @@
     }
     async hitBox(val: number) {
       return new Promise((resolve) => {
+        const ftc = this.splitArr()
         if (val >= 0 && val <= 15) {
           resolve(0)
-        } else if (val >= 15 && val <= 35) {
-          const ftc = this.splitArr()
+        } else if (val >= 15 && val <= 45) {
           ftc.then((value: object[]) => {
-            if (value.length == 5 || value.length == 4) {
-              resolve(1)
-            } else {
-              resolve(0)
-            }
+            value.length == 5 || value.length == 4 ? resolve(1) : resolve(0)
           })
-        } else if (val >= 35 && val <= 75) {
-          const ftc = this.splitArr()
+        } else if (val >= 45 && val <= 75) {
           ftc.then((value: object[]) => {
-            if (value.length >= 3) {
-              resolve(2)
-            } else {
-              resolve(0)
-            }
+            value.length >= 3 ? resolve(2) : resolve(0)
           })
         } else if (val >= 75 && val <= 95) {
-          const ftc = this.splitArr()
           ftc.then((value: object[]) => {
-            if (value.length >= 4) {
-              resolve(3)
-            } else {
-              resolve(1)
-            }
+            value.length >= 4 ? resolve(3) : resolve(1)
           })
         } else if (val >= 95) {
-          const ftc = this.splitArr()
           ftc.then((value: object[]) => {
             resolve(value.length - 1)
           })
@@ -183,25 +153,17 @@
     async checkChap() {
       return new Promise((resolve) => {
         const wdt: number = window.screen.width
-        if (wdt < 1024) {
-          resolve(true)
-        } else {
-          resolve(false)
-        }
+        wdt < 1024 ? resolve(true) : resolve(false)
       })
     }
     shSlider() {
-      const chck = this.checkChap()
+      const chck: boolean = this.checkChap()
       chck.then((resp) => {
-        if (resp) {
-          if (chapMode) {
-            chapMode = false
-          } else {
-            chapMode = true
-          }
-        } else {
-          chapMode = false
-        }
+        resp
+          ? chapmode
+            ? (chapMode = false)
+            : (chapMode = true)
+          : (chapMode = false)
       })
     }
   }
@@ -250,7 +212,7 @@
           }}
           on:input={() => slr.colorSwap(slrVal)}
           class="rainbow-slider"
-          style="--slr-clr: {slrClr || clrs[0]};" />
+          style="--slr-clr: {slrClr || '#FFE500'};" />
       </div>
       <div class="offset-{arr[0].no} chapter-contents">
         {#each arr as el}
