@@ -6,12 +6,12 @@
 </script>
 <style lang="postcss">
   .large-redirect {
-    @apply text-sm my-2 sm:mr-2 sm:my-5 2xl:my-10 px-2 2xl:text-3xl 2xl:p-5 2xl:px-6 bg-blue-light h-10 flex flex-row rounded shadow;
+    @apply text-sm my-2 sm:mr-2 sm:my-5 2xl:my-8 px-2 2xl:text-3xl 2xl:p-5 2xl:px-6 bg-blue-light h-10 flex flex-row rounded shadow;
     .redirect {
       @apply font-sans leading-3;
     }
     .redirect-icon {
-      @apply font-icon text-lg 2xl:text-5xl mr-1; 
+      @apply font-icon text-lg 2xl:text-4xl mr-1; 
       line-height: 0;
     }
   }
