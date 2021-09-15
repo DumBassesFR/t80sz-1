@@ -1,4 +1,4 @@
-<style>
+<style lang="postcss">
   .rainbow-mask {
     background: linear-gradient(
         272deg,
@@ -34,6 +34,9 @@
   }
   .wrapper-tfyc {
     @apply fixed md:flex top-4 right-4 hidden sm:scale-100 2xl:top-8 2xl:right-20 2xl:scale-150 transform;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .bg-tfyc {
     @apply fixed right-0;
