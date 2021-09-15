@@ -160,7 +160,7 @@
       const chck: boolean = this.checkChap()
       chck.then((resp) => {
         resp
-          ? chapmode
+          ? chapMode
             ? (chapMode = false)
             : (chapMode = true)
           : (chapMode = false)
