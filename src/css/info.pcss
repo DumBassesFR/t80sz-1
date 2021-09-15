@@ -27,9 +27,10 @@
 }
 .chapter-contents {
   @apply flex justify-center flex-col fixed lg:relative items-end lg:items-start lg:top-0 lg:right-0 lg:flex-row;
+  width: 80vw;
   transition: opacity 500ms ease-in-out;
   p {
-    @apply flex text-white text-opacity-75 text-base 2xl:text-2xl cursor-pointer transition-all duration-300 ease-in-out;
+    @apply flex text-white text-opacity-75 text-base 2xl:text-3xl cursor-pointer transition-all duration-300 ease-in-out;
     line-height: 0;
     &:hover {
       @apply drop-shadow text-opacity-100;
@@ -93,20 +94,21 @@
     }
 }
 .rainbow-slider {
-  @apply md:w-9/12 lg:w-full transform rotate-90 fixed top-2/4 lg:top-0 lg:right-0 lg:ml-0 lg:relative lg:rotate-0;
+  @apply lg:w-full transform rotate-90 fixed top-2/4 lg:top-0 lg:right-0 lg:ml-0 lg:relative lg:rotate-0;
+  width: 80vw;
   background: transparent;
   -webkit-appearance: none;
   &::-moz-range-thumb {
-    @apply border-purple-dark border-solid xl:border-8 transition-all duration-300 cursor-pointer ease-back rounded-full shadow w-6 h-6 2xl:w-8 2xl:h-8;
+    @apply border-purple-dark border-solid xl:border-8 transition-all duration-300 cursor-pointer ease-back rounded-full shadow w-6 h-6 2xl:w-10 2xl:h-10;
     border-width: 4px;
     &:hover,
     &:active {
-      @apply shadow-lg w-8 h-8 2xl:w-10 2xl:h-10;
+      @apply shadow-lg w-8 h-8 2xl:w-14 2xl:h-14;
     }
   }
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    @apply border-purple-dark xl:border-8 border-solid transition-all duration-300 cursor-pointer ease-back rounded-full shadow w-7 h-7;
+    @apply border-purple-dark xl:border-8 border-solid transition-all duration-300 cursor-pointer ease-back rounded-full shadow w-6 h-6 2xl:w-8 2xl:h-8;
     margin-top: -8px;
     border-width: 4px;
     position: relative;
@@ -125,7 +127,7 @@
       rgb(242, 139, 39) 75%,
       rgb(255, 229, 0) 100%
     );
-    @apply shadow-sm rounded-full h-3 2xl:h-4;
+    @apply shadow-sm rounded-full h-3 2xl:h-5;
   }
   &::-webkit-slider-runnable-track {
     background: linear-gradient(
@@ -136,7 +138,7 @@
       rgb(242, 139, 39) 75%,
       rgb(255, 229, 0) 100%
     );
-    @apply shadow-sm rounded-full h-3;
+    @apply shadow-sm rounded-full h-3 2xl:h-5;
   }
 }
 ::-webkit-scrollbar {
@@ -193,7 +195,7 @@
   @apply filter-drop-shadow-sm filter;
 }
 .offset-2 {
-  --gapval: 45vw;
+  --gapval: 60vw;
   gap: var(--gapval);
 }
 .offset-3 {
