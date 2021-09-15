@@ -110,7 +110,7 @@
   const hireFunc = new Date(hireSplit[2], hireSplit[0] - 1, hireSplit[1])
   const hireDate = `${
       months[hireFunc.getMonth()]
-  }. ${hireFunc.getDate()} ${hireFunc.getFullYear()}`
+  }. ${hireFunc.getDate()}, ${hireFunc.getFullYear()}`
   const leaveDate = leftAt()
   function leftAt() {
     if (left) {
