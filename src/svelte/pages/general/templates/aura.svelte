@@ -53,13 +53,21 @@
     <defs>
       <linearGradient 
        id="paint0_linear" 
-       x1="162.1" 
-       x2="162.1" 
-       y1="1715.5" 
-       y2="467" 
+       x1="100" 
+       x2="100" 
+       y1="1500" 
+       y2="350" 
        gradientUnits="userSpaceOnUse">
+      {#if color != "rainbow"}
         <stop stop-color="{col[0]}"/>
         <stop offset="1" stop-color="{col[1]}"/>
+      {:else}
+        <stop offset="0%" stop-color="{col[0]}"/>
+        <stop offset="25%" stop-color="{col[1]}"/>
+        <stop offset="50%" stop-color="{col[2]}"/>
+        <stop offset="75%" stop-color="{col[3]}"/>
+        <stop offset="100%" stop-color="{col[4]}"/>
+      {/if}
       </linearGradient>
     </defs>
   </svg>

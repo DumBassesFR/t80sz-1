@@ -4,6 +4,7 @@ const gradients = [
   "linear-gradient(90deg, rgba(196,41,169,1) 0%, rgba(141,53,206,1) 100%)",
   "linear-gradient(90deg,  rgba(68,69,255,1) 0%, rgba(51,121,193,1) 100%)",
   "linear-gradient(90deg, rgba(11,241,49,1) 0%, rgba(32,179,123,1) 100%)",
+  "linear-gradient(90deg, #FFE500, #F28B27, #C429A9, #4445FF, #0BF131)"
 ]
 export class colors {
   lightColors = [ "#FFEA33", "#F39132", "#D054BA", "#696AFF", "#3CF45A" ]
@@ -32,6 +33,9 @@ export class colors {
           break
         case "green":
           resolve(gradients[4])
+          break
+        case "rainbow":
+          resolve(gradients[5])
           break
       }
     })
@@ -73,7 +77,16 @@ export class colors {
           resolve(["#3379C1", this.stdColors[3]])
           break;
         case "green":
-          resolve([this.stdColors[4], this.stdColors[0]])
+          resolve([this.stdColors[3], this.stdColors[4]])
+          break;
+        case "rainbow":
+          resolve([
+            this.stdColors[0], 
+            this.stdColors[1], 
+            this.stdColors[2], 
+            this.stdColors[3], 
+            this.stdColors[4]
+          ])
           break;
       }
     })
