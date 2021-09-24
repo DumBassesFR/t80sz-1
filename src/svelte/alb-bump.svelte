@@ -72,6 +72,7 @@
   import { fly } from "svelte/transition"
 </script>
 
+<a href="#album">
 <div
   class="wrapper-tfyc"
   in:fly={{ duration: 1500, y: -500 }}
@@ -132,3 +133,4 @@
     </div>
   </div>
 </div>
+</a>

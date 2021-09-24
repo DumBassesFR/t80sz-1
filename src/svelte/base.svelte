@@ -1,7 +1,8 @@
 <script>
-  import Menu from "./menu.svelte"
+  import Menu from "./menu.svelte";
   import Info from "./pages/info/info.svelte";
-  import Bobby from "./bobby.svelte"
+  import Bobby from "./bobby.svelte";
+  import Album from "./pages/alb/alb.svelte";
   import AlbumBump from "./alb-bump.svelte";
   import VArchive from './pages/varchive/varchive.svelte'
   import NA from "./status-code/unavailable.svelte"
@@ -37,6 +38,11 @@
         break
       case "#home":
         activePage = Bobby
+        defBg = "#150411"
+        lightBg = "purple"
+        break
+      case "#album":
+        activePage = Album
         defBg = "#150411"
         lightBg = "purple"
         break
