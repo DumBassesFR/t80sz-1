@@ -40,7 +40,7 @@
     @apply font-normal;
     min-width: 5em;
     min-height: 5em;
-    max-width: 28em;
+    max-width: 50vw;
   }
   .ambassador-member {
     background: linear-gradient(
