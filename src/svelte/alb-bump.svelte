@@ -128,7 +128,7 @@
       </div>
     </div>
     <div class="text-tfyc">
-      <h2 class="header">the 4 year<br />compilation</h2>
+      <h2 class="header">the four year<br />compilation</h2>
       <p class="subtitle">available now</p>
     </div>
   </div>

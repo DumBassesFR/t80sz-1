@@ -20,6 +20,12 @@
       case "r-tba":
         return "remix - the ʕ ͡ ͡° ᴥ ͡ ͡° ʔ album";
         break;
+      case "ext":
+        return "extras";
+        break;
+      case "r-ext":
+        return "remix - extras";
+        break;
     }
   }
 </script>
@@ -38,10 +44,16 @@
           @apply text-xl mt-0 mb-2 font-normal;
         }
         .flair {
-          @apply text-sm leading-7 rounded-xl mt-0 mb-2 px-2 ml-3 font-bold;
+          @apply text-sm leading-7 rounded-full mt-0 mb-2 px-2 ml-3 font-bold;
         }
         .rnj-flair, .r-rnj-flair {
           @apply bg-green-lightclr text-purple-dark;
+        }
+        .tba-flair, .r-tba-flair {
+          @apply bg-purple-lightclr; 
+        }
+        .ext-flair, .r-ext-flair {
+          @apply bg-yellow-lightclr text-purple-dark; 
         }
         .bi-flair, .r-bi-flair {
           @apply bg-blue-lightclr;

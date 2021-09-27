@@ -6,7 +6,7 @@
   import Menu from "../../menu"
   import Docs from "../info/templates/docs"
   import BackHome from "../general/templates/back-home"
-  import Info from "../info/info"
+  import AlbumCover from '../alb/templates/cover';
   // add your file debug info here V
   let modules = [
     {
@@ -30,10 +30,10 @@
       id: "docs-base",
     },
     {
-      name: Info,
-      public: "Docs/Information Page",
-      id: "info",
-    },
+      name: AlbumCover,
+      public: "Album Cover for t4yc",
+      id: "alb-cover"
+    }
   ]
 </script>
 

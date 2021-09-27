@@ -1,0 +1,197 @@
+<style lang="postcss">
+  .cover-art {
+    @apply bg-purple-light bg-photocopy shadow ml-3 hidden lg:block scale-50 p-12 rounded-lg overflow-hidden;
+    background-image: url("../src/assets/pattern.png");
+    user-select: none;
+    width: 23vw;
+    animation: slide 1s steps(3) infinite;
+    height: 23vw;
+  }
+  .musical-notes {
+    @apply font-icon text-5xl;
+    position: relative;
+    bottom: 48vw;
+    left: 20vw;
+    p {
+      @apply my-0;
+      transform: rotate(-2deg);
+    }
+    .note-music-1 {
+      position: relative;
+      right: 5vw;
+      top: 6vw;
+      transform: rotate(30deg);
+    }
+  }
+  @keyframes slide {
+    from {
+      background-position: 0%;
+    }
+
+    to {
+      background-position: 150%;
+    }
+  }
+  .bobby-album {
+    position: relative;
+    bottom: 36.5vw;
+    width: 7vw;
+    left: 11.5vw;
+  }
+  .dashes-album {
+    position: relative;
+    width: 23vw;
+    height: 23vw;
+    position: relative;
+    display: flex;
+    @apply transform scale-125 2xl:scale-110;
+    left: 0.05em;
+    rect {
+      animation: 2s loopDash linear infinite;
+    }
+  }
+  .logo {
+    width: 20vw;
+    position: relative;
+    bottom: 17vw;
+    left: 0.3em;
+    .rainbow-mask {
+      background: linear-gradient(
+          272deg,
+          rgb(255, 229, 0),
+          rgb(242, 139, 39),
+          rgb(196, 41, 169),
+          rgb(68, 69, 255),
+          rgb(11, 241, 49),
+          rgb(255, 229, 0)
+        )
+        repeat scroll 0% 0% / 200% 200%;
+      animation: 5s linear 0s infinite normal none running logoGrad;
+      mask: url("data:image/svg+xml;base64,ICAgICAgPHN2ZwogICAgICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgICAgICB2aWV3Qm94PSIwIDAgNTcwIDQxMCIKICAgICAgICBmaWxsPSJub25lIj4KICAgICAgICA8ZGVmcyAvPgogICAgICAgIDxnIAogICAgICAgICAgb3BhY2l0eT0iLjkiPgogICAgICAgICAgPHBhdGgKICAgICAgICAgICAgZmlsbD0iI2ZmZiIKICAgICAgICAgICAgZD0iTTExNiA2LjdjLTguMiAzLjYtMTUuNyA3LjMtMTYuNSA4LTIuOCAyLjUtMi4xIDUuOCAyIDEwLjNsMy45IDQtLjYgNzYuNi0zLjcgNWMtNi4zIDguNi00IDkuNyAyMy4xIDkuM2wyOC44LS4zdi01LjFhNC45IDQuOSAwIDAgMC0yLTRjLTMuNS0zLjUtNC01LjctNC0yOCAwLTIzIDEtMjUgNS0yNyAxLjMtLjcgMS41IDIgMS41IDMuNWwuNyAzNi43YTI3IDI3IDAgMCAxLTMuMiAxNC44IDQuOSA0LjkgMCAwIDEgMiA0djUuMWg0OGwuNC0zYy4yLTItLjYtNC41LTIuMy03LjMtMi4yLTQtMi42LTYtNC4xLTIzLjctMi40LTI2LjctNS0zMy0xNi0zOS4yLTQuNy0yLjYtNy44LTIuOC0xNy0yLjgtOC40IDAtMTIuNCAyLjQtMTUuOCA0LjJWMjVjMC0yMy4zLS4zLTI1LTMuNi0yNS0uOSAwLTE4LjMgMy0yNi41IDYuN1ogTTUuNiAxMGMtLjkuNy0xLjUgMS42LTEuNSAyTDIuMyAyNS4zQy42IDM3IC42IDM4LjEgMS45IDM5LjZjMiAyLjIgMTUgMi4xIDE4LS4zIDEuNS0xLjEgNC00LjIgNS40LTcgMS42LTIuNyA0LjMtNi4zIDYuMi04bDEtLjguNCAzNS4xYy4xIDIwLjEgMCAzOC44LS4zIDQxLjQtLjQgMy4yLTEuNyA2LjUtMy45IDkuOS0yIDMtMy4yIDYtMyA3LjQuMyAyLjIuNiAyLjMgNy43IDIuNiA1IC4yIDE5LjItLjQgMjQuNS0xLjYgNC40LTEgMTEuMy0yLjIgMTUuMy0yLjQgNC0uNCA3LjMtMSA3LjMtMS4zYTI3IDI3IDAgMCAwLTMtNC44bC0zLTQuMiAxLTgzLjZINzVzLTIgMCAxLjEgMi45YzIgMS44IDUgNS42IDYuNiA4LjRDODQuMyAzNiA4Ni43IDQwIDkzIDQxYzMuNy42IDEyIC43IDE0LjItMSAxLjctMS4yIDEuNy0xLjYgMC0xNWE3OS4xIDc5LjEgMCAwIDAtMy4yLTE1Yy0xLTEuNC0xNy4zLTEuNi01NS0xLjYtMjguNyAwLTQyIC4yLTQzLjMgMS41WiBNMjE5IDQ0LjZhNDEgNDEgMCAwIDAtMjMuNSAyMC45QzE5MyA3MC40IDE5MyA3MS44IDE5MyA4MmMwIDE0LjYgMiAyMCAxMC4yIDI4LjJsNS43IDUuOCAxMi43LS41YzkuMi0uMyAyNC41IDAgMjkuNiAxLjEgNi43IDEuNCA3IDEuNCAxMC0uNSA2LjgtNCAxMy0xMy42IDEyLjQtMTguOC0uNS00LjUtMi43LTUuNC02LjYtMi41LTcuMiA1LjUtMTcuNSA2LTI0LjQgMS4yLTIuMS0xLjUtNC0zLjEtNC0zLjcgMC0uNSA2LTQuNyAxMy4xLTkuNCAxNy0xMSAyMC4yLTE0IDIwLjItMTkgMC04LTcuNS0xNi41LTE3LTE5LjQtNi0xLjctMzAuMy0xLjgtMzUuOSAwWm0yNC4yIDguOGM0IDQuNCA1LjMgMTMuMSAyLjkgMTguMi0xLjggMy41LTEyLjUgMTEuNi0xMy4xIDkuOC0zLjgtMTAuNi0yLjctMjUgMi0yOC43IDIuNC0xLjcgNi4zLTEuNCA4LjIuN1ogTTYwLjIgMTIzYy0yMSAyLjQtMzguNiAxMi44LTQ1IDI2LjZhNDIgNDIgMCAwIDAtMS41IDM0LjcgNzQgNzQgMCAwIDAgMjIgMjEuOGw3IDQuOS01LjEgMi41QTg4LjUgODguNSAwIDAgMCAxNC44IDIzMGMtNi40IDctOS4xIDEzLjctOS4zIDIzLjNhMjIgMjIgMCAwIDAgMyAxMy4zYzUuNyAxMS44IDE3LjIgMjAuMSAzMy41IDI0LjIgMzEuNCA4LjEgODAuNiAzLjggOTQuOC0xMi43IDguNy04IDE0LTIyLjMgMTIuOS0zNS0xLTEyLjktMTEuMi0yNi0yNy4xLTM1LjMtNC41LTIuNi04LjItNS04LjMtNS4yIDAtLjMgMi42LTIuMiA1LjctNCAxMy41LTguNCAxOS43LTE3LjkgMjAuNC0zMS4yYTM3LjggMzcuOCAwIDAgMC0xMi44LTMxLjZjLTEyLTExLjItNDItMTUuNy02Ny40LTEyLjhabTI3IDE2LjljOC44IDMgMTIuNiAxMyAxMC4yIDI2LjhhNDMgNDMgMCAwIDEtNy43IDE4LjljLTIuMSAxLjctNCAuNS0xMC40LTYuM2EzNC4zIDM0LjMgMCAwIDEtMTAuNy0yNC4xYy0uNC03LjItLjItNy43IDIuMi0xMC42YTE0IDE0IDAgMCAxIDE2LjQtNC43Wm0tNiA4OWMxNC42IDEwLjggMjEgMjAuMSAyMSAzMCAwIDctMi4zIDExLjEtOCAxNC41LTMuOCAyLjQtNS4zIDIuOC0xMC44IDIuOC03LjUgMC0xNS4zLTMuMy0xOS4yLTgtNS44LTYuOC01LjctMTkuOC4yLTMyIDMuOS04IDcuMy0xMyA4LjctMTMgLjQgMCA0IDIuNiA4LjEgNS42WiBNMjE4IDEyMy41Yy0xNS4yIDIuNy0zNyA5LjgtNDguMiAyMS44YTc2IDc2IDAgMCAwLTE5LjYgMzYuNGMtMyAxMC42LTMuNiAzNy0xLjMgNDguMmE4MC4zIDgwLjMgMCAwIDAgMzIuOSA1MS4yYzYuOCA0LjkgMTMuOSA4IDIzLjYgMTAuOSAxMCAyLjkgNDAuMSAyLjggNTAuNiAwYTgyLjQgODIuNCAwIDAgMCA1MC00MSAxMDYuMiAxMDYuMiAwIDAgMCA0LjgtNzEuMiA3OS41IDc5LjUgMCAwIDAtOTIuNy01Ni4zWm0xNy4xIDE4LjVjMTAuOCA1LjcgMjAuMyAyOS4yIDI0LjEgNTkuOCAxLjggMTUgMiA0My4zLjEgNTIuNy0yLjkgMTQuOS04LjIgMjIuMy0xNi4xIDIyLjMtMTAuNyAwLTE4LjEtOC44LTI0LjctMjkuMy01LjctMTgtNy4xLTI5LjMtNy4xLTU2LjYgMC0yMC43LjMtMjUuNCAxLjgtMzEgMi40LTkgNC43LTE1LjEgOC4zLTE3LjNhMTYuMiAxNi4yIDAgMCAxIDEzLjYtLjZaIE0zNDguNiAxNzcuN2MtMTYgMy0yOC4zIDExLjUtMzMuNiAyMy0xLjYgMy41LTIgNi0yIDEzLjIgMCA3LjkuMyA5LjYgMi42IDE0LjIgNC44IDkuNyAxMi4xIDE0LjkgMjkuMyAyMC41IDExLjYgMy45IDIyLjMgNi43IDI3IDExIDQuNCAzLjggNyA4LjMgNi41IDE0LjUtLjcgNi00IDguNy00IDguNy02LjYgMC0xMC43LTQuNC0xNC0xNS40YTI3IDI3IDAgMCAwLTEwLjktMTVjLTgtNC43LTMyLTIuNC0zNi40IDQuMi0yLjUgMy44LTMgMTEuOC0xLjEgMTYuOCA2LjIgMTYuMiA1MCAyNSA4MS4zIDE4LjggMTMtMi43IDI0LTkuOSAyOS4xLTE5LjMgMi42LTQuNyAyLjgtNS44IDIuOC0xNC40IDAtOC4yLS4yLTEwLTIuMy0xNGEzNi40IDM2LjQgMCAwIDAtMjEuMy0xNi45Yy0xOC44LTcuMS0yMS4zLTguMy0yNi4zLTEzLjItNS40LTUuNC03LjQtMTAuNS02LjQtMTcuMi42LTUuMiAyLjEtNy40IDQuOC04LjYgNi44LTMuMSA5LjMgNS40IDExLjcgMTEuNyAzLjMgOC44IDMuNiAxNS41IDEzLjQgMTkuMWEyOC44IDI4LjggMCAwIDAgMTYtLjIgMTUuOSAxNS45IDAgMCAwIDguMi0yMS44Yy0zLjctOC0xNC4yLTE1LjItMjcuMy0xOC42LTguNC0yLjEtMzguNi0yLjgtNDctMS4xWiBNMTg3LjUgMjkzLjJjLTE3IDMuNS00MiAxMy01MS40IDI2YTUwIDUwIDAgMCAwLTkuNCAyNC44Yy0zLjMgMjYuMiAxMS4yIDQ5LjYgMzguMyA2MS4xIDExLjIgNC44IDM5LjYgNi4zIDUyLjcgMy41YTY2IDY2IDAgMCAwIDQyLTI4IDU4LjYgNTguNiAwIDAgMCAyLjctNTQuOSA2OCA2OCAwIDAgMC0xOS40LTIxLjVjLTMuOC0yLjUtNS41LTIuOS0xMi44LTMuM2E5My4zIDkzLjMgMCAwIDEtMjkuMy02LjhjLTYtMi42LTUuMi0yLjYtMTMuNC0xWm0xNCAxNS40YzkgOS40IDE3IDM5LjggMTcgNjUuMiAwIDE3LTIuOCAyMy0xMC41IDIzLTYuOCAwLTEyLjItNy40LTE3LjYtMjQuNmExMzEgMTMxIDAgMCAxLTYuMS00MmMtLjEtMTUuOS43LTIwLjIgNC44LTIzLjQgNC0zLjEgOC40LTIuNSAxMi41IDEuOFogTTI4NCAzMDIuMmMtMTkuNyA5LjctMjUgMTMuMi0yNSAxNi40IDAgLjkgMi42IDQuMSA1LjcgNy4zIDguNCA4LjggOC40IDkuMSA4LjQgMzQgMCAyNC4zLS4yIDI1LTYuOCAzNC00LjcgNi4zLTUuNSAxMC0zIDEyLjcgMS4zIDEuMyA1LjYgMS41IDMzLjIgMS41IDI5LjUgMCA0MS44IDAgNDMuMi0xLjcgMi4zLTIuNiAyLTUuMS0xLjctMTAuMWE5OCA5OCAwIDAgMS01LjYtOS4zbC0yLjQtNC43di0yOC44YzAtMTcuOC40LTMwLjcgMS0zMy44IDEuNi02LjYgNS0xMCAxMC4zLTEwIDIuNSAwIDEuNCA0LjEgMy42IDM3LjlhNjQ0IDY0NCAwIDAgMSAxLjQgMjkuNGMwIDguNiAwIDguOC00LjQgMTctNC4zIDguMS00LjQgOC41LTMuMSAxMWwxLjUgMi42IDI5LjYuM2MyNi4xLjIgMzkuOSAwIDQxLjItMS4zIDIuMy0yLjMgMS44LTYuMy0yLjItMTMuNy0yLTMuNy0zLjgtOC4xLTQuMi05LjZhNzkwIDc5MCAwIDAgMS0yLjUtMjYuNmMtMi42LTMyLTUuMy00MS43LTE0LjItNTEuNGwtMy44LTQuMWgtMTIuOGE5NyA5NyAwIDAgMS0yNy42LTRjLTguOS0yLjMtOS44LTEuOC0xNi4xIDVhNDEuMiA0MS4yIDAgMCAxLTQuNyA0LjZjLS4zIDAtLjUtMi40LS41LTUuNSAwLTYuNC0yLjctOS41LTYuNC05LjQtMS40IDAtMjAuOCA0LjctMzIuMiAxMC4zWiBNNDU2LjggMjkzLjdjLTEwLjYgMi44LTI5LjMgNy44LTM3LjQgMTZhNTEgNTEgMCAwIDAtMTUuOSA0MC44YzAgMTguOSA0LjkgMzEuNiAxNi40IDQzIDExLjIgMTEuMiAzNC40IDE2LjUgNTEuNCAxNi41IDE2LjkgMCAyNy00IDM3LjUtMTQuNSA3LjUtNy42IDEwLjktMTMuNyAxMS40LTIwLjguNC00LjIuMS01LTEuNy02LjQtMy0yLTQtMS44LTcuOCAxLjMtNS41IDUtMTMuNyA4LjQtMjcuMiA2LjQtNi42LTEtMTUuNi04LjctMTUuNi0xMC41IDAtLjUgMTAtNy41IDIyLjEtMTUuNWExODAgMTgwIDAgMCAwIDI0LjYtMTcuN2MyLjItMi44IDIuNS00LjIgMi41LTkuNSAwLTcuNC0yLjMtMTIuMy04LjQtMTguNC0xMC45LTEwLjgtMzMuNS0xNS41LTUxLjktMTAuN1pNNDc1IDMwOGMzLjggNCA1LjcgMTAuMyA1LjcgMTguOSAwIDQuNy0uNSA3LjMtMS43IDkuMmE5OS42IDk5LjYgMCAwIDEtMTguNiAxNC43Yy0yIDAtNC42LTE0LjUtNC42LTI1LjMgMC0xMyA0LjYtMjAuNyAxMi42LTIwLjcgMi45IDAgNC4yLjcgNi42IDMuMlogTTIzLjYgMjk1LjhjLTIgMy0xMSAyNi43LTExIDI5LjQgMCAzLjUgMy40IDYgMTMuOCA2IDUuNyAwIDExLjQtNCAxOC0xMi4yIDYtNy41IDExLjMtMTIuMiAxNS43LTEzbDYuOC4zLTI1IDM5LjljLTM0IDU0LTMxLjQgNDkuNC0zMS40IDU0IDAgMy4yLjUgNC40IDIuNSA2IDIuNCAyIDEyLjQgMiA2MS41IDIgNTYuNiAwIDUzLjYuNSA1NS44LTcuOC41LTIuMiAyLjUtOC45IDQuMy0xNC45YTk1IDk1IDAgMCAwIDMuMi0xMi44YzAtMi41LTMuNC01LTYuOS01LTQuOCAwLTkgMy0xOC40IDEzLjItMTIuNCAxMy4zLTE1LjYgMTUtMjguNSAxNS03LjcgMC05LjItLjItOC44LTEuM2E3NDY1LjMgNzQ2NS4zIDAgMCAwIDU0LjUtODguNWMxLjgtMy41IDItOC44LjQtMTAuNC0xLjctMS43LTYuNy0xLjQtMTMuNy44YTEyNy45IDEyNy45IDAgMCAxLTY4LjMgMGMtMy44LTEtOC4xLTItMTEtMi00LjMgMC0xMi40LS41LTEzLjUgMS4zWiBNNTMwLjUgMzYyLjJhMjYgMjYgMCAwIDAtMTQuMyAxMS40Yy0zIDUuOC0zLjIgMTUuMi0uOCAyMS42YTI1LjMgMjUuMyAwIDAgMCAxNSAxMy40YzYuMiAxLjggMjYgMS44IDMyLjEtLjFhMjQuNiAyNC42IDAgMCAwIDE0LjktMTMuMyAyOS41IDI5LjUgMCAwIDAtLjktMjEuNkEyNS45IDI1LjkgMCAwIDAgNTYyIDM2MmMtNC4yLTEtMjcuNC0xLTMxLjQuMVoiIC8+CiAgICAgICAgPC9nPgogICAgICA8L3N2Zz4K");
+      height: 14.34vw;
+      width: 20vw;
+      position: absolute;
+      z-index: 0;
+    }
+    #white-layer {
+      z-index: 1;
+      left: 0.35rem;
+      position: relative;
+    }
+    .album-title {
+      width: 25vw;
+      @apply text-lg xl:text-xl 2xl:text-3xl my-0;
+    }
+  }
+  @keyframes logoGrad {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  @keyframes loopDash {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 115;
+    }
+  }
+</style>
+
+<div class="cover-art">
+  <div class="dashes-album">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="-10 -10 625 625"
+      fill="none">
+      <defs>
+        <linearGradient id="c" x1="91.5%" x2="11.2%" y1="52.7%" y2="47.4%">
+          <stop offset="0%" stop-color="#0BF131" />
+          <stop offset="25%" stop-color="#4445FF" />
+          <stop offset="54.6%" stop-color="#C429A9" />
+          <stop offset="86.8%" stop-color="#F28B27" />
+          <stop offset="99.9%" stop-color="#FFE500" />
+        </linearGradient>
+      </defs>
+      <rect
+        width="600"
+        height="600"
+        fill="none"
+        rx="10"
+        ry="10"
+        stroke="url(#c)"
+        stroke-width="15"
+        stroke-linecap="round"
+        stroke-dasharray="56.75"
+        stroke-linejoin="round" />
+    </svg>
+  </div>
+  <div class="logo">
+    <div class="rainbow-mask">
+      <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" fill="none">
+        <defs />
+        <g opacity=".9">
+          <path
+            fill="#fff"
+            d="M116 6.7c-8.2 3.6-15.7 7.3-16.5 8-2.8 2.5-2.1 5.8 2 10.3l3.9 4-.6 76.6-3.7 5c-6.3 8.6-4 9.7 23.1 9.3l28.8-.3v-5.1a4.9 4.9 0 0 0-2-4c-3.5-3.5-4-5.7-4-28 0-23 1-25 5-27 1.3-.7 1.5 2 1.5 3.5l.7 36.7a27 27 0 0 1-3.2 14.8 4.9 4.9 0 0 1 2 4v5.1h48l.4-3c.2-2-.6-4.5-2.3-7.3-2.2-4-2.6-6-4.1-23.7-2.4-26.7-5-33-16-39.2-4.7-2.6-7.8-2.8-17-2.8-8.4 0-12.4 2.4-15.8 4.2V25c0-23.3-.3-25-3.6-25-.9 0-18.3 3-26.5 6.7Z M5.6 10c-.9.7-1.5 1.6-1.5 2L2.3 25.3C.6 37 .6 38.1 1.9 39.6c2 2.2 15 2.1 18-.3 1.5-1.1 4-4.2 5.4-7 1.6-2.7 4.3-6.3 6.2-8l1-.8.4 35.1c.1 20.1 0 38.8-.3 41.4-.4 3.2-1.7 6.5-3.9 9.9-2 3-3.2 6-3 7.4.3 2.2.6 2.3 7.7 2.6 5 .2 19.2-.4 24.5-1.6 4.4-1 11.3-2.2 15.3-2.4 4-.4 7.3-1 7.3-1.3a27 27 0 0 0-3-4.8l-3-4.2 1-83.6H75s-2 0 1.1 2.9c2 1.8 5 5.6 6.6 8.4C84.3 36 86.7 40 93 41c3.7.6 12 .7 14.2-1 1.7-1.2 1.7-1.6 0-15a79.1 79.1 0 0 0-3.2-15c-1-1.4-17.3-1.6-55-1.6-28.7 0-42 .2-43.3 1.5Z M219 44.6a41 41 0 0 0-23.5 20.9C193 70.4 193 71.8 193 82c0 14.6 2 20 10.2 28.2l5.7 5.8 12.7-.5c9.2-.3 24.5 0 29.6 1.1 6.7 1.4 7 1.4 10-.5 6.8-4 13-13.6 12.4-18.8-.5-4.5-2.7-5.4-6.6-2.5-7.2 5.5-17.5 6-24.4 1.2-2.1-1.5-4-3.1-4-3.7 0-.5 6-4.7 13.1-9.4 17-11 20.2-14 20.2-19 0-8-7.5-16.5-17-19.4-6-1.7-30.3-1.8-35.9 0Zm24.2 8.8c4 4.4 5.3 13.1 2.9 18.2-1.8 3.5-12.5 11.6-13.1 9.8-3.8-10.6-2.7-25 2-28.7 2.4-1.7 6.3-1.4 8.2.7Z M60.2 123c-21 2.4-38.6 12.8-45 26.6a42 42 0 0 0-1.5 34.7 74 74 0 0 0 22 21.8l7 4.9-5.1 2.5A88.5 88.5 0 0 0 14.8 230c-6.4 7-9.1 13.7-9.3 23.3a22 22 0 0 0 3 13.3c5.7 11.8 17.2 20.1 33.5 24.2 31.4 8.1 80.6 3.8 94.8-12.7 8.7-8 14-22.3 12.9-35-1-12.9-11.2-26-27.1-35.3-4.5-2.6-8.2-5-8.3-5.2 0-.3 2.6-2.2 5.7-4 13.5-8.4 19.7-17.9 20.4-31.2a37.8 37.8 0 0 0-12.8-31.6c-12-11.2-42-15.7-67.4-12.8Zm27 16.9c8.8 3 12.6 13 10.2 26.8a43 43 0 0 1-7.7 18.9c-2.1 1.7-4 .5-10.4-6.3a34.3 34.3 0 0 1-10.7-24.1c-.4-7.2-.2-7.7 2.2-10.6a14 14 0 0 1 16.4-4.7Zm-6 89c14.6 10.8 21 20.1 21 30 0 7-2.3 11.1-8 14.5-3.8 2.4-5.3 2.8-10.8 2.8-7.5 0-15.3-3.3-19.2-8-5.8-6.8-5.7-19.8.2-32 3.9-8 7.3-13 8.7-13 .4 0 4 2.6 8.1 5.6Z M218 123.5c-15.2 2.7-37 9.8-48.2 21.8a76 76 0 0 0-19.6 36.4c-3 10.6-3.6 37-1.3 48.2a80.3 80.3 0 0 0 32.9 51.2c6.8 4.9 13.9 8 23.6 10.9 10 2.9 40.1 2.8 50.6 0a82.4 82.4 0 0 0 50-41 106.2 106.2 0 0 0 4.8-71.2 79.5 79.5 0 0 0-92.7-56.3Zm17.1 18.5c10.8 5.7 20.3 29.2 24.1 59.8 1.8 15 2 43.3.1 52.7-2.9 14.9-8.2 22.3-16.1 22.3-10.7 0-18.1-8.8-24.7-29.3-5.7-18-7.1-29.3-7.1-56.6 0-20.7.3-25.4 1.8-31 2.4-9 4.7-15.1 8.3-17.3a16.2 16.2 0 0 1 13.6-.6Z M348.6 177.7c-16 3-28.3 11.5-33.6 23-1.6 3.5-2 6-2 13.2 0 7.9.3 9.6 2.6 14.2 4.8 9.7 12.1 14.9 29.3 20.5 11.6 3.9 22.3 6.7 27 11 4.4 3.8 7 8.3 6.5 14.5-.7 6-4 8.7-4 8.7-6.6 0-10.7-4.4-14-15.4a27 27 0 0 0-10.9-15c-8-4.7-32-2.4-36.4 4.2-2.5 3.8-3 11.8-1.1 16.8 6.2 16.2 50 25 81.3 18.8 13-2.7 24-9.9 29.1-19.3 2.6-4.7 2.8-5.8 2.8-14.4 0-8.2-.2-10-2.3-14a36.4 36.4 0 0 0-21.3-16.9c-18.8-7.1-21.3-8.3-26.3-13.2-5.4-5.4-7.4-10.5-6.4-17.2.6-5.2 2.1-7.4 4.8-8.6 6.8-3.1 9.3 5.4 11.7 11.7 3.3 8.8 3.6 15.5 13.4 19.1a28.8 28.8 0 0 0 16-.2 15.9 15.9 0 0 0 8.2-21.8c-3.7-8-14.2-15.2-27.3-18.6-8.4-2.1-38.6-2.8-47-1.1Z M187.5 293.2c-17 3.5-42 13-51.4 26a50 50 0 0 0-9.4 24.8c-3.3 26.2 11.2 49.6 38.3 61.1 11.2 4.8 39.6 6.3 52.7 3.5a66 66 0 0 0 42-28 58.6 58.6 0 0 0 2.7-54.9 68 68 0 0 0-19.4-21.5c-3.8-2.5-5.5-2.9-12.8-3.3a93.3 93.3 0 0 1-29.3-6.8c-6-2.6-5.2-2.6-13.4-1Zm14 15.4c9 9.4 17 39.8 17 65.2 0 17-2.8 23-10.5 23-6.8 0-12.2-7.4-17.6-24.6a131 131 0 0 1-6.1-42c-.1-15.9.7-20.2 4.8-23.4 4-3.1 8.4-2.5 12.5 1.8Z M284 302.2c-19.7 9.7-25 13.2-25 16.4 0 .9 2.6 4.1 5.7 7.3 8.4 8.8 8.4 9.1 8.4 34 0 24.3-.2 25-6.8 34-4.7 6.3-5.5 10-3 12.7 1.3 1.3 5.6 1.5 33.2 1.5 29.5 0 41.8 0 43.2-1.7 2.3-2.6 2-5.1-1.7-10.1a98 98 0 0 1-5.6-9.3l-2.4-4.7v-28.8c0-17.8.4-30.7 1-33.8 1.6-6.6 5-10 10.3-10 2.5 0 1.4 4.1 3.6 37.9a644 644 0 0 1 1.4 29.4c0 8.6 0 8.8-4.4 17-4.3 8.1-4.4 8.5-3.1 11l1.5 2.6 29.6.3c26.1.2 39.9 0 41.2-1.3 2.3-2.3 1.8-6.3-2.2-13.7-2-3.7-3.8-8.1-4.2-9.6a790 790 0 0 1-2.5-26.6c-2.6-32-5.3-41.7-14.2-51.4l-3.8-4.1h-12.8a97 97 0 0 1-27.6-4c-8.9-2.3-9.8-1.8-16.1 5a41.2 41.2 0 0 1-4.7 4.6c-.3 0-.5-2.4-.5-5.5 0-6.4-2.7-9.5-6.4-9.4-1.4 0-20.8 4.7-32.2 10.3Z M456.8 293.7c-10.6 2.8-29.3 7.8-37.4 16a51 51 0 0 0-15.9 40.8c0 18.9 4.9 31.6 16.4 43 11.2 11.2 34.4 16.5 51.4 16.5 16.9 0 27-4 37.5-14.5 7.5-7.6 10.9-13.7 11.4-20.8.4-4.2.1-5-1.7-6.4-3-2-4-1.8-7.8 1.3-5.5 5-13.7 8.4-27.2 6.4-6.6-1-15.6-8.7-15.6-10.5 0-.5 10-7.5 22.1-15.5a180 180 0 0 0 24.6-17.7c2.2-2.8 2.5-4.2 2.5-9.5 0-7.4-2.3-12.3-8.4-18.4-10.9-10.8-33.5-15.5-51.9-10.7ZM475 308c3.8 4 5.7 10.3 5.7 18.9 0 4.7-.5 7.3-1.7 9.2a99.6 99.6 0 0 1-18.6 14.7c-2 0-4.6-14.5-4.6-25.3 0-13 4.6-20.7 12.6-20.7 2.9 0 4.2.7 6.6 3.2Z M23.6 295.8c-2 3-11 26.7-11 29.4 0 3.5 3.4 6 13.8 6 5.7 0 11.4-4 18-12.2 6-7.5 11.3-12.2 15.7-13l6.8.3-25 39.9c-34 54-31.4 49.4-31.4 54 0 3.2.5 4.4 2.5 6 2.4 2 12.4 2 61.5 2 56.6 0 53.6.5 55.8-7.8.5-2.2 2.5-8.9 4.3-14.9a95 95 0 0 0 3.2-12.8c0-2.5-3.4-5-6.9-5-4.8 0-9 3-18.4 13.2-12.4 13.3-15.6 15-28.5 15-7.7 0-9.2-.2-8.8-1.3a7465.3 7465.3 0 0 0 54.5-88.5c1.8-3.5 2-8.8.4-10.4-1.7-1.7-6.7-1.4-13.7.8a127.9 127.9 0 0 1-68.3 0c-3.8-1-8.1-2-11-2-4.3 0-12.4-.5-13.5 1.3Z M530.5 362.2a26 26 0 0 0-14.3 11.4c-3 5.8-3.2 15.2-.8 21.6a25.3 25.3 0 0 0 15 13.4c6.2 1.8 26 1.8 32.1-.1a24.6 24.6 0 0 0 14.9-13.3 29.5 29.5 0 0 0-.9-21.6A25.9 25.9 0 0 0 562 362c-4.2-1-27.4-1-31.4.1Z" />
+        </g>
+      </svg>
+    </div>
+    <div id="white-layer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 410" fill="none">
+        <g fill="#FDFAFF" opacity=".8">
+          <path
+            d="M117 6.7c-8.2 3.6-15.7 7.3-16.5 8-2.8 2.5-2.1 5.8 2 10.3l3.9 4-.6 76.6-3.7 5c-6.3 8.6-4 9.7 23.1 9.3l19-.3.3-2.9c.2-2-.3-3.7-2-5.6-4.3-5.2-4.3-6-4.3-28.3 0-23 .3-24.8 4.8-27.4 3.4-1.8 7-.1 8.8 4.2 1.5 3.4 3 20 3.4 36.1.3 9.3.1 10.1-2.3 14.3a12.8 12.8 0 0 0-2.4 7l.3 2.6h41.3l.3-3c.2-2-.6-4.5-2.3-7.3-2.2-4-2.6-6-4.1-23.7-2.4-26.7-5-33-16-39.2-4.7-2.6-5.8-2.8-15-2.8-8.4 0-10.4.3-13.8 2.2l-4 2V25c0-23.3-.3-25-3.6-25-.9 0-8.3 3-16.5 6.7Z" />
+          <path
+            d="M4.6 10c-.8.7-1.5 1.6-1.5 2L1.3 25.3C-.4 37-.4 38.1 1 39.6c2.1 2.2 7 2.1 10-.3 1.5-1.1 4-4.2 5.4-7 1.6-2.7 4.3-6.3 6.2-8 2.7-2.3 4-2.8 7.1-2.5l4 .2.3 36.6c.1 20.1 0 38.8-.3 41.4-.4 3.2-1.7 6.5-3.9 9.9-2 3-3.2 6-3 7.4.3 2.2.6 2.3 7.7 2.6 5 .2 10.2-.4 15.5-1.6 4.4-1 11.3-2.2 15.3-2.4 4-.4 7.3-1 7.3-1.3a27 27 0 0 0-3-4.8l-3-4.2V22l3.4-.2c2.8-.3 4.1.2 7.2 3 2 2 5 5.7 6.6 8.5 1.6 2.7 3.7 5.6 5 6.5 2.5 1.9 7.2 2 9.5.3 1.7-1.3 1.7-1.7 0-15A79 79 0 0 0 95 9.8c-1-1.2-7.3-1.4-45-1.4-38.6 0-44 .2-45.3 1.5ZM220 44.6a41 41 0 0 0-23.5 20.9C194 70.4 194 71.8 194 82c0 14.6 2 20 10.2 28.2l5.7 5.8 12.7-.5c9.2-.3 14.5 0 19.6 1.1 6.7 1.4 7 1.4 10-.5 6.8-4 13-13.6 12.4-18.8-.5-4.5-2.7-5.4-6.6-2.5-7.2 5.5-17.5 6-24.4 1.2-2.1-1.5-4-3.1-4-3.7 0-.5 6-4.7 13.1-9.4 17-11 20.2-14 20.2-19 0-8-7.5-16.5-17-19.4-6-1.7-20.3-1.8-25.9 0Zm14.2 8.8c4 4.4 5.3 13.1 2.9 18.2-1.8 3.5-12.5 11.6-13.1 9.8-3.8-10.6-2.7-25 2-28.7 2.4-1.7 6.3-1.4 8.2.7ZM61.2 123c-21 2.4-38.6 12.8-45 26.6a42 42 0 0 0-1.5 34.7 74 74 0 0 0 22 21.8l7 4.9-5.1 2.5A88.5 88.5 0 0 0 15.8 230c-6.4 7-9.1 13.7-9.3 23.3a22 22 0 0 0 3 13.3c5.7 11.8 17.2 20.1 33.5 24.2 31.4 8.1 68.5 2.5 84.8-12.7 8.7-8 14-22.3 12.9-35-1-12.9-11.2-26-27.1-35.3-4.5-2.6-8.2-5-8.3-5.2 0-.3 2.6-2.2 5.7-4 13.5-8.4 19.7-17.9 20.4-31.2a37.8 37.8 0 0 0-12.8-31.6c-12-11.2-32-15.7-57.4-12.8Zm17 16.9c8.8 3 12.6 13 10.2 26.8a43 43 0 0 1-7.7 18.9c-2.1 1.7-4 .5-10.4-6.3a34.3 34.3 0 0 1-10.7-24.1c-.4-7.2-.2-7.7 2.2-10.6a14 14 0 0 1 16.4-4.7Zm-6 89c14.6 10.8 21 20.1 21 30 0 7-2.3 11.1-8 14.5-3.8 2.4-5.3 2.8-10.8 2.8-7.5 0-15.3-3.3-19.2-8-5.8-6.8-5.7-19.8.2-32 3.9-8 7.3-13 8.7-13 .4 0 4 2.6 8.1 5.6ZM210 123.5a68.8 68.8 0 0 0-39.2 21.8 76 76 0 0 0-19.6 36.4c-3 10.6-3.6 37-1.3 48.2a80.3 80.3 0 0 0 32.9 51.2c6.8 4.9 13.9 8 23.6 10.9 10 2.9 30.1 2.8 40.6 0a82.4 82.4 0 0 0 50-41 106.2 106.2 0 0 0 4.8-71.2 78.4 78.4 0 0 0-91.7-56.3Zm16.1 18.5c10.8 5.7 20.3 29.2 24.1 59.8 1.8 15 2 43.3.1 52.7-2.9 14.9-8.2 22.3-16.1 22.3-10.7 0-18.1-8.8-24.7-29.3-5.7-18-7.1-29.3-7.1-56.6 0-20.7.3-25.4 1.8-31 2.4-9 5.7-15.1 9.3-17.3a14 14 0 0 1 12.6-.6Zm123.5 35.7c-16 3-28.3 11.5-33.6 23-1.6 3.5-2 6-2 13.2 0 7.9.3 9.6 2.6 14.2 4.8 9.7 12.1 14.9 29.3 20.5a58.5 58.5 0 0 1 22 11c4.4 3.8 6 8.3 5.5 14.5-.7 6-3 8.5-8 8.7-6.6 0-10.7-4.4-14-15.4a27 27 0 0 0-10.9-15c-8-4.7-22-2.4-26.4 4.2-2.5 3.8-3 11.8-1.1 16.8 6.2 16.2 40 25 71.3 18.8 13-2.7 24-9.9 29.1-19.3 2.6-4.7 2.8-5.8 2.8-14.4 0-8.2-.2-10-2.3-14a36.4 36.4 0 0 0-21.3-16.9c-18.8-7.1-21.3-8.3-26.3-13.2-5.4-5.4-7.4-10.5-6.4-17.2.6-5.2 2-7.6 4.8-8.6 5.1-2 8.2 1.1 11.7 11.7 3.7 11.6 5.6 16.2 13.4 19.1a28.8 28.8 0 0 0 16-.2 15.9 15.9 0 0 0 8.2-21.8c-3.7-8-14.2-15.2-27.3-18.6a121 121 0 0 0-37-1.1ZM178.5 293.2a67 67 0 0 0-41.4 26 50 50 0 0 0-9.4 24.8c-3.3 26.2 11.2 49.6 38.3 61.1a80.5 80.5 0 0 0 42.7 3.5 66 66 0 0 0 42-28 58.6 58.6 0 0 0 2.7-54.9 68 68 0 0 0-19.4-21.5c-3.8-2.5-5.5-2.9-12.8-3.3a93.3 93.3 0 0 1-29.3-6.8c-6-2.6-5.2-2.6-13.4-1Zm14 15.4c9 9.4 17 39.8 17 65.2 0 17-2.8 23-10.5 23-6.8 0-12.2-7.4-17.6-24.6a131 131 0 0 1-6.1-42c-.1-15.9.7-20.2 4.8-23.4 4-3.1 8.4-2.5 12.5 1.8Z" />
+          <path
+            d="M285 302.2c-19.7 9.7-25 13.2-25 16.4 0 .9 2.6 4.1 5.7 7.3 8.4 8.8 8.4 9.1 8.4 34 0 24.3-.2 25-6.8 34-4.7 6.3-5.5 10-3 12.7 1.3 1.3 5.6 1.5 33.2 1.5 29.5 0 31.8 0 33.2-1.7 2.3-2.6 2-5.1-1.7-10.1a98 98 0 0 1-5.6-9.3l-2.4-4.7v-28.8c0-17.8.4-30.7 1-33.8 1.6-6.6 5-10 10.3-10 9.8 0 11.4 4.1 13.6 37.9a644 644 0 0 1 1.4 29.4c0 8.6 0 8.8-4.4 17-4.3 8.1-4.4 8.5-3.1 11l1.5 2.6 29.6.3c26.1.2 29.9 0 31.2-1.3 2.3-2.3 1.8-6.3-2.2-13.7-2-3.7-3.8-8.1-4.2-9.6a790 790 0 0 1-2.5-26.6c-2.6-32-5.3-41.7-14.2-51.4l-3.8-4.1h-8.8c-10.5 0-20.9-1.4-30.6-4-8.9-2.3-10.8-1.8-17.1 5a41.2 41.2 0 0 1-4.7 4.6c-.3 0-.5-2.4-.5-5.5 0-6.4-1.7-9.5-5.4-9.4-1.4 0-11.8 4.7-23.2 10.3Zm162.8-8.5a59.4 59.4 0 0 0-27.4 16 51 51 0 0 0-15.9 40.8c0 18.9 4.9 31.6 16.4 43a55 55 0 0 0 41.4 16.5c16.9 0 27-4 37.5-14.5 7.5-7.6 10.9-13.7 11.4-20.8.4-4.2.1-5-1.7-6.4-3-2-4-1.8-7.8 1.3a27.6 27.6 0 0 1-19.8 7 28 28 0 0 1-12.2-2c-4.8-2.2-10.8-7.3-10.8-9 0-.6 10-7.6 22.1-15.6a180 180 0 0 0 24.6-17.7c2.2-2.8 2.5-4.2 2.5-9.5 0-7.4-2.3-12.3-8.4-18.4-10.9-10.8-33.5-15.5-51.9-10.7ZM466 308c3.8 4 5.7 10.3 5.7 18.9 0 4.7-.5 7.3-1.7 9.2a99.6 99.6 0 0 1-18.6 14.7c-2 0-4.6-14.5-4.6-25.3 0-13 4.6-20.7 12.6-20.7 2.9 0 4.2.7 6.6 3.2ZM19.6 296.8c-2 3-10 25.7-10 28.4 0 3.5 3.2 6 7.8 6 5.7 0 11.4-4 18-12.2 6-7.5 11.5-12 16-12.7 1.5-.4 6-.4 9.7-.3l6.8.3-25 39.9c-34 54-31.4 49.4-31.4 54 0 3.2.5 4.4 2.5 6 2.4 2 3.4 2 52.5 2 56.6 0 52.6.5 54.8-7.8.5-2.2 2.5-8.9 4.3-14.9a95 95 0 0 0 3.2-12.8c0-2.5-3.4-5-6.9-5-4.8 0-9 3-18.4 13.2C91 394.2 87.9 396 75 396c-7.7 0-9.2-.2-8.8-1.3a7464 7464 0 0 0 54.5-88.5c1.8-3.5 2-8.8.4-10.4-1.7-1.7-6.7-1.4-13.7.8a131.6 131.6 0 0 1-69.3 0c-3.8-1-9.1-2-12-2-4.3 0-5.4.5-6.5 2.3Zm511.9 65.4a26 26 0 0 0-14.3 11.4c-3 5.8-3.2 15.2-.8 21.6a25.3 25.3 0 0 0 15 13.4c6.2 1.8 16 1.8 22.1-.1a24.6 24.6 0 0 0 14.9-13.3 29.5 29.5 0 0 0-.9-21.6A25.9 25.9 0 0 0 553 362a65.4 65.4 0 0 0-21.4.1Z" />
+        </g>
+      </svg>
+    </div>
+    <p class="album-title">the four year compilation</p>
+  </div>
+  <div class="bobby-album">
+  <svg
+    viewBox="0 0 212 204"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M67 4L80 46.5"
+      stroke="white"
+      stroke-width="7"
+      stroke-linecap="round" />
+    <circle cx="106.5" cy="120.5" r="79" stroke="white" stroke-width="9" />
+    <path
+      d="M16.4999 111.5C-16.5001 121.5 20.9996 160 111 155.5C161 153 238 129.5 195.5 106"
+      stroke="url(#c)"
+      stroke-width="8"
+      stroke-linecap="round" />
+    <path
+      d="M60 127L82 119"
+      stroke="#FF8888"
+      stroke-width="8"
+      stroke-linecap="round" />
+    <path
+      d="M137 100L159 92"
+      stroke="#FF8888"
+      stroke-width="8"
+      stroke-linecap="round" />
+    <circle cx="88" cy="102" r="6" fill="white" />
+    <circle cx="125" cy="91" r="6" fill="white" />
+    <path
+      d="M105 117.5C105.833 118.833 110.4 120.6 114 119C117.6 117.4 118.5 114 118.5 112"
+      stroke="white"
+      stroke-width="3"
+      stroke-linecap="round" />
+    <defs/>
+  </svg>
+  </div>
+  <div class="musical-notes">
+    <p class="note-music-1">audiotrack</p>
+    <p class="note-music-2">audiotrack</p>
+  </div>
+</div>

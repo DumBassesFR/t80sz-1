@@ -4,14 +4,18 @@
   import BackHome from "../general/templates/back-home.svelte"
   import "../../../css/pages.pcss"
   import Track from "./templates/track.svelte"
+  import Cover from "./templates/cover.svelte"
   import { fly, fade } from "svelte/transition"
 </script>
 
 <style lang="postcss">
   .tracklist {
-    @apply overflow-x-hidden overflow-y-scroll flex flex-col items-start pr-8;
+    @apply overflow-x-hidden overflow-y-scroll flex flex-col items-start pr-12;
     width: 45vw;
-    height: 30vw;
+    height: 25%;
+  }
+  .album-wrapper {
+    @apply flex flex-row;
   }
 </style>
 <div
@@ -21,6 +25,7 @@
   <BackHome gradient="rainbow" />
   <Aura color="rainbow" />
   <Header gradient="rainbow" text="album info" />
+  <div class="album-wrapper">
   <div class="tracklist">
     <Track
       track="Hidden Leaf Village Anthem"
@@ -52,5 +57,79 @@
       no="5"
       length="1:26"
       type="rnj" />
+    <Track
+      track="A$$ CROSSING"
+      artist="I Am Jemboy"
+      no="6"
+      length="3:19"
+      type="tba" />
+    <Track
+      track="Ten Camp Commandments"
+      artist="I Am Jemboy"
+      no="7"
+      length="2:34"
+      type="tba" />
+    <Track
+      track="Soundclown Showdown!"
+      artist="Nickster"
+      no="8"
+      length="3:31"
+      type="r-rnj" />
+    <Track
+      track="Ten Camp Commandments (Remix)"
+      artist="Lumsynwave"
+      no="9"
+      length="3:56"
+      type="r-tba" />
+    <Track
+      track="/STORAGE/EMULATED/0/BOOTANIMATION.png"
+      artist="rini"
+      no="10"
+      length="0:28"
+      type="bi" />
+    <Track
+      track="強くなって、ストライクアップ"
+      artist="Hidden Leaf Village (part. GUNTROL)"
+      no="11"
+      length="3:00"
+      type="bi" />
+    <Track
+      track="JOYNER LUCAS PRESENTS"
+      artist="Wobble"
+      no="12"
+      length="3:49"
+      type="bi" />
+    <Track
+      track="BAKA DRIVER"
+      artist="rini"
+      no="13"
+      length="3:14"
+      type="bi" />
+    <Track
+      track="HELILJON NEST"
+      artist="KurtTheKing"
+      no="14"
+      length="2:46"
+      type="bi" />
+    <Track
+      track="Thank You"
+      artist="rini"
+      no="15"
+      length="3:49"
+      type="bi" />
+    <Track
+      track="Fantasy"
+      artist="Saynoz"
+      no="16"
+      length="2:46"
+      type="ext" />
+    <Track
+      track="Fantasy (Remix)"
+      artist="LOSER//99"
+      no="17"
+      length="3:32"
+      type="r-ext" />
+  </div>
+  <Cover />
   </div>
 </div>
