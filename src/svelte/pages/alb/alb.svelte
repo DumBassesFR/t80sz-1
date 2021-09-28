@@ -9,6 +9,12 @@
 </script>
 
 <style lang="postcss">
+  @media (max-width: 1024px) {
+    .tracklist {
+      width: 75vw !important;
+      height: 73vh !important;
+    }
+  }
   .tracklist {
     @apply overflow-x-hidden overflow-y-scroll flex flex-col items-start pr-12;
     width: 45vw;
@@ -88,8 +94,8 @@
       length="0:28"
       type="bi" />
     <Track
-      track="強くなって、ストライクアップ"
-      artist="Hidden Leaf Village (part. GUNTROL)"
+      track="強くなって、ストライクアップ (part. GUNTROL)"
+      artist="Hidden Leaf Village"
       no="11"
       length="3:00"
       type="bi" />

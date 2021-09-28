@@ -33,7 +33,7 @@
   .track-wrapper {
     @apply flex items-center mt-3 bg-purple-light rounded-lg px-5 flex-row w-full;
     .track-no {
-      @apply mr-3 my-6 text-yellow text-4xl font-bold;
+      @apply mr-3 my-6 text-yellow text-2xl lg:text-3xl lg:text-4xl font-bold;
     }
     .artist-track {
       @apply flex-grow;
@@ -41,10 +41,10 @@
       .artist-wrapper {
         @apply flex flex-row;
         h3 {
-          @apply text-xl mt-0 mb-2 font-normal;
+          @apply text-base lg:text-xl mt-0 mb-2 font-normal;
         }
         .flair {
-          @apply text-sm leading-7 rounded-full mt-0 mb-2 px-2 ml-3 font-bold;
+            @apply text-xs lg:text-sm leading-7 rounded-full mt-0 mb-2 px-2 ml-1 xl:ml-3 font-bold;
         }
         .rnj-flair, .r-rnj-flair {
           @apply bg-green-lightclr text-purple-dark;
@@ -60,7 +60,7 @@
         }
       }
       .track-name {
-        @apply my-0 text-xl;
+        @apply my-0 text-base lg:text-xl;
       }
       .length {
         @apply text-yellow;
