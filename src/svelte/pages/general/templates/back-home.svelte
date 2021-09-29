@@ -6,7 +6,7 @@
     width: fit-content;
     width: --webkit-fit-content;
     background-size: 120%;
-    text-shadow: 0px 2px 5px rgba(0,0,0,.3);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     .back-icon {
       @apply font-icon mr-1;
     }
@@ -39,7 +39,9 @@
   const gradProm = gradSelection(gradient)
 </script>
 
-<a style="text-decoration: none;" href="{redirectTo()}">
+<a
+  style="text-decoration: none; width: fit-content; width: -moz-fit-content; width: -webkit-fit-content"
+  href={redirectTo()}>
   {#await gradProm}
     <div class="back-button" style="background: #eee;">
       <p class="back-icon">home</p>
