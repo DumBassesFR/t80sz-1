@@ -4,6 +4,7 @@
   import BackHome from "../general/templates/back-home.svelte"
   import "../../../css/pages.pcss"
   import Track from "./templates/track.svelte"
+  import AlbInfo from "./templates/alb-info.svelte";
   import Cover from "./templates/cover.svelte"
   import { fly, fade } from "svelte/transition"
 </script>
@@ -33,6 +34,7 @@
   <Header gradient="rainbow" text="album info" />
   <div class="album-wrapper">
   <div class="tracklist">
+    <AlbInfo/>
     <Track
       track="Hidden Leaf Village Anthem"
       artist="Wobble"
