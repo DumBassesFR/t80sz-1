@@ -16,6 +16,11 @@
       height: 73vh !important;
     }
   }
+  @media (min-height: 800px) {
+    .tracklist {
+      height: 75vh !important;
+    }
+  }
   .tracklist {
     @apply overflow-x-hidden overflow-y-scroll flex flex-col items-start pr-12;
     width: 45vw;
