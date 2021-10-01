@@ -57,7 +57,7 @@ module.exports = merge(defcfg, {
         }
       },
       {
-        test: /\.(webp|png|jpg)$/i,
+        test: /\.(webp|png|jpg|mp3)$/i,
         type: 'asset/resource',
         generator: {
           filename: "../src/assets/[name][ext][query]"

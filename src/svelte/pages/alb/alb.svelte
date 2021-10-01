@@ -81,7 +81,7 @@
       artist="I Am Jemboy"
       no="7"
       length="2:34"
-      type="tba" />
+      type="tla" />
     <Track
       track="Soundclown Showdown!"
       artist="Nickster"
@@ -93,7 +93,7 @@
       artist="Lumsynwave"
       no="9"
       length="3:56"
-      type="r-tba" />
+      type="r-tla" />
     <Track
       track="/STORAGE/EMULATED/0/BOOTANIMATION.png"
       artist="rini"
