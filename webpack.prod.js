@@ -73,14 +73,16 @@ module.exports = merge(defcfg, {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: "./src/fonts/[hash][ext][query]"
+          filename: "src/fonts/[hash][ext][query]",
+          publicPath: "../"
         }
       },
       {
         test: /\.(webp|png|jpg|mp3)$/i,
         type: 'asset/resource',
         generator: {
-          filename: "./src/assets/[name][ext][query]"
+          filename: "src/assets/[name][ext][query]",
+          publicPath: "../"
         }
       },
       {
