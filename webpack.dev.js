@@ -31,39 +31,38 @@ module.exports = merge(defcfg, {
       filename: "src/[name].css",
     }),
   ],
+  devServer: {
+    hot: false,
+    client: {
+      logging: "info",
+      overlay: {
+        errors: true,
+        warnings: false
+      },
+      progress: true
+    }
+  },
   module: {
     rules: [
       {
-        test: /\.(css|pcss)$/i,
+        test: /\.((p|)css)$/i,
         exclude: /node_modules/,
         use: [cssExtract.loader, "css-loader", "postcss-loader"],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "src/fonts",
-              publicPath: "../src/fonts",
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: "../src/fonts/[hash][ext][query]"
+        }
       },
       {
         test: /\.(webp|png|jpg)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "src/assets",
-              publicPath: "../src/assets",
-            },
-          },
-        ],
-      },
+        type: 'asset/resource',
+        generator: {
+          filename: "../src/assets/[name][ext][query]"
+        }
+      }
     ],
   },
 })
