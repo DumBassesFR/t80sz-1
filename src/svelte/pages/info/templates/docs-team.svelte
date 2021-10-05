@@ -83,15 +83,15 @@
   }
 </style>
 
-<script>
+<script lang="ts">
   import Base from "../../../base.svelte"
   import Bobby from "../../../bobby.svelte"
 
-  export let name
-  export let role
-  export let hired
-  export let left
-  export let desc
+  export let name: string,
+    role: string,
+    hired: string,
+    left: string,
+    desc: string
   let months = [
     "Jan",
     "Feb",
@@ -106,16 +106,23 @@
     "Nov",
     "Dec",
   ]
-  const hireSplit = hired.split("/")
-  const hireFunc = new Date(hireSplit[2], hireSplit[0] - 1, hireSplit[1])
-  const hireDate = `${
+  const hireWrap = () => {
+    const hireSplit = hired.split("/")
+    const hireFunc = new Date(hireSplit[2], hireSplit[0] - 1, hireSplit[1])
+    const hireDate = `${
       months[hireFunc.getMonth()]
-  }. ${hireFunc.getDate()}, ${hireFunc.getFullYear()}`
+    }. ${hireFunc.getDate()}, ${hireFunc.getFullYear()}`
+    return hireDate;
+  }
   const leaveDate = leftAt()
   function leftAt() {
     if (left) {
       const leaveSplit = left.split("/")
-      const leaveFunc = new Date(leaveSplit[2], leaveSplit[0] - 1, leaveSplit[1])
+      const leaveFunc = new Date(
+        leaveSplit[2],
+        leaveSplit[0] - 1,
+        leaveSplit[1]
+      )
       const leaveDt = `${
         months[leaveFunc.getMonth()]
       }. ${leaveFunc.getDate()}, ${leaveFunc.getFullYear()}`
@@ -123,18 +130,22 @@
     }
   }
 </script>
-
 <div class="team-member">
   <div style="display: flex; flex-direction: row;">
-    <img loading=lazy src="../../../../../src/assets/team/{name}.png" alt={name} />
+    <img
+      loading="lazy"
+      src="../../../../../src/assets/team/{name}.png"
+      alt={name} />
     <div id="info">
       <h3 class="member-name">{name}</h3>
       <p class="team-role {role}-member">{role}</p>
       <div class="join-leave">
-        <h4 class="joined-at">
-          <span style="color:#FFEA33;">Day of Hire:</span>
-          {hireDate}
-        </h4>
+        {#if hired}
+          <h4 class="joined-at">
+            <span style="color:#FFEA33;">Day of Hire:</span>
+            {hireWrap}
+          </h4>
+        {/if}
         {#if leaveDate}
           <h4 class="left-at">
             <span style="color:#FFEA33;">Day of Leave:</span>
