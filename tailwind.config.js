@@ -14,7 +14,11 @@ module.exports = {
         light: "#271C07",
         lightclr: "#FFEA33"
       },
-      orange: "#f28b27",
+      orange: {
+        DEFAULT: "#F28B27",
+        light: "#271707",
+        lightclr: "#F39132"
+      },
       blue: { 
         DEFAULT: "#4445ff",
         light: "#181428",
