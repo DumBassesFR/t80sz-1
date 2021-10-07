@@ -143,7 +143,7 @@
         {#if hired}
           <h4 class="joined-at">
             <span style="color:#FFEA33;">Day of Hire:</span>
-            {hireWrap}
+            {hireWrap()}
           </h4>
         {/if}
         {#if leaveDate}
