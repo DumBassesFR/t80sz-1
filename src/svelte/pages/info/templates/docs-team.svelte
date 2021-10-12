@@ -91,7 +91,7 @@
     role: string,
     hired: string,
     left: string,
-    desc: string
+    audio: string
   let months = [
     "Jan",
     "Feb",
@@ -149,7 +149,7 @@
             {hireWrap()}
           </h4>
         {/if}
-        {#if leaveDate}
+        {#if left}
           <h4 class="left-at">
             <span style="color:#FFEA33;">Day of Leave:</span>
             {leaveDate}
@@ -158,5 +158,7 @@
       </div>
     </div>
   </div>
-  <p class="team-desc">{desc}</p>
+  <p class="team-desc">
+    <slot name="desc"/>
+  </p>
 </div>
