@@ -139,6 +139,9 @@
     <div id="info">
       <h3 class="member-name">{name}</h3>
       <p class="team-role {role}-member">{role}</p>
+      {#if audio}
+        <a href="{audio}" style="text-decoration: none; color: #ffe500;"><b>[Audio Available]</b></a>
+      {/if}
       <div class="join-leave">
         {#if hired}
           <h4 class="joined-at">
