@@ -1,6 +1,6 @@
 .chapters {
   @apply mt-2;
-  width: 65vw;
+  width: 77vw;
 }
 .docs-gap[name="info"] {
   overflow-y: scroll;
@@ -8,7 +8,9 @@
 }
 @media (max-width: 640px) {
   .docs-gap[name="info"] {
-    width: 85vw;
+    min-width: 10em;
+    max-width: 25em;
+    margin-right: 3em;
     height: 100%;
   }
 }
@@ -26,14 +28,13 @@
 }
 @media (min-width: 880px) and (max-width: 2160px) {
   .docs-gap[name="info"] {
-    width: 80vw;
     height: 73vh;
     scrollbar-width: none;
   }
 }
 .chapter-contents {
   @apply flex justify-center flex-col fixed lg:relative items-end lg:items-start lg:top-0 lg:right-0 lg:flex-row;
-  width: 80vw;
+  width: 95%;
   transition: opacity 500ms ease-in-out;
   p {
     @apply flex text-white text-opacity-75 text-base 2xl:text-2xl cursor-pointer transition-all duration-300 ease-in-out;
@@ -101,7 +102,7 @@
 }
 .rainbow-slider {
   @apply lg:w-full transform rotate-90 fixed top-2/4 lg:top-0 lg:right-0 lg:ml-0 lg:relative lg:rotate-0;
-  width: 80vw;
+  width: 75vw;
   background: transparent;
   -webkit-appearance: none;
   &::-moz-range-thumb {
@@ -201,7 +202,7 @@
   @apply filter-drop-shadow-sm filter;
 }
 .offset-2 {
-  --gapval: 60vw;
+  --gapval: 50vw;
   gap: var(--gapval);
 }
 .offset-3 {
