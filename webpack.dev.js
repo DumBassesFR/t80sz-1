@@ -53,7 +53,7 @@ module.exports = merge(defcfg, {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: "../src/fonts/[hash][ext][query]"
+          filename: "../src/fonts/[name][ext][query]"
         }
       },
       {
