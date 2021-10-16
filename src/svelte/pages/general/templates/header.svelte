@@ -14,7 +14,6 @@
   import { colors } from "../../../../libs/colors"
   export let gradient
   export let text
-  console.log(gradient)
   async function gradSelection(g: string) {
     const clr = await new colors()
     return new Promise(async (resolve) => {
