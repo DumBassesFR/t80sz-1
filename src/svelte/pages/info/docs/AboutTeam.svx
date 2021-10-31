@@ -8,6 +8,9 @@
     width: fit-content;
     width: -moz-fit-content;
   }
+  .toggle {
+    cursor: pointer;
+  }
   @media (max-width: 850px) {
     .team-divider {
       grid-template-columns: auto;
@@ -24,9 +27,10 @@
   import Header from "../../general/templates/header.svelte"
   import Member from "../templates/docs-team.svelte"
   import { fly, fade } from "svelte/transition"
+  let pastToggle;
 </script>
 
-<Header text="past staff" gradient="yellow" />
+<Header text="about the team" gradient="yellow" />
 <div
   class="team-divider"
   in:fly={{ y: 1200, duration: 1000 }}
@@ -42,6 +46,51 @@
       instead of the second place winner meaning the true winner was-
     </span>
   </Member>
+  <Member name="D Vana" role="admin" hired="09/27/2017">
+    <span slot="desc">
+      D Vana joined the mod team as part of the first wave of mods. D Vana
+      orchestrated most of the drama and events throughout the server, having
+      been handed the server after Shira had to step back in early 2018. D Vana
+      went on to found The 80s Zone and The Solar System before resigning as
+      owner in 2019. Today, D Vana works on The 80s Zone projects alongside
+      working in the r/Futurefunk community.
+    </span>
+  </Member>
+  <Member name="Courier" role="moderator" hired="07/21/2018">
+    <span slot="desc">
+      Courier joined the mod team after a receiving an invitation from Doe. He's
+      the current night time moderator along with being a core moderator of the
+      Westnet and Usenet categories.
+    </span>
+  </Member>
+  <Member name="Fluffacorn" role="moderator" hired="06/21/2018">
+    <span slot="desc">
+      Fluffacorn joined at the end of The Bear Zone's lifespan but stuck with
+      the mod team into The 80s Zone. Currently, Fluffacorn handles most of the
+      technical side of the server such as bots, having more or less replaced
+      Doe, and works on most of the larger projects in the server, such as
+      anniversary events.
+    </span>
+  </Member>
+  <Member name="Giggles" role="moderator" hired="07/12/2019">
+    <span slot="desc">
+      Giggles qualified for mod by proving to Skelly and Fluffacorn that he had
+      the knowledge and ability to moderate at a competent level. Despite
+      previously being banned for the doxxing of administrator D Vana, he
+      continues to mod today.
+    </span>
+  </Member>
+</div>
+{#if pastToggle}
+  <h1 class="toggle" on:click={() => { pastToggle = false; }}>▼ past staff</h1>
+{:else}
+  <h1 class="toggle" on:click={() => { pastToggle = true; }}>▶ past staff</h1>
+{/if}
+{#if pastToggle}
+<div
+  class="team-divider"
+  in:fly={{ y: 1200, duration: 1000 }}
+  out:fade={{ duration: 500 }}>
   <Member name="IamJemboy" role="owner" hired="09/20/2017" left="07/04/2018">
     <span slot="desc">
       Jem founded The Bear Zone as a way to harbor his community together and
@@ -62,16 +111,6 @@
       part of the server's drama, and often playing a part in the creation of
       new drama. Doe would leave the server due to a disagreement in July of
       2019.
-    </span>
-  </Member>
-  <Member name="D Vana" role="admin" hired="09/27/2017">
-    <span slot="desc">
-      D Vana joined the mod team as part of the first wave of mods. D Vana
-      orchestrated most of the drama and events throughout the server, having
-      been handed the server after Shira had to step back in early 2018. D Vana
-      went on to found The 80s Zone and The Solar System before resigning as
-      owner in 2019. Today, D Vana works on The 80s Zone projects alongside
-      working in the r/Futurefunk community.
     </span>
   </Member>
   <Member name="7Z" role="moderator" hired="11/17/2017" left="7/6/2018">
@@ -107,13 +146,6 @@
       citing personal issues.
     </span>
   </Member>
-  <Member name="Courier" role="moderator" hired="07/21/2018">
-    <span slot="desc">
-      Courier joined the mod team after a receiving an invitation from Doe. He's
-      the current night time moderator along with being a core moderator of the
-      Westnet and Usenet categories.
-    </span>
-  </Member>
   <Member name="Mary" role="moderator" hired="08/25/2018" left="06/12/2019">
     <span slot="desc">
       Mary joined the mod team in late August after being recommended by D Vana.
@@ -128,15 +160,6 @@
       invited to the mod team. Doodee ended up leaving several months later at
       the launch of The 80s Zone, wanting to focus on her own server, The Tilly
       Zone.
-    </span>
-  </Member>
-  <Member name="Fluffacorn" role="moderator" hired="06/21/2018">
-    <span slot="desc">
-      Fluffacorn joined at the end of The Bear Zone's lifespan but stuck with
-      the mod team into The 80s Zone. Currently, Fluffacorn handles most of the
-      technical side of the server such as bots, having more or less replaced
-      Doe, and works on most of the larger projects in the server, such as
-      anniversary events.
     </span>
   </Member>
   <Member
@@ -158,14 +181,6 @@
       being demoted in January following the failure of the last Switch
       Saturday, she was promoted to Staff Head, a role which never ended up
       being used by her in any meaningful capacity.
-    </span>
-  </Member>
-  <Member name="Giggles" role="moderator" hired="07/12/2019">
-    <span slot="desc">
-      Giggles qualified for mod by proving to Skelly and Fluffacorn that he had
-      the knowledge and ability to moderate at a competent level. Despite
-      previously being banned for the doxxing of administrator D Vana, he
-      continues to mod today.
     </span>
   </Member>
   <Member
@@ -259,14 +274,6 @@
       shortest lifespan.
     </span>
   </Member>
-  <Member name="Rini" role="moderator" hired="01/21/2018" left="07/29/2019">
-    <span slot="desc">
-      After being recognized for his work in the propaganda turf war, Rini
-      was appointed lead designer. Despite leaving the team in 2019, Rini would
-      continue to work on multiple side projects with the team including but not
-      limited to: Solar89, and the80s.zone. (oh hey, you're here!)
-    </span>
-  </Member>
   <Member name="Rigeios" role="moderator" hired="01/12/2019" left="01/25/2021">
     <span slot="desc">
       Rigeios was the last mod hired via formal application. His time on the
@@ -274,6 +281,14 @@
       issues with the team. Before his leave in 2021, Rigeios also created and
       managed Moms Fridge, a monthly art showcase which aimed to clear pins in
       the Art SFW channel and highlight the vast art community in The 80s Zone.
+    </span>
+  </Member>
+  <Member name="Rini" role="moderator" hired="01/21/2018" left="07/29/2019">
+    <span slot="desc">
+      After being recognized for his work in the propaganda turf war, Rini was
+      appointed lead designer. Despite leaving the team in 2019, Rini would
+      continue to work on multiple side projects with the team including but not
+      limited to: Solar89, and the80s.zone. (oh hey, you're here!)
     </span>
   </Member>
   <Member name="Shieldzee" role="moderator" hired="09/27/2017">
@@ -328,19 +343,6 @@
       Bear, being brought in primarily for night time moderation.
     </span>
   </Member>
-  <Member
-    name="RaccoonVillain"
-    role="moderator"
-    hired="09/27/17"
-    left="12/16/2017">
-    <span slot="desc">
-      RaccoonVillain, known as The Notorious W.A.A. at the time, was one of the
-      first mods employed by Jem. W.A.A. spent his time interacting with the
-      community in voice chat primarily, often disregarding rules and pinging
-      @everyone with images throughout his career before being terminated in
-      December 2017.
-    </span>
-  </Member>
   <Member name="Willbot" role="moderator" hired="04/21/2018" left="07/30/2021">
     <span slot="desc">
       Will worked with D Vana and Doe on toxicity issues in the community
@@ -365,6 +367,19 @@
       for much beyond being the one to conceive the Loli Patroli. This is due to
       her being a fairly inactive member of the team, having only ever sent 241
       messages in mod chat.
+    </span>
+  </Member>
+  <Member
+    name="RaccoonVillain"
+    role="moderator"
+    hired="09/27/17"
+    left="12/16/2017">
+    <span slot="desc">
+      RaccoonVillain, known as The Notorious W.A.A. at the time, was one of the
+      first mods employed by Jem. W.A.A. spent his time interacting with the
+      community in voice chat primarily, often disregarding rules and pinging
+      @everyone with images throughout his career before being terminated in
+      December 2017.
     </span>
   </Member>
   <Member name="Nuggies" role="staff" hired="04/13/2018" left="08/31/2018">
@@ -401,3 +416,4 @@
     </span>
   </Member>
 </div>
+{/if}
