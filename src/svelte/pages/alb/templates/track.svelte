@@ -1,3 +1,4 @@
+
 <style lang="postcss">
   .track-wrapper {
     @apply flex items-center mt-3 bg-purple-light rounded-lg px-5 flex-row w-full;

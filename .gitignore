@@ -1,8 +1,8 @@
 node_modules
 public
 .cache
-package-lock.json
 certs
 dev
 src/fonts/recoleta
 src/assets/alb
+src/assets/team/*

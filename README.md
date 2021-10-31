@@ -9,7 +9,5 @@ After that:
 - If you want to test/debug the site, use `npm run dev`
 - Else, run `npm run compile`, later following with a `npm run start` to initialize the server.
 
-# Debug
-A Debug Menu is available at the Dev Server's `debug/` directory (by default: `localhost:8080/debug`).
-
-From there, you can test and work with the site's features in a more compact form.
+# Credits
+Special thanks to "Fluffacorn", D. Vana and "Toastee" for early development feedback/troubleshooting.

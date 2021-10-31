@@ -9,9 +9,9 @@ const { merge } = require("webpack-merge")
 module.exports = merge(defcfg, {
   mode: "production",
   entry: {
-    main: "./src/pages/index.ts",
-    bobby: "./src/pages/standalone-bobby.ts",
-    404: "./src/pages/status-codes/404.ts",
+    main: "./src/svelte/index.ts",
+    bobby: "./src/svelte/standalone-bobby.ts",
+    404: "./src/svelte/status-code/404.ts",
   },
   output: {
     filename: "src/t80sz.[name].js",
