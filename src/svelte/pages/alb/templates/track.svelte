@@ -1,49 +1,93 @@
 <style lang="postcss">
+  @import "../../../../css/vars.pcss";
+  @media (min-width: 1280px) {
+    .track-no {
+      font-size: 2.25rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .artist-wrapper h3, .track-name {
+      font-size: 1.5rem; 
+    }
+    .artist-wrapper .flair {
+      font-size: 0.75rem;
+    }
+  }
   .track-wrapper {
-    @apply flex items-center mt-3 bg-purple-light rounded-lg px-5 flex-row w-full;
+    display: flex;
+    align-items: center;
+    margin-top: 0.75rem;
+    background-color: var(--purple-light);
+    border-radius: 1rem;
+    padding: 1.25rem 0.5rem;
+    flex-direction: row;
+    width: 100%;
     user-select: none;
     .track-no {
-      @apply mr-3 my-6 text-yellow text-2xl lg:text-3xl lg:text-4xl font-bold;
+      margin-right: 0.75rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #ffe500;
+      font-size: 2.25rem;
+      font-weight: 700;
     }
     .preview {
-      @apply font-icon rounded-full text-purple-dark bg-yellow;
+      font-family: var(--icon-font);
+      border-radius: 100%;
+      color: var(--purple-dark);
+      background-color: var(--yellow);
       cursor: pointer;
       padding: 0px 2px;
     }
     .artist-track {
-      @apply flex-grow;
+      flex-grow: 1;
       text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
       .artist-wrapper {
-        @apply flex flex-row;
+        display: flex;
+        flex-direction: row;
         h3 {
-          @apply text-base lg:text-xl mt-0 mb-2 font-normal;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          font-weight: 400;
+          font-size: 1rem;
         }
         .flair {
-          @apply text-xs lg:text-sm leading-7 rounded-full mt-0 mb-2 px-2 ml-1 xl:ml-3 font-bold;
+          line-height: 1.75rem;
+          border-radius: 100%;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          padding: 0.5rem 0;
+          margin-left: 0.25rem;
+          font-weight: 700;
+          font-size: 0.5rem;
         }
         .rnj-flair,
         .r-rnj-flair {
-          @apply bg-green-lightclr text-purple-dark;
+          background-color: var(--green-light);
+          color: var(--purple-dark);
         }
         .tba-flair,
         .tla-flair,
         .r-tla-flair {
-          @apply bg-purple-lightclr;
+          background-color: var(--pink-light);
         }
         .ext-flair,
         .r-ext-flair {
-          @apply bg-yellow-lightclr text-purple-dark;
+          background-color: var(--yellow-light);
+          color: var(--purple-dark);
         }
         .bi-flair,
         .r-bi-flair {
-          @apply bg-blue-lightclr;
+          background-color: var(--blue-light);
         }
       }
       .track-name {
-        @apply my-0 text-base lg:text-xl;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1rem;
       }
       .length {
-        @apply text-yellow;
+        color: #ffe500;
       }
     }
   }

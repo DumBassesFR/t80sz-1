@@ -6,8 +6,7 @@ const { merge } = require("webpack-merge")
 module.exports = merge(defcfg, {
   mode: "development",
   entry: {
-    main: "./src/pages/index.ts",
-    debug: "./src/pages/debug/debug.ts",
+    main: "./src/pages/index.ts"
   },
   output: {
     filename: "t80sz.[name].js",
@@ -19,13 +18,7 @@ module.exports = merge(defcfg, {
       title: "The 80s Zone",
       filename: "index.html",
       meta: { viewport: "width=device-width, initial-scale=1" },
-      excludeChunks: ["debug"],
       hash: true,
-    }),
-    new htmlWebpack({
-      template: "src/pages/debug/debug.html",
-      filename: "debug/index.html",
-      excludeChunks: ["main"],
     }),
     new cssExtract({
       filename: "src/[name].css",
