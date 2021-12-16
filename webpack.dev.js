@@ -6,7 +6,7 @@ const { merge } = require("webpack-merge")
 module.exports = merge(defcfg, {
   mode: "development",
   entry: {
-    main: "./src/pages/index.ts"
+    main: "./src/svelte/index.ts"
   },
   output: {
     filename: "t80sz.[name].js",
